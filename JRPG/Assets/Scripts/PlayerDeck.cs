@@ -16,10 +16,7 @@ public class PlayerDeck : MonoBehaviour
         {            
             GameObject go = Instantiate(cardPrefab);
             go.transform.SetParent(parent.transform,false);
-            while (totalPower < 20)
-            {
-                go.GetComponent<CardDisplay>().card = GetRandomCard();
-            }
+            go.GetComponent<CardDisplay>().card = GetRandomCard();
         }
 
         foreach (var item in cards)
