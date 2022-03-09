@@ -11,17 +11,22 @@ public class PlayerDeck : MonoBehaviour
 
     private void Start()
     {
+        FirstFight();
+    }
+
+    private void FirstFight()
+    {
         for (int i = 0; i < cardCount; i++)
-        {            
+        {
             GameObject go = Instantiate(cardPrefab);
-            go.transform.SetParent(parent.transform,false);
-            go.GetComponent<CardDisplay>().card = GetRandomCard();
+            go.transform.SetParent(parent.transform, false);
+            go.GetComponent<CardDisplay>().card = cards[i];
         }
     }
 
-    private Card GetRandomCard()
-    {
-        int rnd = Random.Range(0, cards.Count);
-        return cards[rnd];
-    }
+    //private Card GetRandomCard()
+    //{
+    //    int rnd = Random.Range(0, cards.Count);
+    //    return cards[rnd];
+    //}
 }

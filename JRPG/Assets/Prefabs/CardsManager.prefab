@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6220157289882805943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6220157289882805941}
+  - component: {fileID: 6220157289882805940}
+  - component: {fileID: 61903488}
+  m_Layer: 0
+  m_Name: CardsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6220157289882805941
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6220157289882805943}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.4755739, y: 0.6993142, z: -91.58415}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6220157289882805940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6220157289882805943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c11f5a59c79573945ad6732059f92f56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placedCards: {fileID: 61903488}
+  cards:
+  - {fileID: 11400000, guid: 615018843ca44184cab07f00fd091316, type: 2}
+  - {fileID: 11400000, guid: c368726e200f36241a57b4d1df3214d0, type: 2}
+  - {fileID: 11400000, guid: 240d802ffb3c04e4c9b6be3105826e49, type: 2}
+  - {fileID: 11400000, guid: 615018843ca44184cab07f00fd091316, type: 2}
+  - {fileID: 11400000, guid: c368726e200f36241a57b4d1df3214d0, type: 2}
+  - {fileID: 11400000, guid: 240d802ffb3c04e4c9b6be3105826e49, type: 2}
+  parent: {fileID: 0}
+  cardPrefab: {fileID: 4354206737431118379, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
+  cardCount: 6
+--- !u!114 &61903488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6220157289882805943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 660ba7b828796aa47a1d3df95d3f8b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placedCards: []
