@@ -9,6 +9,8 @@ public class PlayerDeck : MonoBehaviour
     public GameObject cardPrefab;
     public int cardCount = 6;
 
+    public PlacedCards placedCards;
+
     private void Start()
     {
         FirstFight();
@@ -21,6 +23,7 @@ public class PlayerDeck : MonoBehaviour
             GameObject go = Instantiate(cardPrefab);
             go.transform.SetParent(parent.transform, false);
             go.GetComponent<CardDisplay>().card = cards[i];
+            go.GetComponent<OnClickCard>().placedCards = placedCards;
         }
     }
 

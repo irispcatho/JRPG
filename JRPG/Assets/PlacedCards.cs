@@ -4,6 +4,5 @@ using UnityEngine;
 
 public class PlacedCards : MonoBehaviour
 {
-    public List<GameObject> placedCards;
-    
+    public List<GameObject> placedCardsList;
 }

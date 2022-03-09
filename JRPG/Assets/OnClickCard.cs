@@ -12,6 +12,6 @@ public class OnClickCard : MonoBehaviour
     {
         isSelected = true;
         Debug.Log(this.gameObject.name + "is selected");
-        placedCards.placedCards.Add(thisCard);
+        placedCards.placedCardsList.Add(thisCard);
     }
 }
