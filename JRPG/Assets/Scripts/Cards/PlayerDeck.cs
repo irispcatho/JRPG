@@ -13,11 +13,6 @@ public class PlayerDeck : MonoBehaviour
 
     private void Start()
     {
-        FirstFight();
-    }
-
-    private void FirstFight()
-    {
         for (int i = 0; i < cardCount; i++)
         {
             GameObject go = Instantiate(cardPrefab);

@@ -6,12 +6,18 @@ public class OnClickCard : MonoBehaviour
 {
     public bool isSelected = false;
     public PlacedCards placedCards;
+    public PlayerDeck playerDeck;
     public GameObject thisCard;
+    private int count = 0;
 
     private void OnMouseDown()
     {
-        isSelected = true;
         Debug.Log(this.gameObject.name + "is selected");
-        placedCards.placedCardsList.Add(thisCard);
+        if(count == 0)
+        {
+            count++;
+            placedCards.placedCardsList.Add(thisCard);
+            thisCard.SetActive(false);
+        }
     }
 }
