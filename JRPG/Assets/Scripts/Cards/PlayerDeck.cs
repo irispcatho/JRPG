@@ -8,7 +8,6 @@ public class PlayerDeck : MonoBehaviour
     public GameObject parent;
     public GameObject cardPrefab;
     public int cardCount = 6;
-    private int totalPower;
 
     private void Start()
     {
@@ -17,11 +16,6 @@ public class PlayerDeck : MonoBehaviour
             GameObject go = Instantiate(cardPrefab);
             go.transform.SetParent(parent.transform,false);
             go.GetComponent<CardDisplay>().card = GetRandomCard();
-        }
-
-        foreach (var item in cards)
-        {
-            totalPower += item.power;
         }
     }
 
