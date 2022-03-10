@@ -123,6 +123,16 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &28021712 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7773265004660865850, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+  m_PrefabInstance: {fileID: 1595844291}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &34931467 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7773265004660865850, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+  m_PrefabInstance: {fileID: 138137856}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &39886129
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +307,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: casenumber
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: CasesManager
+      value: 
+      objectReference: {fileID: 872147279}
     - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: onClickCard
       value: 
@@ -407,6 +425,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: casenumber
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: CasesManager
+      value: 
+      objectReference: {fileID: 872147279}
     - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: onClickCard
       value: 
@@ -517,6 +543,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: casenumber
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: CasesManager
+      value: 
+      objectReference: {fileID: 872147279}
     - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: onClickCard
       value: 
@@ -620,6 +654,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
   m_PrefabInstance: {fileID: 138137856}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &154932207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6220157289882805943, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+  m_PrefabInstance: {fileID: 6220157289860822218}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &259446259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -627,6 +666,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: casenumber
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: CasesManager
+      value: 
+      objectReference: {fileID: 872147279}
     - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: onClickCard
       value: 
@@ -730,6 +777,16 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
   m_PrefabInstance: {fileID: 259446259}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &264125152 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7773265004660865850, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+  m_PrefabInstance: {fileID: 101558509}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &343654736 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7773265004660865850, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+  m_PrefabInstance: {fileID: 1557972487}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &469358178
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,6 +877,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: casenumber
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: CasesManager
+      value: 
+      objectReference: {fileID: 872147279}
     - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: onClickCard
       value: 
@@ -923,6 +988,21 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
   m_PrefabInstance: {fileID: 524356062}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &556078929 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7773265004660865850, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+  m_PrefabInstance: {fileID: 1552677082}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &664597812 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7773265004660865850, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+  m_PrefabInstance: {fileID: 524356062}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &707802597 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7773265004660865850, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+  m_PrefabInstance: {fileID: 1630060822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &724579988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -930,6 +1010,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: casenumber
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: CasesManager
+      value: 
+      objectReference: {fileID: 872147279}
     - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: onClickCard
       value: 
@@ -1042,6 +1130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 872147280}
+  - component: {fileID: 872147281}
   m_Layer: 5
   m_Name: Cases
   m_TagString: Untagged
@@ -1084,6 +1173,36 @@ RectTransform:
   m_AnchoredPosition: {x: -15.5, y: 163}
   m_SizeDelta: {x: 605, y: 550}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &872147281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872147279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4600e42ea1413b04196d8f7566345792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CasesList:
+  - {fileID: 1532934510}
+  - {fileID: 707802597}
+  - {fileID: 556078929}
+  - {fileID: 1027813797}
+  - {fileID: 2031798730}
+  - {fileID: 1794736473}
+  - {fileID: 28021712}
+  - {fileID: 264125152}
+  - {fileID: 343654736}
+  - {fileID: 664597812}
+  - {fileID: 1280540928}
+  - {fileID: 2104865159}
+  - {fileID: 1829276243}
+  - {fileID: 1387240233}
+  - {fileID: 2143010163}
+  - {fileID: 34931467}
+  Placedcards: {fileID: 1672399453}
 --- !u!1001 &939688960
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1091,6 +1210,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: casenumber
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: CasesManager
+      value: 
+      objectReference: {fileID: 872147279}
     - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: onClickCard
       value: 
@@ -1194,6 +1321,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
   m_PrefabInstance: {fileID: 939688960}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1027813797 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7773265004660865850, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+  m_PrefabInstance: {fileID: 1647041251}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1142861683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1201,6 +1333,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: casenumber
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: CasesManager
+      value: 
+      objectReference: {fileID: 872147279}
     - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: onClickCard
       value: 
@@ -1311,6 +1451,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: casenumber
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: CasesManager
+      value: 
+      objectReference: {fileID: 872147279}
     - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: onClickCard
       value: 
@@ -1516,6 +1664,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253713903}
   m_CullTransparentMesh: 1
+--- !u!1 &1280540928 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7773265004660865850, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+  m_PrefabInstance: {fileID: 939688960}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1387240233 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7773265004660865850, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+  m_PrefabInstance: {fileID: 1163719634}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1445797261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1523,6 +1681,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: casenumber
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: CasesManager
+      value: 
+      objectReference: {fileID: 872147279}
     - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: onClickCard
       value: 
@@ -1626,6 +1792,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
   m_PrefabInstance: {fileID: 1445797261}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1532934510 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7773265004660865850, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+  m_PrefabInstance: {fileID: 7773265004313173853}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1552677082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1633,6 +1804,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: casenumber
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: CasesManager
+      value: 
+      objectReference: {fileID: 872147279}
     - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: onClickCard
       value: 
@@ -1743,6 +1922,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: casenumber
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: CasesManager
+      value: 
+      objectReference: {fileID: 872147279}
     - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: onClickCard
       value: 
@@ -1853,6 +2040,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: casenumber
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: CasesManager
+      value: 
+      objectReference: {fileID: 872147279}
     - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: onClickCard
       value: 
@@ -1963,6 +2158,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: casenumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: CasesManager
+      value: 
+      objectReference: {fileID: 872147279}
     - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: onClickCard
       value: 
@@ -2073,6 +2276,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: casenumber
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: CasesManager
+      value: 
+      objectReference: {fileID: 872147279}
     - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: onClickCard
       value: 
@@ -2181,28 +2392,42 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
   m_PrefabInstance: {fileID: 6220157289860822218}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 154932207}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 660ba7b828796aa47a1d3df95d3f8b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1794736473 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7773265004660865850, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+  m_PrefabInstance: {fileID: 259446259}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1824973928 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
   m_PrefabInstance: {fileID: 7773265004313173853}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1987553075 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
-  m_PrefabInstance: {fileID: 7773265004313173853}
+--- !u!1 &1829276243 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7773265004660865850, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+  m_PrefabInstance: {fileID: 1445797261}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18d04e2b8c7c2af4396e92d849dde745, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+--- !u!1 &2031798730 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7773265004660865850, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+  m_PrefabInstance: {fileID: 98102184}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2104865159 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7773265004660865850, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+  m_PrefabInstance: {fileID: 724579988}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2143010163 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7773265004660865850, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+  m_PrefabInstance: {fileID: 1142861683}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6220157289860822218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2210,6 +2435,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: LastCardClickerd
+      value: 
+      objectReference: {fileID: 154932207}
     - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: parent
       value: 
@@ -2221,7 +2450,7 @@ PrefabInstance:
     - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: caseController
       value: 
-      objectReference: {fileID: 1987553075}
+      objectReference: {fileID: 0}
     - target: {fileID: 6220157289882805941, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2279,6 +2508,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 587076189130908204, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: CasesManager
+      value: 
+      objectReference: {fileID: 872147279}
     - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: onClickCard
       value: 

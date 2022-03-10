@@ -19,6 +19,7 @@ public class OnClickCard : MonoBehaviour
             count++;
             hasCard = true;
             placedCards.placedCardsList.Add(thisCard);
+            placedCards.LastCardClickerd = gameObject;
         }
     }
 }
