@@ -297,6 +297,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: onClickCard
+      value: 
+      objectReference: {fileID: -4092452893302620348, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: placedCards
+      value: 
+      objectReference: {fileID: 1672399453}
     - target: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -399,6 +407,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: onClickCard
+      value: 
+      objectReference: {fileID: -4092452893302620348, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: placedCards
+      value: 
+      objectReference: {fileID: 1672399453}
     - target: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -501,6 +517,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: onClickCard
+      value: 
+      objectReference: {fileID: -4092452893302620348, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: placedCards
+      value: 
+      objectReference: {fileID: 1672399453}
     - target: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -603,6 +627,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: onClickCard
+      value: 
+      objectReference: {fileID: -4092452893302620348, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: placedCards
+      value: 
+      objectReference: {fileID: 1672399453}
     - target: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -788,6 +820,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: onClickCard
+      value: 
+      objectReference: {fileID: -4092452893302620348, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: placedCards
+      value: 
+      objectReference: {fileID: 1672399453}
     - target: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -890,6 +930,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: onClickCard
+      value: 
+      objectReference: {fileID: -4092452893302620348, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: placedCards
+      value: 
+      objectReference: {fileID: 1672399453}
     - target: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1043,6 +1091,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: onClickCard
+      value: 
+      objectReference: {fileID: -4092452893302620348, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: placedCards
+      value: 
+      objectReference: {fileID: 1672399453}
     - target: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1145,6 +1201,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: onClickCard
+      value: 
+      objectReference: {fileID: -4092452893302620348, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: placedCards
+      value: 
+      objectReference: {fileID: 1672399453}
     - target: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1247,6 +1311,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: onClickCard
+      value: 
+      objectReference: {fileID: -4092452893302620348, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: placedCards
+      value: 
+      objectReference: {fileID: 1672399453}
     - target: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1451,6 +1523,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: onClickCard
+      value: 
+      objectReference: {fileID: -4092452893302620348, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: placedCards
+      value: 
+      objectReference: {fileID: 1672399453}
     - target: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1553,6 +1633,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: onClickCard
+      value: 
+      objectReference: {fileID: -4092452893302620348, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: placedCards
+      value: 
+      objectReference: {fileID: 1672399453}
     - target: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1655,6 +1743,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: onClickCard
+      value: 
+      objectReference: {fileID: -4092452893302620348, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: placedCards
+      value: 
+      objectReference: {fileID: 1672399453}
     - target: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1757,6 +1853,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: onClickCard
+      value: 
+      objectReference: {fileID: -4092452893302620348, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: placedCards
+      value: 
+      objectReference: {fileID: 1672399453}
     - target: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1859,6 +1963,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: onClickCard
+      value: 
+      objectReference: {fileID: -4092452893302620348, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: placedCards
+      value: 
+      objectReference: {fileID: 1672399453}
     - target: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1961,6 +2073,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: onClickCard
+      value: 
+      objectReference: {fileID: -4092452893302620348, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: placedCards
+      value: 
+      objectReference: {fileID: 1672399453}
     - target: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2056,11 +2176,33 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
   m_PrefabInstance: {fileID: 1647041251}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1672399453 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+  m_PrefabInstance: {fileID: 6220157289860822218}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 660ba7b828796aa47a1d3df95d3f8b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1824973928 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
   m_PrefabInstance: {fileID: 7773265004313173853}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1987553075 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+  m_PrefabInstance: {fileID: 7773265004313173853}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18d04e2b8c7c2af4396e92d849dde745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6220157289860822218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2072,6 +2214,14 @@ PrefabInstance:
       propertyPath: parent
       value: 
       objectReference: {fileID: 1253713903}
+    - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: onClickCard
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: caseController
+      value: 
+      objectReference: {fileID: 1987553075}
     - target: {fileID: 6220157289882805941, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2129,6 +2279,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872147280}
     m_Modifications:
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: onClickCard
+      value: 
+      objectReference: {fileID: -4092452893302620348, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
+    - target: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+      propertyPath: placedCards
+      value: 
+      objectReference: {fileID: 1672399453}
     - target: {fileID: 7773265004660865845, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

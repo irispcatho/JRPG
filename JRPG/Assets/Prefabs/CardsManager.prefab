@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11f5a59c79573945ad6732059f92f56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placedCards: {fileID: 61903488}
   cards:
   - {fileID: 11400000, guid: 615018843ca44184cab07f00fd091316, type: 2}
   - {fileID: 11400000, guid: c368726e200f36241a57b4d1df3214d0, type: 2}
@@ -55,6 +54,8 @@ MonoBehaviour:
   parent: {fileID: 0}
   cardPrefab: {fileID: 4354206737431118379, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
   cardCount: 6
+  placedCards: {fileID: 61903488}
+  caseController: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
 --- !u!114 &61903488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,4 +68,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 660ba7b828796aa47a1d3df95d3f8b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placedCards: []
+  placedCardsList: []
