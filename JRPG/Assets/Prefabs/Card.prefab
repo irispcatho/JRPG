@@ -772,10 +772,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8417ec70ff6c2c43b79885bbb1d8c25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSelected: 0
   placedCards: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
-  thisCard: {fileID: 4354206737431118379}
-  caseController: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
+  casesManager: {fileID: 194577858009108244, guid: 225e0291a025e9b44b466a0fa8ab783e, type: 3}
 --- !u!61 &-6889448380398719942
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -19,6 +19,7 @@ public class PlayerDeck : MonoBehaviour
             go.transform.SetParent(parent.transform, false);
             go.GetComponent<CardDisplay>().card = cards[i];
             go.GetComponent<OnClickCard>().placedCards = placedCards;
+           
         }
     }
 

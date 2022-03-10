@@ -55,7 +55,6 @@ MonoBehaviour:
   cardPrefab: {fileID: 4354206737431118379, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
   cardCount: 6
   placedCards: {fileID: 61903488}
-  caseController: {fileID: 3820414629610116792, guid: ed3aa0a7b62439244b7a44ea6920b7af, type: 3}
 --- !u!114 &61903488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,3 +68,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placedCardsList: []
+  lastCardClicked: {fileID: 6220157289882805943}
