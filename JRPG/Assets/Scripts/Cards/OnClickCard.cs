@@ -5,7 +5,6 @@ using UnityEngine;
 public class OnClickCard : MonoBehaviour
 {
     public PlacedCards placedCards;
-    private int count = 0;
 
     private void OnMouseDown()
     {
