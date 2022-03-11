@@ -7,6 +7,7 @@ public class CasesManager : MonoBehaviour
 {
     public List<GameObject> CasesList;
     public PlacedCards placedCards;
+    public bool canPlay = false;
 
     public void CaseIsClicker(int casenumber)
     {
@@ -15,6 +16,14 @@ public class CasesManager : MonoBehaviour
         {
             placedCards.lastCardClicked.transform.position = position;
             placedCards.placedCardsList.Add(placedCards.lastCardClicked);
+
+            if (placedCards.placedCardsList.Count >= 6)
+            {
+                Debug.Log("le compte est bon");
+                canPlay = true;
+            }
+            else
+                canPlay = false;
         }
     }
 }
