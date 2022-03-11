@@ -5,10 +5,15 @@ using UnityEngine;
 public class OnClickCard : MonoBehaviour
 {
     public PlacedCards placedCards;
+    private int count = 0;
 
     private void OnMouseDown()
     {
-        Debug.Log(this.gameObject.name + "is selected");
-        placedCards.lastCardClicked = gameObject;
+        if (count == 0)
+        {
+            count++;
+            Debug.Log(this.gameObject.name + "is selected");
+            placedCards.lastCardClicked = gameObject;
+        }
     }
 }
