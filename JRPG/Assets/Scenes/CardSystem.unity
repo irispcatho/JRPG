@@ -491,6 +491,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 660ba7b828796aa47a1d3df95d3f8b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2137303066 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+  m_PrefabInstance: {fileID: 6220157289860822218}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c11f5a59c79573945ad6732059f92f56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &194577857680369221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -502,6 +513,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cases
       objectReference: {fileID: 0}
+    - target: {fileID: 194577858009108244, guid: 225e0291a025e9b44b466a0fa8ab783e, type: 3}
+      propertyPath: playerDeck
+      value: 
+      objectReference: {fileID: 2137303066}
     - target: {fileID: 194577858009108244, guid: 225e0291a025e9b44b466a0fa8ab783e, type: 3}
       propertyPath: placedCards
       value: 

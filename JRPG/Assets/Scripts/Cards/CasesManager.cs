@@ -7,6 +7,7 @@ public class CasesManager : MonoBehaviour
 {
     public List<GameObject> CasesList;
     public PlacedCards placedCards;
+    public PlayerDeck playerDeck;
     public bool canPlay = false;
 
     public void CaseIsClicker(int casenumber)
