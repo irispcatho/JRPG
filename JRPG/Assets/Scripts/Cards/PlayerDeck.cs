@@ -11,9 +11,6 @@ public class PlayerDeck : MonoBehaviour
 
     public PlacedCards placedCards;
 
-    public int order;
-
-
     private void Start()
     {
         for (int i = 0; i < cardCount; i++)

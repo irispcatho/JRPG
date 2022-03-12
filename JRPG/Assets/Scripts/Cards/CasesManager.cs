@@ -6,11 +6,12 @@ using UnityEngine;
 public class CasesManager : MonoBehaviour
 {
     public PlacedCards placedCards;
+    public CardDisplay cardDisplay;
     public List<GameObject> CasesList;
     public bool canPlay = false;
     public int order;
-    private GameObject visual;
-    private GameObject onCase;
+    private GameObject visualCard;
+    private GameObject visualCardOnCase;
     public void CaseIsClicker(int casenumber)
     {
         Vector2 position = CasesList[casenumber].transform.position;
@@ -19,24 +20,21 @@ public class CasesManager : MonoBehaviour
             placedCards.lastCardClicked.transform.position = position;
             placedCards.placedCardsList.Add(placedCards.lastCardClicked);
 
-            CasesList[casenumber].SetActive(false);
-
             GameObject go = placedCards.lastCardClicked;
-            visual = go.GetComponent<CardDisplay>().visual;
-            onCase = go.GetComponent<CardDisplay>().onCase;
+            visualCard = go.GetComponent<CardDisplay>().visual;
+            visualCardOnCase = go.GetComponent<CardDisplay>().onCase;
             order = go.GetComponent<CardDisplay>().card.gameOrder;
 
             placedCards.orderPlacedCardsList.Add(order);
-            int min_value = placedCards.orderPlacedCardsList.AsQueryable().Min();
-            Debug.Log(min_value);
 
-            visual.SetActive(false);
-            onCase.SetActive(true);
+            visualCard.SetActive(false);
+            visualCardOnCase.SetActive(true);
             
             if (placedCards.placedCardsList.Count >= 6)
             {
                 Debug.Log("le compte est bon");
                 canPlay = true;
+                int min_value = placedCards.orderPlacedCardsList.AsQueryable().Min();
             }
             else
                 canPlay = false;

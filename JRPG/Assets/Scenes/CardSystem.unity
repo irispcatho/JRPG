@@ -214,8 +214,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1253713904}
   - {fileID: 872147280}
+  - {fileID: 1253713904}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -414,7 +414,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 39886133}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -527,6 +527,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1058131615}
     - target: {fileID: 194577858009108244, guid: 225e0291a025e9b44b466a0fa8ab783e, type: 3}
+      propertyPath: cardDisplay
+      value: 
+      objectReference: {fileID: 4354206737431118377, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
+    - target: {fileID: 194577858009108244, guid: 225e0291a025e9b44b466a0fa8ab783e, type: 3}
       propertyPath: placedCards
       value: 
       objectReference: {fileID: 1672399453}
@@ -540,7 +544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 194577858009108245, guid: 225e0291a025e9b44b466a0fa8ab783e, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 194577858009108245, guid: 225e0291a025e9b44b466a0fa8ab783e, type: 3}
       propertyPath: m_AnchorMax.x

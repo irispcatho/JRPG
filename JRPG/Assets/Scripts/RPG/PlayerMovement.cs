@@ -23,13 +23,16 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Input
+
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        movement.Normalize();
 
-        animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("Vertical", movement.y);
+        if (movement != Vector2.zero)
+        {
+            animator.SetFloat("Horizontal", movement.x);
+            animator.SetFloat("Vertical", movement.y);
+        }
+
         animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
@@ -37,9 +40,9 @@ public class PlayerMovement : MonoBehaviour
     {
         // Movement
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-        if (movement.x > 0)
-            sr.flipX = false;
-        else
-            sr.flipX = true;
+        //if (movement.x > 0)
+        //    sr.flipX = false;
+        //else
+        //    sr.flipX = true;
     }
 }
