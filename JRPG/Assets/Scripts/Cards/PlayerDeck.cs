@@ -22,7 +22,7 @@ public class PlayerDeck : MonoBehaviour
             go.GetComponent<CardDisplay>().card = cards[i];
             go.GetComponent<OnClickCard>().placedCards = placedCards;
             order = go.GetComponent<CardDisplay>().card.gameOrder;
-            Debug.Log(order);
+            //Debug.Log(order);
         }
     }
 

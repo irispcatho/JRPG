@@ -614,10 +614,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: playerDeck
+      value: 
+      objectReference: {fileID: 2137303066}
     - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: parent
       value: 
       objectReference: {fileID: 1253713903}
+    - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: cards.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8c6456b0263649d4ea22bea3c87c555b, type: 2}
+    - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: cards.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8c6456b0263649d4ea22bea3c87c555b, type: 2}
     - target: {fileID: 6220157289882805941, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: m_RootOrder
       value: 3
