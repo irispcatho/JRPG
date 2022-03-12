@@ -26,6 +26,9 @@ public class DialogManager : MonoBehaviour
 
     public void StartDialog(Dialog dialog)
     {
+        PlayerMovement.instance.moveSpeed = 0;
+        PlayerMovement.instance.animator.enabled = false;
+
         dialogUI.SetActive(true);
 
         nameText.text = dialog.name;
@@ -40,7 +43,7 @@ public class DialogManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if(sentences.Count == 0)
+        if (sentences.Count == 0)
         {
             EndDialog();
             return;
@@ -64,5 +67,7 @@ public class DialogManager : MonoBehaviour
     void EndDialog()
     {
         dialogUI.SetActive(false);
+        PlayerMovement.instance.moveSpeed = PlayerMovement.instance.initMoveSpeed;
+        PlayerMovement.instance.animator.enabled = true;
     }
 }

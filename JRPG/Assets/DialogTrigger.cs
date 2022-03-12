@@ -9,11 +9,14 @@ public class DialogTrigger : MonoBehaviour
 
     void Update()
     {
-        if(isInRange && Input.GetKeyDown(KeyCode.E))
+        if (isInRange && Input.GetKeyDown(KeyCode.E))
         {
             TriggerDialog();
-            
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+            DialogManager.instance.DisplayNextSentence();
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

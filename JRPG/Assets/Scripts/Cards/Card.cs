@@ -7,7 +7,7 @@ using TMPro;
 public class Card : ScriptableObject
 {
     public int index;
-    
+
     public Sprite background;
 
     public int power;
@@ -17,4 +17,5 @@ public class Card : ScriptableObject
     public string biome;
     public string type;
     public string description;
+    public string onCase;
 }

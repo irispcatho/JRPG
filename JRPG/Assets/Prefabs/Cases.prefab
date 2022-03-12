@@ -64,6 +64,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4600e42ea1413b04196d8f7566345792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  placedCards: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
   CasesList:
   - {fileID: 194577857089307170}
   - {fileID: 7589525047846378601}
@@ -81,9 +82,10 @@ MonoBehaviour:
   - {fileID: 7589525047373737645}
   - {fileID: 7589525047394857484}
   - {fileID: 7589525046117469311}
-  placedCards: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
-  onClickCard: {fileID: -4092452893302620348, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
-  count: 0
+  canPlay: 0
+  order: 0
+  visualCard: {fileID: 4354206737431118379, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
+  visualOnCase: {fileID: 4354206737431118379, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
 --- !u!1001 &194577856280010399
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class PlayerDeck : MonoBehaviour
 
     public int order;
 
+
     private void Start()
     {
         for (int i = 0; i < cardCount; i++)
@@ -21,8 +22,6 @@ public class PlayerDeck : MonoBehaviour
             go.transform.SetParent(parent.transform, false);
             go.GetComponent<CardDisplay>().card = cards[i];
             go.GetComponent<OnClickCard>().placedCards = placedCards;
-            order = go.GetComponent<CardDisplay>().card.gameOrder;
-            //Debug.Log(order);
         }
     }
 

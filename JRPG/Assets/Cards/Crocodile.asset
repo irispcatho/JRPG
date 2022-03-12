@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 626e6bd677fc2604c945dd71681358f4, type: 3}
   m_Name: Crocodile
   m_EditorClassIdentifier: 
+  index: 0
   background: {fileID: 21300000, guid: c7bf45f0ef95bed4491c5809fc6bf484, type: 3}
   power: 5
   gameOrder: 6
@@ -19,3 +20,4 @@ MonoBehaviour:
   biome: "For\xEAt"
   type: Attaque
   description: okokokokokokoko
+  onCase: CROCO

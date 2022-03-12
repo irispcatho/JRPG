@@ -4,19 +4,28 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement instance;
+
     public float moveSpeed = 5f;
+    public float initMoveSpeed;
 
     public Rigidbody2D rb;
     public SpriteRenderer sr;
     public Animator animator;
     Vector2 movement;
 
+    private void Awake()
+    {
+        instance = this;
+        initMoveSpeed = moveSpeed;
+    }
+
     // Update is called once per frame
     void Update()
     {
         // Input
-        movement.x = Input.GetAxis("Horizontal");
-        movement.y = Input.GetAxis("Vertical");
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
         movement.Normalize();
 
         animator.SetFloat("Horizontal", movement.x);
