@@ -12,6 +12,7 @@ public class CasesManager : MonoBehaviour
     public int order;
     private GameObject visualCard;
     private GameObject visualCardOnCase;
+
     public void CaseIsClicker(int casenumber)
     {
         Vector2 position = CasesList[casenumber].transform.position;

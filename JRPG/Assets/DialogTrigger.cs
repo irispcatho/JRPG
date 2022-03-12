@@ -6,6 +6,7 @@ public class DialogTrigger : MonoBehaviour
 {
     public Dialog dialog;
     public bool isInRange;
+    public GameObject pnj;
 
     void Update()
     {
@@ -14,7 +15,7 @@ public class DialogTrigger : MonoBehaviour
             TriggerDialog();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (isInRange && Input.GetKeyDown(KeyCode.Space))
             DialogManager.instance.DisplayNextSentence();
 
     }
@@ -37,6 +38,6 @@ public class DialogTrigger : MonoBehaviour
 
     void TriggerDialog()
     {
-        DialogManager.instance.StartDialog(dialog);
+        DialogManager.instance.StartDialog(dialog, pnj);
     }
 }

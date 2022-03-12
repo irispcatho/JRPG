@@ -10,9 +10,17 @@ public class DialogManager : MonoBehaviour
 
     public TMP_Text nameText;
     public TMP_Text dialogText;
+
     public float letterSpeed = 0.05f;
 
+    public bool discoverMap01 = false;
+
     public GameObject dialogUI;
+
+    public GameObject[] maps;
+    public GameObject[] pnjs;
+
+    public GameObject[] wall;
 
     private Queue<string> sentences;
 
@@ -24,8 +32,13 @@ public class DialogManager : MonoBehaviour
         dialogUI.SetActive(false);
     }
 
-    public void StartDialog(Dialog dialog)
+    public void StartDialog(Dialog dialog, GameObject pnj)
     {
+        if(pnj == pnjs[0])
+        {
+            discoverMap01 = true;            
+        }
+
         PlayerMovement.instance.moveSpeed = 0;
         PlayerMovement.instance.animator.enabled = false;
 
@@ -66,6 +79,11 @@ public class DialogManager : MonoBehaviour
 
     void EndDialog()
     {
+        if(discoverMap01)
+        {
+            wall[0].SetActive(false);
+            maps[1].SetActive(true);
+        }
         dialogUI.SetActive(false);
         PlayerMovement.instance.moveSpeed = PlayerMovement.instance.initMoveSpeed;
         PlayerMovement.instance.animator.enabled = true;
