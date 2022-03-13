@@ -23,17 +23,22 @@ public class DialogManager : MonoBehaviour
     public GameObject[] wall;
 
     private Queue<string> sentences;
+    private Queue<string> names;
 
     private void Awake()
     {
         instance = this;
 
         sentences = new Queue<string>();
+        names = new Queue<string>();
+
         dialogUI.SetActive(false);
     }
 
     public void StartDialog(Dialog dialog, GameObject pnj)
     {
+        ZoomCamera.instance.zoomActive = true;
+
         if(pnj == pnjs[0])
         {
             discoverMap01 = true;            
@@ -44,9 +49,13 @@ public class DialogManager : MonoBehaviour
 
         dialogUI.SetActive(true);
 
-        nameText.text = dialog.name;
+        names.Clear();
         sentences.Clear();
 
+        foreach (string name in dialog.names)
+        {
+            names.Enqueue(name);
+        }
         foreach (string sentence in dialog.sentences)
         {
             sentences.Enqueue(sentence);
@@ -62,6 +71,9 @@ public class DialogManager : MonoBehaviour
             return;
         }
 
+        string name = names.Dequeue();
+        nameText.text = name;
+        
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
@@ -79,7 +91,9 @@ public class DialogManager : MonoBehaviour
 
     void EndDialog()
     {
-        if(discoverMap01)
+        ZoomCamera.instance.zoomActive = false;
+
+        if (discoverMap01)
         {
             wall[0].SetActive(false);
             maps[1].SetActive(true);

@@ -339,7 +339,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Le tronc
+    names:
+    - A
+    - B
+    - C
+    - D
+    - E
     sentences:
     - Ohhhhh salut.
     - Tu es tout petit.
@@ -435,7 +440,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Geralt
+    names:
+    - A
+    - B
+    - C
+    - D
     sentences:
     - Coucou !
     - Comment tu vas aujourd'hui ?
@@ -10748,7 +10757,7 @@ Camera:
   far clip plane: 0.01
   field of view: 60
   orthographic: 1
-  orthographic size: 3.53
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -58027,6 +58036,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2114034224}
   - component: {fileID: 2114034223}
+  - component: {fileID: 2114034225}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -58073,3 +58083,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2114034225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114034222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b715bab299f314e812bd53495a6660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoomActive: 0
+  cam: {fileID: 0}
+  speed: 0.02
