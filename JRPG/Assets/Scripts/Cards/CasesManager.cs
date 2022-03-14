@@ -7,7 +7,10 @@ public class CasesManager : MonoBehaviour
 {
     public PlacedCards placedCards;
     public CardDisplay cardDisplay;
+    public OnClickCard onClickCard;
+
     public List<GameObject> CasesList;
+    public Card card;
     public bool canPlay = false;
     public int order;
     private GameObject visualCard;
@@ -26,6 +29,8 @@ public class CasesManager : MonoBehaviour
             visualCardOnCase = go.GetComponent<CardDisplay>().onCase;
             order = go.GetComponent<CardDisplay>().card.gameOrder;
 
+            //order = onClickCard.order;
+
             placedCards.orderPlacedCardsList.Add(order);
 
             visualCard.SetActive(false);
@@ -35,10 +40,18 @@ public class CasesManager : MonoBehaviour
             {
                 Debug.Log("le compte est bon");
                 canPlay = true;
-                int min_value = placedCards.orderPlacedCardsList.AsQueryable().Min();
+                //int min_value = placedCards.orderPlacedCardsList.AsQueryable().Min();
             }
             else
                 canPlay = false;
+
+            //List<OnClickCard> SortedList = placedCards.placedCardsList.OrderBy(o => o.).ToList();
+            //for (int i = 0; i < SortedList.Count; i++)
+            //{
+            //    Debug.Log(SortedList[i].order);
+            //}
+
+
         }
     }
 }

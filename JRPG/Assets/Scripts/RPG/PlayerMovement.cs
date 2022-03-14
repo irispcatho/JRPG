@@ -20,7 +20,6 @@ public class PlayerMovement : MonoBehaviour
         initMoveSpeed = moveSpeed;
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -34,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         animator.SetFloat("Speed", movement.sqrMagnitude);
+        movement.Normalize();
     }
 
     private void FixedUpdate()
