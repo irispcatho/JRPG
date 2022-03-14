@@ -6,7 +6,8 @@ using UnityEngine;
 public class PlacedCards : MonoBehaviour
 {
     public List<GameObject> placedCardsList;
-    public List<int> orderPlacedCardsList; 
+    public List<GameObject> OrderList;
+
     public GameObject lastCardClicked;
 
 }

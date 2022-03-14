@@ -6,10 +6,11 @@ using UnityEngine;
 public class CasesManager : MonoBehaviour
 {
     public PlacedCards placedCards;
-    public CardDisplay cardDisplay;
+    //public CardDisplay cardDisplay;
     public OnClickCard onClickCard;
 
     public List<GameObject> CasesList;
+
     public Card card;
     public bool canPlay = false;
     public int order;
@@ -25,13 +26,9 @@ public class CasesManager : MonoBehaviour
             placedCards.placedCardsList.Add(placedCards.lastCardClicked);
 
             GameObject go = placedCards.lastCardClicked;
+            placedCards.OrderList.Add(go);
             visualCard = go.GetComponent<CardDisplay>().visual;
             visualCardOnCase = go.GetComponent<CardDisplay>().onCase;
-            order = go.GetComponent<CardDisplay>().card.gameOrder;
-
-            //order = onClickCard.order;
-
-            placedCards.orderPlacedCardsList.Add(order);
 
             visualCard.SetActive(false);
             visualCardOnCase.SetActive(true);
@@ -40,18 +37,25 @@ public class CasesManager : MonoBehaviour
             {
                 Debug.Log("le compte est bon");
                 canPlay = true;
+                OrderManagement();
                 //int min_value = placedCards.orderPlacedCardsList.AsQueryable().Min();
             }
             else
                 canPlay = false;
-
-            //List<OnClickCard> SortedList = placedCards.placedCardsList.OrderBy(o => o.).ToList();
-            //for (int i = 0; i < SortedList.Count; i++)
-            //{
-            //    Debug.Log(SortedList[i].order);
-            //}
-
-
         }
     }
+    private static int CompareCardOrder(GameObject cardone, GameObject cardtwo)
+    {
+        return (cardone.GetComponent<CardDisplay>().card.gameOrder < cardtwo.GetComponent<CardDisplay>().card.gameOrder) ? -1 : 1;
+    }
+    private void OrderManagement()
+    {
+        placedCards.OrderList.Sort(CompareCardOrder);
+        for (int i = 0; i < placedCards.OrderList.Count; i++)
+        {
+            Debug.Log($"card {placedCards.OrderList[i].name} order : {placedCards.OrderList[i].GetComponent<CardDisplay>().card.gameOrder} addded to order list");
+        }
+    }
+
 }
+

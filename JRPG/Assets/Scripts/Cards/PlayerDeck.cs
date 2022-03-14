@@ -11,7 +11,7 @@ public class PlayerDeck : MonoBehaviour
 
     public PlacedCards placedCards;
 
-    public List<GameObject> OrderList;
+    //public List<GameObject> OrderList;
 
     private void Start()
     {
@@ -21,23 +21,23 @@ public class PlayerDeck : MonoBehaviour
             go.transform.SetParent(parent.transform, false);
             go.GetComponent<CardDisplay>().card = cards[i];
             go.GetComponent<OnClickCard>().placedCards = placedCards;
-            OrderList.Add(go);
+            //OrderList.Add(go);
         }
-        OrderManagement();
+        //OrderManagement();
     }
 
-    private static int CompareCardOrder(GameObject cardone, GameObject cardtwo)
-    {
-        return (cardone.GetComponent<CardDisplay>().card.gameOrder < cardtwo.GetComponent<CardDisplay>().card.gameOrder) ? -1 : 1;
-    }
-    private void OrderManagement()
-    {
-        OrderList.Sort(CompareCardOrder);
-        for (int i = 0; i < OrderList.Count; i++)
-        {
-            Debug.Log($"card {OrderList[i].name} order : {OrderList[i].GetComponent<CardDisplay>().card.gameOrder} addded to order list");
-        }
-    }
+    //private static int CompareCardOrder(GameObject cardone, GameObject cardtwo)
+    //{
+    //    return (cardone.GetComponent<CardDisplay>().card.gameOrder < cardtwo.GetComponent<CardDisplay>().card.gameOrder) ? -1 : 1;
+    //}
+    //private void OrderManagement()
+    //{
+    //    OrderList.Sort(CompareCardOrder);
+    //    for (int i = 0; i < OrderList.Count; i++)
+    //    {
+    //        Debug.Log($"card {OrderList[i].name} order : {OrderList[i].GetComponent<CardDisplay>().card.gameOrder} addded to order list");
+    //    }
+    //}
 
     //private Card GetRandomCard()
     //{
