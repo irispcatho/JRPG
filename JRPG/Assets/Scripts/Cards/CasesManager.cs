@@ -10,10 +10,8 @@ public class CasesManager : MonoBehaviour
     public OnClickCard onClickCard;
 
     public List<GameObject> CasesList;
-
-    public Card card;
     public bool canPlay = false;
-    public int order;
+    //public int order;
     private GameObject visualCard;
     private GameObject visualCardOnCase;
 
@@ -26,9 +24,9 @@ public class CasesManager : MonoBehaviour
             placedCards.placedCardsList.Add(placedCards.lastCardClicked);
 
             GameObject go = placedCards.lastCardClicked;
-            placedCards.OrderList.Add(go);
             visualCard = go.GetComponent<CardDisplay>().visual;
             visualCardOnCase = go.GetComponent<CardDisplay>().onCase;
+            placedCards.OrderList.Add(go);
 
             visualCard.SetActive(false);
             visualCardOnCase.SetActive(true);
@@ -38,7 +36,7 @@ public class CasesManager : MonoBehaviour
                 Debug.Log("le compte est bon");
                 canPlay = true;
                 OrderManagement();
-                //int min_value = placedCards.orderPlacedCardsList.AsQueryable().Min();
+                Debug.Log(placedCards.OrderList[0]);
             }
             else
                 canPlay = false;
@@ -51,10 +49,10 @@ public class CasesManager : MonoBehaviour
     private void OrderManagement()
     {
         placedCards.OrderList.Sort(CompareCardOrder);
-        for (int i = 0; i < placedCards.OrderList.Count; i++)
-        {
-            Debug.Log($"card {placedCards.OrderList[i].name} order : {placedCards.OrderList[i].GetComponent<CardDisplay>().card.gameOrder} addded to order list");
-        }
+        //for (int i = 0; i < placedCards.OrderList.Count; i++)
+        //{
+        //    Debug.Log($"card {placedCards.OrderList[i].name} order : {placedCards.OrderList[i].GetComponent<CardDisplay>().card.gameOrder} addded to order list");
+        //}
     }
 
 }
