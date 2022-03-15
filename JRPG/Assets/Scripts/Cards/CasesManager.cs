@@ -43,11 +43,51 @@ public class CasesManager : MonoBehaviour
 
         if (!playerCanPlay)
         {
-            TakeACard(casenumber);
+            //TakeACard(casenumber);
+            enviedecrever();
             playerCanPlay = true;
         }
     }
-    public void TakeACard(int casenumber)
+
+    public void enviedecrever()
+    {
+        int randomCardIndex = Random.Range(0, playerDeck.cardsIA.Count);
+        int randomCellIndex = Random.Range(0, CasesList.Count);
+        GameObject randomCard = playerDeck.parentIADeck.transform.GetChild(randomCardIndex).gameObject;
+
+        // fait une boucle pour verifier si la carte random est contenu dans la cellule random.
+        // faire gaffe pck on peut facilement faire freeze unity et tomber sur un cas ou la liste
+        // est trop petite pour qu'on puisse trouver un nombre random qui remplisse toute les conditions.
+        while (placedCards.placedCardsList.Contains(randomCard) || CasesListUsed.Contains(CasesList[randomCellIndex]))
+        {
+            randomCardIndex = Random.Range(0, playerDeck.cardsIA.Count);
+            randomCellIndex = Random.Range(0, CasesList.Count);
+            randomCard = playerDeck.parentIADeck.transform.GetChild(randomCardIndex).gameObject;
+        }
+
+        TakeCard(randomCard, CasesList[randomCellIndex]);
+    }
+
+    void TakeCard(GameObject card, GameObject randomCell)
+    {
+        placedCards.placedCardsList.Add(card);
+        Debug.Log(card);
+        Vector2 positionC = randomCell.transform.position;
+
+        card.transform.position = positionC;
+        CardDisplay display = card.GetComponent<CardDisplay>();
+        visualCard = display.visual;
+        visualCardOnCase = display.onCase;
+
+        visualCard.SetActive(false);
+        visualCardOnCase.SetActive(true);
+
+        card.GetComponent<BoxCollider2D>().size = new Vector2(101.1319f, 98.74604f);
+        Debug.Log("Carte IA placée");
+        Debug.Log("Alors mattéo il fait moins le malin la j'ai pas raison ? ;) ");
+    }
+
+    /*public void TakeACard(int casenumber)
     {
         int rnd = Random.Range(0, playerDeck.cardsIA.Count);
         GameObject card = playerDeck.parentIADeck.transform.GetChild(rnd).gameObject;
@@ -74,7 +114,7 @@ public class CasesManager : MonoBehaviour
         }
         else
             TakeACard(casenumber);
-    }
+    }*/
 
     private static int CompareCardOrder(GameObject cardone, GameObject cardtwo)
     {
