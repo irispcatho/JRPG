@@ -10,5 +10,6 @@ public class CaseSlot : MonoBehaviour
     private void OnMouseDown()
     {
         CasesManager.GetComponent<CasesManager>().CaseIsClicker(casenumber);
+        //CasesManager.GetComponent<CasesManager>().TakeACard(casenumber);
     }
 }

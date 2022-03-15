@@ -31,7 +31,7 @@ public class CasesManager : MonoBehaviour
             visualCardOnCase.SetActive(true);
 
             if (placedCards.placedCardsList.Count >= 12)
-            { 
+            {
                 for (int i = 0; i < 12; i++)
                 {
                     placedCards.OrderList.Add(go);
@@ -41,13 +41,39 @@ public class CasesManager : MonoBehaviour
             playerCanPlay = false;
         }
 
-        if(!playerCanPlay)
+        if (!playerCanPlay)
         {
-            Debug.Log("IA turn");
-            int rnd = Random.Range(0, playerDeck.cardsIA.Count);
-            GameObject card = playerDeck.parentIADeck.transform.GetChild(rnd).gameObject;
-            Debug.Log(card);
+            TakeACard(casenumber);
+            playerCanPlay = true;
         }
+    }
+    public void TakeACard(int casenumber)
+    {
+        int rnd = Random.Range(0, playerDeck.cardsIA.Count);
+        GameObject card = playerDeck.parentIADeck.transform.GetChild(rnd).gameObject;
+        if (!placedCards.placedCardsList.Contains(card))
+        {
+            placedCards.placedCardsList.Add(card);
+            Debug.Log(card);
+            int rndC = Random.Range(0, CasesList.Count);
+            Vector2 positionC = CasesList[rndC].transform.position;
+            if(!CasesListUsed.Contains(CasesList[rndC]))
+            {
+                card.transform.position = positionC;
+                visualCard = card.GetComponent<CardDisplay>().visual;
+                visualCardOnCase = card.GetComponent<CardDisplay>().onCase;
+
+                visualCard.SetActive(false);
+                visualCardOnCase.SetActive(true);
+
+                card.GetComponent<BoxCollider2D>().size = new Vector2(101.1319f, 98.74604f);
+                Debug.Log("Carte IA placée");
+            }
+            else
+                TakeACard(casenumber);
+        }
+        else
+            TakeACard(casenumber);
     }
 
     private static int CompareCardOrder(GameObject cardone, GameObject cardtwo)
@@ -57,10 +83,6 @@ public class CasesManager : MonoBehaviour
     private void OrderManagement()
     {
         placedCards.OrderList.Sort(CompareCardOrder);
-        //for (int i = 0; i < placedCards.OrderList.Count; i++)
-        //{
-        //    Debug.Log($"card {placedCards.OrderList[i].name} order : {placedCards.OrderList[i].GetComponent<CardDisplay>().card.gameOrder} addded to order list");
-        //}
     }
 }
 
