@@ -30,22 +30,16 @@ public class CasesManager : MonoBehaviour
             visualCard.SetActive(false);
             visualCardOnCase.SetActive(true);
 
-            if (placedCards.placedCardsList.Count >= 12)
-            {
-                for (int i = 0; i < 12; i++)
-                {
-                    placedCards.OrderList.Add(go);
-                }
-                OrderManagement();
-            }
+            placedCards.OrderList.Add(go);
+            OrderManagement();
+
             playerCanPlay = false;
         }
 
         if (!playerCanPlay)
         {
-            //TakeACard(casenumber);
             StartCoroutine(WaitToPlay());
-            
+
         }
     }
 
@@ -85,6 +79,9 @@ public class CasesManager : MonoBehaviour
 
         card.GetComponent<BoxCollider2D>().size = new Vector2(101.1319f, 98.74604f);
         Debug.Log("Carte IA placée");
+
+        placedCards.OrderList.Add(card);
+        OrderManagement();
         playerCanPlay = true;
     }
 
@@ -101,6 +98,7 @@ public class CasesManager : MonoBehaviour
     private void OrderManagement()
     {
         placedCards.OrderList.Sort(CompareCardOrder);
+        Debug.Log("Cartes dans l'ordre");
     }
 }
 
