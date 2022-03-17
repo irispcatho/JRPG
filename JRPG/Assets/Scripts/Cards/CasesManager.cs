@@ -25,7 +25,7 @@ public class CasesManager : MonoBehaviour
             GameObject go = placedCards.lastCardClicked;
             visualCard = go.GetComponent<CardDisplay>().visual;
             visualCardOnCase = go.GetComponent<CardDisplay>().onCase;
-            go.GetComponent<BoxCollider2D>().size = new Vector2(101.1319f, 98.74604f)
+            go.GetComponent<BoxCollider2D>().size = new Vector2(101.1319f, 98.74604f);
 
             visualCard.SetActive(false);
             visualCardOnCase.SetActive(true);
