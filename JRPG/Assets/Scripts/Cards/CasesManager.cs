@@ -25,7 +25,7 @@ public class CasesManager : MonoBehaviour
             GameObject go = placedCards.lastCardClicked;
             visualCard = go.GetComponent<CardDisplay>().visual;
             visualCardOnCase = go.GetComponent<CardDisplay>().onCase;
-            go.GetComponent<BoxCollider2D>().size = new Vector2(101.1319f, 98.74604f);
+            go.GetComponent<BoxCollider2D>().size = new Vector2(101.1319f, 98.74604f)
 
             visualCard.SetActive(false);
             visualCardOnCase.SetActive(true);
@@ -36,10 +36,10 @@ public class CasesManager : MonoBehaviour
             playerCanPlay = false;
         }
 
+
         if (!playerCanPlay)
         {
             StartCoroutine(WaitToPlay());
-
         }
     }
 
@@ -49,9 +49,6 @@ public class CasesManager : MonoBehaviour
         int randomCellIndex = Random.Range(0, CasesList.Count);
         GameObject randomCard = playerDeck.parentIADeck.transform.GetChild(randomCardIndex).gameObject;
 
-        // fait une boucle pour verifier si la carte random est contenu dans la cellule random.
-        // faire gaffe pck on peut facilement faire freeze unity et tomber sur un cas ou la liste
-        // est trop petite pour qu'on puisse trouver un nombre random qui remplisse toute les conditions.
         while (placedCards.placedCardsList.Contains(randomCard) || CasesListUsed.Contains(CasesList[randomCellIndex]))
         {
             randomCardIndex = Random.Range(0, playerDeck.cardsIA.Count);
@@ -82,13 +79,13 @@ public class CasesManager : MonoBehaviour
 
         placedCards.OrderList.Add(card);
         OrderManagement();
-        playerCanPlay = true;
     }
 
     IEnumerator WaitToPlay()
     {
         yield return new WaitForSeconds(1);
         RandomC();
+        playerCanPlay = true;
     }
 
     private static int CompareCardOrder(GameObject cardone, GameObject cardtwo)

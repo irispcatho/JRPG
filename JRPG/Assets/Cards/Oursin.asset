@@ -10,14 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 626e6bd677fc2604c945dd71681358f4, type: 3}
-  m_Name: Chat
+  m_Name: Oursin
   m_EditorClassIdentifier: 
-  index: 1
   background: {fileID: 21300000, guid: 5915cdc174101e540b3349e21ee2cd74, type: 3}
-  power: 3
-  gameOrder: 1
-  name: Chat
-  biome: Ciel
-  type: "D\xE9fense"
-  description: lalalalallalazlal
-  onCase: CHAT
+  power: 2
+  gameOrder: 5
+  name: Oursin
+  type: Attaque
+  description: 
+  onCase: OURSIN

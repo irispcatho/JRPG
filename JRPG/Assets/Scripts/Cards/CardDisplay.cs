@@ -17,7 +17,7 @@ public class CardDisplay : MonoBehaviour
     public GameObject onCase;
 
     public TMP_Text nameText;
-    public TMP_Text biomeText;
+    //public TMP_Text biomeText;
     public TMP_Text typeText;
     public TMP_Text descriptionText;
     public TMP_Text onCaseText;
@@ -28,7 +28,7 @@ public class CardDisplay : MonoBehaviour
         powerText.text = card.power.ToString();
         gameOrderText.text = card.gameOrder.ToString();
         nameText.text = card.name;
-        biomeText.text = card.biome;
+        //biomeText.text = card.biome;
         typeText.text = card.type;
         descriptionText.text = card.description;
         onCaseText.text = card.onCase;

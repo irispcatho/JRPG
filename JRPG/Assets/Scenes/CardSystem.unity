@@ -1174,27 +1174,27 @@ PrefabInstance:
     - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: cardsIA.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 240d802ffb3c04e4c9b6be3105826e49, type: 2}
+      objectReference: {fileID: 11400000, guid: 1936fe9968878374ca517bd56ec504dd, type: 2}
     - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: cardsIA.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 240d802ffb3c04e4c9b6be3105826e49, type: 2}
+      objectReference: {fileID: 11400000, guid: aa65f2dfe75050a458d496f2fb11aef3, type: 2}
     - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: cardsIA.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: c368726e200f36241a57b4d1df3214d0, type: 2}
+      objectReference: {fileID: 11400000, guid: a2f0abd31b560ee4388eab081362fd83, type: 2}
     - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: cardsIA.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: c368726e200f36241a57b4d1df3214d0, type: 2}
+      objectReference: {fileID: 11400000, guid: dc6ca7e346f4a6644aeaf8f0d790c35d, type: 2}
     - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: cardsIA.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: 615018843ca44184cab07f00fd091316, type: 2}
+      objectReference: {fileID: 11400000, guid: 3675510cc133e1846926aba4b1419451, type: 2}
     - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: cardsIA.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: 615018843ca44184cab07f00fd091316, type: 2}
+      objectReference: {fileID: 11400000, guid: a13918d5f7c57cf4bb2eb483b5e5b74b, type: 2}
     - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: cardsPlayer.Array.size
       value: 6
@@ -1202,27 +1202,27 @@ PrefabInstance:
     - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: cardsPlayer.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 8c6456b0263649d4ea22bea3c87c555b, type: 2}
+      objectReference: {fileID: 11400000, guid: 85c547224b82f46418e9b3baa2f9a587, type: 2}
     - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: cardsPlayer.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 8c6456b0263649d4ea22bea3c87c555b, type: 2}
+      objectReference: {fileID: 11400000, guid: 50211c8abab0abc4a84c3af694a00242, type: 2}
     - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: cardsPlayer.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 615018843ca44184cab07f00fd091316, type: 2}
+      objectReference: {fileID: 11400000, guid: 4e30a8e0aa810b248bdae38c47205e03, type: 2}
     - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: cardsPlayer.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 615018843ca44184cab07f00fd091316, type: 2}
+      objectReference: {fileID: 11400000, guid: 060304a213acd8c4884bb99fe8f94461, type: 2}
     - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: cardsPlayer.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: c368726e200f36241a57b4d1df3214d0, type: 2}
+      objectReference: {fileID: 11400000, guid: a5b00aca7a2b1694f99ca28fd7533509, type: 2}
     - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: cardsPlayer.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: c368726e200f36241a57b4d1df3214d0, type: 2}
+      objectReference: {fileID: 11400000, guid: 6b66d12eff988ae42a55d99250b67eaa, type: 2}
     - target: {fileID: 6220157289882805941, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: m_RootOrder
       value: 3

@@ -761,14 +761,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02cc755da8f48034db211656b94cbd68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 615018843ca44184cab07f00fd091316, type: 2}
+  card: {fileID: 0}
   backgroundImage: {fileID: 2682996996213322048}
   powerText: {fileID: 2618494214825945480}
   gameOrderText: {fileID: 7119930637414833020}
   visual: {fileID: 4986991127579159993}
   onCase: {fileID: 6388496382732105740}
   nameText: {fileID: 6197786697813113800}
-  biomeText: {fileID: 7767551672459761167}
   typeText: {fileID: 2266525165547231778}
   descriptionText: {fileID: 1345831659869319029}
   onCaseText: {fileID: 6113444981976645204}
@@ -1158,7 +1157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.9191474, b: 0.5707547, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
