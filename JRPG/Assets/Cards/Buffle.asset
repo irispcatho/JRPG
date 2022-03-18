@@ -16,6 +16,8 @@ MonoBehaviour:
   power: 2
   gameOrder: 8
   name: Buffle
+  biome: Moutain
   type: Soutien
-  description: 
+  description: MeuhMeuhMeuh
   onCase: BUFFLE
+  isEnemy: 0

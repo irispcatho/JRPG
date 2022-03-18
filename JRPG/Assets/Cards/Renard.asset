@@ -16,6 +16,8 @@ MonoBehaviour:
   power: 5
   gameOrder: 9
   name: Renard
+  biome: Montagne
   type: Attaque
-  description: 
+  description: HiHiHiHiHi
   onCase: RENARD
+  isEnemy: 0

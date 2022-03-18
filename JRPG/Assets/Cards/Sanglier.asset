@@ -16,6 +16,8 @@ MonoBehaviour:
   power: 2
   gameOrder: 1
   name: Sanglier
+  biome: "For\xEAt"
   type: Attaque
-  description: 
+  description: '*RespireFort*'
   onCase: SANGLIER
+  isEnemy: 0

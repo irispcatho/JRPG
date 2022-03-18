@@ -16,6 +16,8 @@ MonoBehaviour:
   power: 2
   gameOrder: 2
   name: Grenouille
+  biome: Eau
   type: Attaque
-  description: 
+  description: CroaCroaCroa
   onCase: GRENOUILLE
+  isEnemy: 0

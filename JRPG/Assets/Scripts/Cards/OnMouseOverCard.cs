@@ -1,41 +1,42 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
 
 public class OnMouseOverCard : MonoBehaviour
 {
+    public CardDisplay cardDisplay;
+    public bool isPlaced = false;
     private int countUp = 0;
     private int countDown = 0;
     Vector2 initalPos;
     public GameObject description;
-    public TMP_Text descriptionText;
+    public TMP_Text powerTxt;
+    public TMP_Text orderTxt;
+    public TMP_Text biomeTxt;
 
     private void Start()
     {
-        description = GetComponent<OnMouseOverCard>().description;
-        descriptionText = GetComponent<OnMouseOverCard>().descriptionText;
+        description = GetComponent<CardDisplay>().onMouseOver;
+        powerTxt.text = "Puissance : " + cardDisplay.powerText.text;
+        orderTxt.text = "Ordre de jeu : " + cardDisplay.gameOrderText.text;
+        biomeTxt.text = "Type : " + cardDisplay.biomeTxt.text;
         description.SetActive(false);
     }
     private void OnMouseOver()
     {
-        if (countUp == 0)
+        if (!isPlaced && countUp == 0)
         {
             initalPos = gameObject.transform.position;
             gameObject.transform.DOMove(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 1), 0.5f, false);
             countUp++;
-
             description.SetActive(true);
-            description.transform.position = new Vector2(gameObject.transform.position.x + 1, gameObject.transform.position.y + 4);
-            descriptionText.text = GetComponent<CardDisplay>().card.description;
         }
     }
 
     private void OnMouseExit()
     {
-        if(countDown == 0)
+        if(!isPlaced && countDown == 0)
         {
             gameObject.transform.DOMove(new Vector2(initalPos.x, initalPos.y), 0.5f, false);
             countDown++;

@@ -16,6 +16,8 @@ MonoBehaviour:
   power: 2
   gameOrder: 1
   name: Abeille
+  biome: Montagne
   type: Attaque
-  description: 
+  description: Bizbizbizbiz
   onCase: ABEILLE
+  isEnemy: 0

@@ -16,6 +16,8 @@ MonoBehaviour:
   power: 3
   gameOrder: 7
   name: "Cam\xE9l\xE9on"
+  biome: "For\xEAt"
   type: Attaque
-  description: 
+  description: ???????
   onCase: CAMELEON
+  isEnemy: 0

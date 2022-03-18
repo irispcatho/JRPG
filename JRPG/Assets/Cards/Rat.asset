@@ -16,6 +16,8 @@ MonoBehaviour:
   power: 3
   gameOrder: 6
   name: Rat
+  biome: Moutain
   type: Attaque
-  description: 
+  description: ??????????
   onCase: RAT
+  isEnemy: 0

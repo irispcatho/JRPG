@@ -19,6 +19,7 @@ public class CasesManager : MonoBehaviour
         Vector2 position = CasesList[casenumber].transform.position;
         if (!placedCards.placedCardsList.Contains(placedCards.lastCardClicked) && playerCanPlay)
         {
+
             CasesListUsed.Add(CasesList[casenumber]);
             placedCards.lastCardClicked.transform.position = position;
             placedCards.placedCardsList.Add(placedCards.lastCardClicked);
@@ -26,6 +27,7 @@ public class CasesManager : MonoBehaviour
             visualCard = go.GetComponent<CardDisplay>().visual;
             visualCardOnCase = go.GetComponent<CardDisplay>().onCase;
             go.GetComponent<BoxCollider2D>().size = new Vector2(101.1319f, 98.74604f);
+            go.GetComponent<OnMouseOverCard>().isPlaced = true;
 
             visualCard.SetActive(false);
             visualCardOnCase.SetActive(true);

@@ -16,6 +16,8 @@ MonoBehaviour:
   power: 3
   gameOrder: 8
   name: Hippocampe
+  biome: Eau
   type: Soutien
-  description: 
+  description: ??????
   onCase: HIPPOCAMPE
+  isEnemy: 0

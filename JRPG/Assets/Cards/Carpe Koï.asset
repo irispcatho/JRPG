@@ -16,6 +16,8 @@ MonoBehaviour:
   power: 4
   gameOrder: 6
   name: "Carpe Ko\xEF"
+  biome: Eau
   type: Attaque
-  description: 
+  description: GlouGlouGlou
   onCase: "CARPE KO\xCF"
+  isEnemy: 0

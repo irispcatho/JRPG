@@ -16,6 +16,8 @@ MonoBehaviour:
   power: 2
   gameOrder: 8
   name: Dragon
+  biome: Eau
   type: Attaque
-  description: 
+  description: '*CracheDuFeu*'
   onCase: DRAGON
+  isEnemy: 0

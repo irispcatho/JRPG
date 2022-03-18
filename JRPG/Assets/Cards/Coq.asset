@@ -16,6 +16,8 @@ MonoBehaviour:
   power: 2
   gameOrder: 1
   name: Coq
+  biome: "For\xEAt"
   type: Soutien
-  description: 
+  description: Cocorico
   onCase: COQ
+  isEnemy: 0

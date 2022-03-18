@@ -16,6 +16,8 @@ MonoBehaviour:
   power: 5
   gameOrder: 9
   name: Ours
+  biome: "For\xEAt"
   type: Attaque
-  description: 
+  description: Roarrrrrrrrr
   onCase: OURS
+  isEnemy: 0

@@ -16,6 +16,8 @@ MonoBehaviour:
   power: 3
   gameOrder: 6
   name: Panda
+  biome: "For\xEAt"
   type: Attaque
-  description: 
+  description: ???????
   onCase: PANDA
+  isEnemy: 0

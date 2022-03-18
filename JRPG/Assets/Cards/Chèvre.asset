@@ -16,6 +16,8 @@ MonoBehaviour:
   power: 3
   gameOrder: 4
   name: "Ch\xE8vre"
+  biome: Montagne
   type: Attaque
-  description: 
+  description: BehBehBeh
   onCase: CHEVRE
+  isEnemy: 0

@@ -17,10 +17,12 @@ public class CardDisplay : MonoBehaviour
     public GameObject onCase;
 
     public TMP_Text nameText;
-    //public TMP_Text biomeText;
+    public TMP_Text biomeTxt;
     public TMP_Text typeText;
     public TMP_Text descriptionText;
     public TMP_Text onCaseText;
+
+    public GameObject onMouseOver;
 
     void Start()
     {

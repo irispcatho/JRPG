@@ -12,7 +12,7 @@ public class Card : ScriptableObject
     public int gameOrder;
 
     public new string name;
-    //public string biome;
+    public string biome;
     public string type;
     public string description;
     public string onCase;

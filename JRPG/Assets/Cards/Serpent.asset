@@ -16,6 +16,8 @@ MonoBehaviour:
   power: 5
   gameOrder: 10
   name: Serpent
+  biome: Eau
   type: Attaque
-  description: 
+  description: Sssssssssssss
   onCase: SERPENT
+  isEnemy: 0

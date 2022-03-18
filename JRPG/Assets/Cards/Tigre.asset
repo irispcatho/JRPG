@@ -16,6 +16,8 @@ MonoBehaviour:
   power: 4
   gameOrder: 4
   name: Tigre
+  biome: Montagne
   type: Attaque
-  description: 
+  description: Roarrrrrrrrr
   onCase: TIGRE
+  isEnemy: 0
