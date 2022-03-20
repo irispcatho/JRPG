@@ -14,27 +14,28 @@ public class CasesManager : MonoBehaviour
     private GameObject visualCard;
     private GameObject visualCardOnCase;
 
+    public float[,] cardsPlacements;
+
     public void CaseIsClicker(int casenumber)
     {
         Vector2 position = CasesList[casenumber].transform.position;
         if (!placedCards.placedCardsList.Contains(placedCards.lastCardClicked) && playerCanPlay)
         {
-
             CasesListUsed.Add(CasesList[casenumber]);
-            placedCards.lastCardClicked.transform.position = position;
             placedCards.placedCardsList.Add(placedCards.lastCardClicked);
-            GameObject go = placedCards.lastCardClicked;
-            visualCard = go.GetComponent<CardDisplay>().visual;
-            visualCardOnCase = go.GetComponent<CardDisplay>().onCase;
-            go.GetComponent<BoxCollider2D>().size = new Vector2(101.1319f, 98.74604f);
-            go.GetComponent<OnMouseOverCard>().isPlaced = true;
+            GameObject card = placedCards.lastCardClicked;
+            card.GetComponent<OnMouseOverCard>().isPlaced = true;
+            placedCards.lastCardClicked.transform.position = position;
+            visualCard = card.GetComponent<CardDisplay>().visual;
+            visualCardOnCase = card.GetComponent<CardDisplay>().onCase;
+            card.GetComponent<BoxCollider2D>().size = new Vector2(101.1319f, 98.74604f);
 
             visualCard.SetActive(false);
             visualCardOnCase.SetActive(true);
 
-            placedCards.OrderList.Add(go);
+            placedCards.OrderList.Add(card);
             OrderManagement();
-
+            DetectCards(card.transform.position.x, card.transform.position.y);
             playerCanPlay = false;
         }
 
@@ -64,7 +65,6 @@ public class CasesManager : MonoBehaviour
     void TakeCard(GameObject card, GameObject randomCell, int randomCellIndex)
     {
         placedCards.placedCardsList.Add(card);
-        Debug.Log(card);
         Vector2 positionC = randomCell.transform.position;
         CasesListUsed.Add(CasesList[randomCellIndex]);
 
@@ -77,10 +77,10 @@ public class CasesManager : MonoBehaviour
         visualCardOnCase.SetActive(true);
 
         card.GetComponent<BoxCollider2D>().size = new Vector2(101.1319f, 98.74604f);
-        Debug.Log("Carte IA placée");
 
         placedCards.OrderList.Add(card);
         OrderManagement();
+        DetectCards(card.transform.position.x, card.transform.position.y);
     }
 
     IEnumerator WaitToPlay()
@@ -97,7 +97,15 @@ public class CasesManager : MonoBehaviour
     private void OrderManagement()
     {
         placedCards.OrderList.Sort(CompareCardOrder);
-        Debug.Log("Cartes dans l'ordre");
+    }
+
+    public void DetectCards(float x, float y)
+    {
+        for (int i = 0; i < placedCards.OrderList.Count - 1; i++)
+        {
+            cardsPlacements = new float[,] { { x, y } };
+            Debug.Log(cardsPlacements[0, 0]);
+        }
     }
 }
 

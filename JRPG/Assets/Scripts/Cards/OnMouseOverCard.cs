@@ -20,7 +20,7 @@ public class OnMouseOverCard : MonoBehaviour
         description = GetComponent<CardDisplay>().onMouseOver;
         powerTxt.text = "Puissance : " + cardDisplay.powerText.text;
         orderTxt.text = "Ordre de jeu : " + cardDisplay.gameOrderText.text;
-        biomeTxt.text = "Type : " + cardDisplay.biomeTxt.text;
+        //biomeTxt.text = "Type : " + cardDisplay.biomeText.text;
         description.SetActive(false);
     }
     private void OnMouseOver()

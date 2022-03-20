@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 626e6bd677fc2604c945dd71681358f4, type: 3}
   m_Name: Sanglier
   m_EditorClassIdentifier: 
-  background: {fileID: 21300000, guid: 5915cdc174101e540b3349e21ee2cd74, type: 3}
+  background: {fileID: 21300000, guid: 7d96db067c005744d8b545bb4bd93b98, type: 3}
+  animal: {fileID: 21300000, guid: 12d2e6d11cf1ee1409e9d9391e1b40d1, type: 3}
+  biome: {fileID: 21300000, guid: 2fdc85098f31be3438d7fe836aff0f74, type: 3}
+  type: {fileID: 21300000, guid: 9f07995e308b70d498af163d8773fbe1, type: 3}
   power: 2
   gameOrder: 1
-  name: Sanglier
-  biome: "For\xEAt"
-  type: Attaque
+  animalTxt: SANGLIER
   description: '*RespireFort*'
-  onCase: SANGLIER
-  isEnemy: 0

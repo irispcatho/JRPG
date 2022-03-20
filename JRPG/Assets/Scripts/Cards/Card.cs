@@ -7,15 +7,13 @@ using TMPro;
 public class Card : ScriptableObject
 {
     public Sprite background;
+    public Sprite animal;
+    public Sprite biome;
+    public Sprite type;
 
     public int power;
     public int gameOrder;
 
-    public new string name;
-    public string biome;
-    public string type;
+    public string animalTxt;
     public string description;
-    public string onCase;
-
-    public bool isEnemy;
 }
