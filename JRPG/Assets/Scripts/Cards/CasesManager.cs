@@ -13,6 +13,7 @@ public class CasesManager : MonoBehaviour
     public bool playerCanPlay = true;
     private GameObject visualCard;
     private GameObject visualCardOnCase;
+    private GameObject visualCardOnCaseIA;
 
     public float[,] cardsPlacements;
 
@@ -38,7 +39,6 @@ public class CasesManager : MonoBehaviour
             DetectCards(card.transform.position.x, card.transform.position.y);
             playerCanPlay = false;
         }
-
 
         if (!playerCanPlay)
         {
@@ -68,10 +68,16 @@ public class CasesManager : MonoBehaviour
         Vector2 positionC = randomCell.transform.position;
         CasesListUsed.Add(CasesList[randomCellIndex]);
 
+        visualCardOnCaseIA = card.GetComponent<CardDisplay>().cardIA;
+        visualCardOnCaseIA.SetActive(false);
+
+        SpriteRenderer AnimalG = card.GetComponent<CardDisplay>().animalG;
+        AnimalG.enabled = false;
+
         card.transform.position = positionC;
         CardDisplay display = card.GetComponent<CardDisplay>();
         visualCard = display.visual;
-        visualCardOnCase = display.onCase;
+        visualCardOnCase = display.onCaseIA;
 
         visualCard.SetActive(false);
         visualCardOnCase.SetActive(true);
@@ -80,6 +86,7 @@ public class CasesManager : MonoBehaviour
 
         placedCards.OrderList.Add(card);
         OrderManagement();
+
         DetectCards(card.transform.position.x, card.transform.position.y);
     }
 

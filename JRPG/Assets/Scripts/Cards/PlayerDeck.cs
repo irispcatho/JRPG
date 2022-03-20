@@ -9,6 +9,7 @@ public class PlayerDeck : MonoBehaviour
     public GameObject parentPlayerDeck;
     public GameObject parentIADeck;
     public GameObject cardPrefab;
+    //public int initialPower;
 
     public PlacedCards placedCards;
 
@@ -33,6 +34,10 @@ public class PlayerDeck : MonoBehaviour
             go.GetComponent<OnClickCard>().placedCards = placedCards;
             go.GetComponent<BoxCollider2D>().enabled = false;
             go.GetComponent<CardDisplay>().isEnemy = true;
+            go.GetComponent<CardDisplay>().visual.SetActive(false);
+            go.GetComponent<CardDisplay>().cardIA.SetActive(true);
+            //initialPower = go.GetComponent<CardDisplay>().card.power;
+            go.GetComponent<CardDisplay>().card.power += 2;
         }
     }
 

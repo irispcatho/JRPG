@@ -7,7 +7,8 @@ using TMPro;
 public class Card : ScriptableObject
 {
     public Sprite background;
-    public Sprite animal;
+    public Sprite animalG;
+    public Sprite animalR;
     public Sprite biome;
     public Sprite type;
 
