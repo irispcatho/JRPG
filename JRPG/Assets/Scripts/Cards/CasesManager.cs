@@ -15,7 +15,7 @@ public class CasesManager : MonoBehaviour
     private GameObject visualCardOnCase;
     private GameObject visualCardOnCaseIA;
 
-    public float[,] cardsPlacements;
+    public float[,] casesPlacements;
 
     public void CaseIsClicker(int casenumber)
     {
@@ -26,6 +26,7 @@ public class CasesManager : MonoBehaviour
             placedCards.placedCardsList.Add(placedCards.lastCardClicked);
             GameObject card = placedCards.lastCardClicked;
             card.GetComponent<OnMouseOverCard>().isPlaced = true;
+
             placedCards.lastCardClicked.transform.position = position;
             visualCard = card.GetComponent<CardDisplay>().visual;
             visualCardOnCase = card.GetComponent<CardDisplay>().onCase;
@@ -87,7 +88,7 @@ public class CasesManager : MonoBehaviour
         placedCards.OrderList.Add(card);
         OrderManagement();
 
-        DetectCards(card.transform.position.x, card.transform.position.y);
+        DetectCards(randomCell.transform.position.x, randomCell.transform.position.y);
     }
 
     IEnumerator WaitToPlay()
@@ -108,10 +109,10 @@ public class CasesManager : MonoBehaviour
 
     public void DetectCards(float x, float y)
     {
-        for (int i = 0; i < placedCards.OrderList.Count - 1; i++)
+        for (int i = 0; i < CasesListUsed.Count - 1; i++)
         {
-            cardsPlacements = new float[,] { { x, y } };
-            Debug.Log(cardsPlacements[0, 0]);
+            casesPlacements = new float[,] { { x, y } };
+            Debug.Log(casesPlacements[0, 0]);
         }
     }
 }
