@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: "Ch\xE8vre"
   m_EditorClassIdentifier: 
   background: {fileID: 21300000, guid: 7d96db067c005744d8b545bb4bd93b98, type: 3}
-  animal: {fileID: 0}
+  animalG: {fileID: 21300000, guid: 78ba9136c5fca754b87df40d470c8212, type: 3}
+  animalR: {fileID: 21300000, guid: 473e8b37b0ea7da45a61bcf3d224cdc8, type: 3}
   biome: {fileID: 21300000, guid: c91138273545bf64386949a453189d59, type: 3}
   type: {fileID: 21300000, guid: 9f07995e308b70d498af163d8773fbe1, type: 3}
   power: 3
   gameOrder: 4
   animalTxt: CHEVRE
   description: BehBehBeh
-  onCase: CHEVRE
