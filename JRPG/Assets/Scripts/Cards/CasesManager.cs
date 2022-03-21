@@ -18,6 +18,7 @@ public class CasesManager : MonoBehaviour
 
     public Vector2Int gridSize = new Vector2Int(4, 4);
     public CaseSlot[,] allCases;
+    private int caseNextTo;
 
     private void Start()
     {
@@ -49,15 +50,14 @@ public class CasesManager : MonoBehaviour
 
     public void CaseIsClicker(int casenumber)
     {
-        GameObject cellObject = CasesList[casenumber];
-        Vector2 position = cellObject.transform.position;
+        GameObject cell = CasesList[casenumber];
+        Vector2 position = cell.transform.position;
         if (!placedCards.placedCardsList.Contains(placedCards.lastCardClicked) && playerCanPlay)
         {
-            CasesListUsed.Add(cellObject);
+            CasesListUsed.Add(cell);
             placedCards.placedCardsList.Add(placedCards.lastCardClicked);
             GameObject card = placedCards.lastCardClicked;
             card.GetComponent<OnMouseOverCard>().isPlaced = true;
-
             placedCards.lastCardClicked.transform.position = position;
             visualCard = card.GetComponent<CardDisplay>().visual;
             visualCardOnCase = card.GetComponent<CardDisplay>().onCase;
@@ -70,8 +70,38 @@ public class CasesManager : MonoBehaviour
             OrderManagement();
             playerCanPlay = false;
 
-            CaseSlot slot = cellObject.GetComponent<CaseSlot>();
-            CaseSlot rightCell = GetCellOnGrid(slot.coordinates.x + 1, slot.coordinates.y); //test pour montrer qu'on peut détecter une cases placé a droite de celle qu'on viens de placer
+            CaseSlot slot = cell.GetComponent<CaseSlot>();
+            slot.card = card.GetComponent<CardDisplay>().card;
+            if (caseNextTo != 1)
+            {
+                CaseSlot rightCell = GetCellOnGrid(slot.coordinates.x + 1, slot.coordinates.y); // droite
+                if (rightCell.card)
+                    print("Carte à droite");
+
+            }
+
+            if (caseNextTo != 2)
+            {
+                CaseSlot leftCell = GetCellOnGrid(slot.coordinates.x - 1, slot.coordinates.y); // gauche
+                if (leftCell.card)
+                    print("Carte à gauche");
+            }
+
+            if (caseNextTo != 3)
+            {
+                CaseSlot upCell = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y - 1); // haut
+                if (upCell.card)
+                    print("Carte en haut");
+            }
+
+            if (caseNextTo != 3)
+            {
+                CaseSlot downCell = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y + 1); // bas
+                if (downCell.card)
+                    print("Carte en bas");
+            }
+            
+
         }
 
         if (!playerCanPlay)
@@ -120,6 +150,37 @@ public class CasesManager : MonoBehaviour
 
         placedCards.OrderList.Add(card);
         OrderManagement();
+
+
+        CaseSlot slot = randomCell.GetComponent<CaseSlot>();
+        slot.card = card.GetComponent<CardDisplay>().card;
+        if (caseNextTo != 1)
+        {
+            CaseSlot rightCell = GetCellOnGrid(slot.coordinates.x + 1, slot.coordinates.y); // droite
+            if (rightCell.card)
+                print("Carte à droite");
+        }
+
+        if (caseNextTo != 2)
+        {
+            CaseSlot leftCell = GetCellOnGrid(slot.coordinates.x - 1, slot.coordinates.y); // gauche
+            if (leftCell.card)
+                print("Carte à gauche");
+        }
+
+        if (caseNextTo != 3)
+        {
+            CaseSlot upCell = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y - 1); // haut
+            if (upCell.card)
+                print("Carte en haut");
+        }
+
+        if (caseNextTo != 4)
+        {
+            CaseSlot downCell = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y + 1); // bas
+            if (downCell.card)
+                print("Carte en bas");
+        }
     }
 
     IEnumerator WaitToPlay()
@@ -140,15 +201,31 @@ public class CasesManager : MonoBehaviour
 
     public CaseSlot GetCellOnGrid(int x, int y)
     {
-        if (x >= gridSize.x || x < 0 || y >= gridSize.y || y < 0) //les coordonnées dépassent des limites de la grille
+        if (x >= gridSize.x)
         {
-            print(x + " , " + y);
-            print("pas de case a droite trouvé car hors limites");
+            caseNextTo = 1;
             return null;
         }
 
-        print("case adjacente trouvé a droite : " + allCases[x, y]);
+        if (x < 0)
+        {
+            caseNextTo = 2;
+            return null;
+        }
+
+        if (y >= gridSize.y)
+        {
+            caseNextTo = 3;
+            return null;
+        }
+
+        if (y < 0)
+        {
+            caseNextTo = 4;
+            return null;
+        }
+
+        caseNextTo = 0;
         return allCases[x, y];
     }
 }
-

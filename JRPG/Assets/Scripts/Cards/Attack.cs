@@ -4,14 +4,8 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    public static Attack instance;
-    public PlacedCards placedCards;
-
-    
-
-    private void Awake()
+    public void AttackCard()
     {
-        instance = this;
-    }
 
+    }
 }

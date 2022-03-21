@@ -6,6 +6,9 @@ public class CaseSlot : MonoBehaviour
 {
     public GameObject CasesManager;
     public int casenumber;
+
+    public Card card;
+
     public Vector2Int coordinates;
 
     private void OnMouseDown()

@@ -1101,7 +1101,6 @@ GameObject:
   - component: {fileID: 4354206737431118377}
   - component: {fileID: -4092452893302620348}
   - component: {fileID: -2717689691261053903}
-  - component: {fileID: 2856788944142864364}
   - component: {fileID: 7045365642929977948}
   m_Layer: 5
   m_Name: Card
@@ -1196,19 +1195,6 @@ MonoBehaviour:
   powerTxt: {fileID: 2346719350508342930}
   orderTxt: {fileID: 4849316495668713502}
   biomeTxt: {fileID: 2398137589689620661}
---- !u!114 &2856788944142864364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4354206737431118379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6f98a2744b26a248afa31a52dbc3533, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  placedCards: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
 --- !u!61 &7045365642929977948
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1530,7 +1516,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -0.00049782}
-  m_SizeDelta: {x: 100, y: 99.999}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &425957649362328464
 CanvasRenderer:
@@ -2303,7 +2289,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -0.00049782}
-  m_SizeDelta: {x: 100, y: 99.999}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8319163333098262861
 CanvasRenderer:
