@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class CasesManager : MonoBehaviour
 {
+    public static CasesManager instance;
     public PlacedCards placedCards;
     public PlayerDeck playerDeck;
 
@@ -18,7 +19,11 @@ public class CasesManager : MonoBehaviour
 
     public Vector2Int gridSize = new Vector2Int(4, 4);
     public CaseSlot[,] allCases;
-    private int caseNextTo;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {
@@ -72,41 +77,74 @@ public class CasesManager : MonoBehaviour
 
             CaseSlot slot = cell.GetComponent<CaseSlot>();
             slot.card = card.GetComponent<CardDisplay>().card;
-            if (caseNextTo != 1)
-            {
-                CaseSlot rightCell = GetCellOnGrid(slot.coordinates.x + 1, slot.coordinates.y); // droite
-                if (rightCell.card)
-                    print("Carte à droite");
-
-            }
-
-            if (caseNextTo != 2)
-            {
-                CaseSlot leftCell = GetCellOnGrid(slot.coordinates.x - 1, slot.coordinates.y); // gauche
-                if (leftCell.card)
-                    print("Carte à gauche");
-            }
-
-            if (caseNextTo != 3)
-            {
-                CaseSlot upCell = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y - 1); // haut
-                if (upCell.card)
-                    print("Carte en haut");
-            }
-
-            if (caseNextTo != 3)
-            {
-                CaseSlot downCell = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y + 1); // bas
-                if (downCell.card)
-                    print("Carte en bas");
-            }
-            
-
+            DetectCards(slot);
         }
 
         if (!playerCanPlay)
         {
             StartCoroutine(WaitToPlay());
+        }
+    }
+
+    private void DetectCards(CaseSlot slot)
+    {
+        CaseSlot rightCell = GetCellOnGrid(slot.coordinates.x + 1, slot.coordinates.y); // droite
+        if (rightCell)
+        {
+            if (rightCell.card)
+                print("Carte à droite");
+        }
+
+
+        CaseSlot leftCell = GetCellOnGrid(slot.coordinates.x - 1, slot.coordinates.y); // gauche
+        if (leftCell)
+        {
+            if (leftCell.card)
+                print("Carte à gauche");
+        }
+
+
+        CaseSlot upCell = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y + 1); // haut
+        if (upCell)
+        {
+            if (upCell.card)
+                print("Carte en haut");
+        }
+
+
+        CaseSlot downCell = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y - 1); // bas
+        if (downCell)
+        {
+            if (downCell.card)
+                print("Carte en bas");
+        }
+
+        CaseSlot diagULCell = GetCellOnGrid(slot.coordinates.x - 1, slot.coordinates.y + 1); 
+        if (diagULCell)
+        {
+            if (diagULCell.card)
+                print("Carte en diagonale en haut à gauche");
+        }
+
+        CaseSlot diagURCell = GetCellOnGrid(slot.coordinates.x + 1, slot.coordinates.y + 1); 
+        if (diagURCell)
+        {
+            if (diagURCell.card)
+                print("Carte en diagonale en haut à droite");
+        }
+
+        CaseSlot diagDLCell = GetCellOnGrid(slot.coordinates.x - 1, slot.coordinates.y - 1);
+        if (diagDLCell)
+        {
+            if (diagDLCell.card)
+                print("Carte en diagonale en haut à droite");
+        }
+
+        CaseSlot diagDRCell = GetCellOnGrid(slot.coordinates.x + 1, slot.coordinates.y - 1);
+        if (diagDRCell)
+        {
+            if (diagDRCell.card)
+                print("Carte en diagonale en bas à droite");
         }
     }
 
@@ -154,30 +192,11 @@ public class CasesManager : MonoBehaviour
 
         CaseSlot slot = randomCell.GetComponent<CaseSlot>();
         slot.card = card.GetComponent<CardDisplay>().card;
-        if (caseNextTo != 1)
-        {
-            CaseSlot rightCell = GetCellOnGrid(slot.coordinates.x + 1, slot.coordinates.y); // droite
-            if (rightCell.card)
-                print("Carte à droite");
-        }
+        DetectCards(slot);
 
-        if (caseNextTo != 2)
+        CaseSlot downCell = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y + 1); // bas
+        if (downCell)
         {
-            CaseSlot leftCell = GetCellOnGrid(slot.coordinates.x - 1, slot.coordinates.y); // gauche
-            if (leftCell.card)
-                print("Carte à gauche");
-        }
-
-        if (caseNextTo != 3)
-        {
-            CaseSlot upCell = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y - 1); // haut
-            if (upCell.card)
-                print("Carte en haut");
-        }
-
-        if (caseNextTo != 4)
-        {
-            CaseSlot downCell = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y + 1); // bas
             if (downCell.card)
                 print("Carte en bas");
         }
@@ -201,31 +220,10 @@ public class CasesManager : MonoBehaviour
 
     public CaseSlot GetCellOnGrid(int x, int y)
     {
-        if (x >= gridSize.x)
+        if (x >= gridSize.x || x < 0 || y >= gridSize.y || y < 0)
         {
-            caseNextTo = 1;
             return null;
         }
-
-        if (x < 0)
-        {
-            caseNextTo = 2;
-            return null;
-        }
-
-        if (y >= gridSize.y)
-        {
-            caseNextTo = 3;
-            return null;
-        }
-
-        if (y < 0)
-        {
-            caseNextTo = 4;
-            return null;
-        }
-
-        caseNextTo = 0;
         return allCases[x, y];
     }
 }
