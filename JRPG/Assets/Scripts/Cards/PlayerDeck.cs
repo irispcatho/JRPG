@@ -20,7 +20,7 @@ public class PlayerDeck : MonoBehaviour
             GameObject go = Instantiate(cardPrefab);
             go.name = "Carte joueur numéro " + i ;
             go.transform.SetParent(parentPlayerDeck.transform, false);
-            go.GetComponent<CardDisplay>().card = cardsPlayer[i];
+            go.GetComponent<CardDisplay>().card = GameObject.Instantiate(cardsPlayer[i]);
             go.GetComponent<OnClickCard>().placedCards = placedCards;
             go.GetComponent<CardDisplay>().isEnemy = false;
         }
@@ -30,7 +30,7 @@ public class PlayerDeck : MonoBehaviour
             GameObject go = Instantiate(cardPrefab);
             go.name = "Carte IA numéro " + i;
             go.transform.SetParent(parentIADeck.transform, false);
-            go.GetComponent<CardDisplay>().card = cardsIA[i];
+            go.GetComponent<CardDisplay>().card = GameObject.Instantiate(cardsIA[i]);
             go.GetComponent<OnClickCard>().placedCards = placedCards;
             go.GetComponent<BoxCollider2D>().enabled = false;
             go.GetComponent<CardDisplay>().isEnemy = true;
