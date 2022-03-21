@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CasesManager : MonoBehaviour
 {
@@ -15,14 +16,42 @@ public class CasesManager : MonoBehaviour
     private GameObject visualCardOnCase;
     private GameObject visualCardOnCaseIA;
 
-    public float[,] casesPlacements;
+    public Vector2Int gridSize = new Vector2Int(4, 4);
+    public CaseSlot[,] allCases;
+
+    private void Start()
+    {
+        GetCellArray();
+    }
+
+    void GetCellArray()
+    {
+        allCases = new CaseSlot[gridSize.x, gridSize.y];
+        Queue<CaseSlot> cellQueue = new Queue<CaseSlot>(GetComponentsInChildren<CaseSlot>());
+
+        for (int y = gridSize.y - 1; y >= 0; y--)
+        {
+            for (int x = 0; x < gridSize.x; x++)
+            {
+                CaseSlot cell = cellQueue.Dequeue();
+                if (cell)
+                {
+                    allCases[x, y] = cell;
+                    cell.coordinates = new Vector2Int(x, y);
+                }
+                else
+                    return;
+            }
+        }
+    }
 
     public void CaseIsClicker(int casenumber)
     {
-        Vector2 position = CasesList[casenumber].transform.position;
+        GameObject cellObject = CasesList[casenumber];
+        Vector2 position = cellObject.transform.position;
         if (!placedCards.placedCardsList.Contains(placedCards.lastCardClicked) && playerCanPlay)
         {
-            CasesListUsed.Add(CasesList[casenumber]);
+            CasesListUsed.Add(cellObject);
             placedCards.placedCardsList.Add(placedCards.lastCardClicked);
             GameObject card = placedCards.lastCardClicked;
             card.GetComponent<OnMouseOverCard>().isPlaced = true;
@@ -37,8 +66,10 @@ public class CasesManager : MonoBehaviour
 
             placedCards.OrderList.Add(card);
             OrderManagement();
-            DetectCards(card.transform.position.x, card.transform.position.y);
             playerCanPlay = false;
+
+            CaseSlot slot = cellObject.GetComponent<CaseSlot>();
+            AdjacentCell(slot.coordinates.x + 1, slot.coordinates.y); //test pour montrer qu'on peut détecter une cases placé a droite de celle qu'on viens de placer
         }
 
         if (!playerCanPlay)
@@ -87,8 +118,6 @@ public class CasesManager : MonoBehaviour
 
         placedCards.OrderList.Add(card);
         OrderManagement();
-
-        DetectCards(randomCell.transform.position.x, randomCell.transform.position.y);
     }
 
     IEnumerator WaitToPlay()
@@ -107,13 +136,16 @@ public class CasesManager : MonoBehaviour
         placedCards.OrderList.Sort(CompareCardOrder);
     }
 
-    public void DetectCards(float x, float y)
+    public void AdjacentCell(int x, int y)
     {
-        for (int i = 0; i < CasesListUsed.Count - 1; i++)
+        if (x >= gridSize.x || x < 0 || y >= gridSize.y || y < 0) //les coordonnées dépassent des limites de la grille
         {
-            casesPlacements = new float[,] { { x, y } };
-            Debug.Log(casesPlacements[0, 0]);
+            print(x + " , " + y);
+            print("pas de case a droite trouvé car hors limites");
+            return;
         }
+
+        print("case adjacente trouvé a droite : " + allCases[x, y]);
     }
 }
 

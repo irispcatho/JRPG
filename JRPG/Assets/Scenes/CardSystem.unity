@@ -675,6 +675,18 @@ PrefabInstance:
       value: Cases
       objectReference: {fileID: 0}
     - target: {fileID: 194577858009108244, guid: 225e0291a025e9b44b466a0fa8ab783e, type: 3}
+      propertyPath: grid
+      value: 
+      objectReference: {fileID: 961375325}
+    - target: {fileID: 194577858009108244, guid: 225e0291a025e9b44b466a0fa8ab783e, type: 3}
+      propertyPath: gridSize.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 194577858009108244, guid: 225e0291a025e9b44b466a0fa8ab783e, type: 3}
+      propertyPath: gridSize.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 194577858009108244, guid: 225e0291a025e9b44b466a0fa8ab783e, type: 3}
       propertyPath: playerDeck
       value: 
       objectReference: {fileID: 2137303066}
