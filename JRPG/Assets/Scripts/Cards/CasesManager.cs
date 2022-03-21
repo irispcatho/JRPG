@@ -27,13 +27,15 @@ public class CasesManager : MonoBehaviour
     void GetCellArray()
     {
         allCases = new CaseSlot[gridSize.x, gridSize.y];
-        Queue<CaseSlot> cellQueue = new Queue<CaseSlot>(GetComponentsInChildren<CaseSlot>());
+        Queue<CaseSlot> cellQueue = new Queue<CaseSlot>(GetComponentsInChildren<CaseSlot>()); // on fait une queue a partir des cases récupérées 
 
         for (int y = gridSize.y - 1; y >= 0; y--)
         {
             for (int x = 0; x < gridSize.x; x++)
-            {
-                CaseSlot cell = cellQueue.Dequeue();
+            { // on ajoute la case dans le tableau selon les coordonées
+
+                CaseSlot cell = cellQueue.Dequeue(); //ça nous permet de récup le dernier élément ajouté dans la queue,
+                                                     //pratique quand on veut recup les éléments d'une liste dans le bonne ordre et la vider en même temps
                 if (cell)
                 {
                     allCases[x, y] = cell;
@@ -69,7 +71,7 @@ public class CasesManager : MonoBehaviour
             playerCanPlay = false;
 
             CaseSlot slot = cellObject.GetComponent<CaseSlot>();
-            AdjacentCell(slot.coordinates.x + 1, slot.coordinates.y); //test pour montrer qu'on peut détecter une cases placé a droite de celle qu'on viens de placer
+            CaseSlot rightCell = GetCellOnGrid(slot.coordinates.x + 1, slot.coordinates.y); //test pour montrer qu'on peut détecter une cases placé a droite de celle qu'on viens de placer
         }
 
         if (!playerCanPlay)
@@ -136,16 +138,17 @@ public class CasesManager : MonoBehaviour
         placedCards.OrderList.Sort(CompareCardOrder);
     }
 
-    public void AdjacentCell(int x, int y)
+    public CaseSlot GetCellOnGrid(int x, int y)
     {
         if (x >= gridSize.x || x < 0 || y >= gridSize.y || y < 0) //les coordonnées dépassent des limites de la grille
         {
             print(x + " , " + y);
             print("pas de case a droite trouvé car hors limites");
-            return;
+            return null;
         }
 
         print("case adjacente trouvé a droite : " + allCases[x, y]);
+        return allCases[x, y];
     }
 }
 
