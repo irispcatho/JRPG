@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 626e6bd677fc2604c945dd71681358f4, type: 3}
   m_Name: Serpent
   m_EditorClassIdentifier: 
-  background: {fileID: 21300000, guid: 5915cdc174101e540b3349e21ee2cd74, type: 3}
-  animal: {fileID: 21300000, guid: a3178c1f27702d144a0e5d6238342050, type: 3}
+  background: {fileID: 21300000, guid: 7d96db067c005744d8b545bb4bd93b98, type: 3}
+  animalG: {fileID: 21300000, guid: a3178c1f27702d144a0e5d6238342050, type: 3}
+  animalR: {fileID: 21300000, guid: a019570a3df33cc49b146e31423af224, type: 3}
   biome: {fileID: 21300000, guid: ad7208320d4d2f74cb133b18bca8d1b8, type: 3}
   type: {fileID: 21300000, guid: 9f07995e308b70d498af163d8773fbe1, type: 3}
   power: 5
