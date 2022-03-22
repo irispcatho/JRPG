@@ -170,6 +170,36 @@ public class CasesManager : MonoBehaviour
         }
     }
 
+    public void DetectCardUp2(CaseSlot slot)
+    {
+        CaseSlot upCell2 = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y + 2); // haut
+        if (upCell2)
+        {
+            if (upCell2.card)
+                print("Carte en haut");
+        }
+    }
+
+    public void DetectCardDown2(CaseSlot slot)
+    {
+        CaseSlot downCell2 = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y - 2); // bas
+        if (downCell2)
+        {
+            if (downCell2.card)
+                print("Carte en bas");
+        }
+    }
+
+    public void DetectCardDown3(CaseSlot slot)
+    {
+        CaseSlot downCell3 = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y - 3); // bas
+        if (downCell3)
+        {
+            if (downCell3.card)
+                print("Carte en bas");
+        }
+    }
+
     public void RandomC()
     {
         int randomCardIndex = Random.Range(0, playerDeck.cardsIA.Count);
