@@ -193,13 +193,6 @@ public class CasesManager : MonoBehaviour
         CaseSlot slot = randomCell.GetComponent<CaseSlot>();
         slot.card = card.GetComponent<CardDisplay>().card;
         DetectCards(slot);
-
-        CaseSlot downCell = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y + 1); // bas
-        if (downCell)
-        {
-            if (downCell.card)
-                print("Carte en bas");
-        }
     }
 
     IEnumerator WaitToPlay()
