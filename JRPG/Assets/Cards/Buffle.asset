@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 626e6bd677fc2604c945dd71681358f4, type: 3}
   m_Name: Buffle
   m_EditorClassIdentifier: 
+  frenchName: Buffle
   background: {fileID: 21300000, guid: 7d96db067c005744d8b545bb4bd93b98, type: 3}
   animalG: {fileID: 21300000, guid: 962c4859b8d4fc64a8a70a69302b24c3, type: 3}
   animalR: {fileID: 21300000, guid: b25887162d6b7ef449057282589f514c, type: 3}
@@ -21,3 +22,4 @@ MonoBehaviour:
   gameOrder: 8
   animalTxt: BUFFLE
   description: MeuhMeuhMeuh
+  cell: {fileID: 0}

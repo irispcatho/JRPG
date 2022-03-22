@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 626e6bd677fc2604c945dd71681358f4, type: 3}
   m_Name: "Carpe Ko\xEF"
   m_EditorClassIdentifier: 
+  frenchName: "Carpe Ko\xEF"
   background: {fileID: 21300000, guid: 7d96db067c005744d8b545bb4bd93b98, type: 3}
   animalG: {fileID: 21300000, guid: 0a1ff21f813611e4d9f9d93c60c19dcc, type: 3}
   animalR: {fileID: 21300000, guid: 2230d91e4fc35bb4f9590e9c8f154acd, type: 3}
@@ -21,3 +22,4 @@ MonoBehaviour:
   gameOrder: 6
   animalTxt: "CARPE KO\xCF"
   description: GlouGlouGlou
+  cell: {fileID: 0}

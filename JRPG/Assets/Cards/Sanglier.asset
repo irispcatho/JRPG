@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 626e6bd677fc2604c945dd71681358f4, type: 3}
   m_Name: Sanglier
   m_EditorClassIdentifier: 
+  frenchName: Sanglier
   background: {fileID: 21300000, guid: 7d96db067c005744d8b545bb4bd93b98, type: 3}
   animalG: {fileID: 21300000, guid: 12d2e6d11cf1ee1409e9d9391e1b40d1, type: 3}
   animalR: {fileID: 21300000, guid: 9ed0c09a39e9ff0468b1b74f0c555c9d, type: 3}
@@ -21,3 +22,4 @@ MonoBehaviour:
   gameOrder: 1
   animalTxt: SANGLIER
   description: '*RespireFort*'
+  cell: {fileID: 0}

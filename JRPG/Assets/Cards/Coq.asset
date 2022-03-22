@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 626e6bd677fc2604c945dd71681358f4, type: 3}
   m_Name: Coq
   m_EditorClassIdentifier: 
+  frenchName: Coq
   background: {fileID: 21300000, guid: 7d96db067c005744d8b545bb4bd93b98, type: 3}
   animalG: {fileID: 21300000, guid: dc6a5e7af92dade4598be8c2c9b50f79, type: 3}
   animalR: {fileID: 21300000, guid: a35af89648b7bda418afa42f8d3d1db3, type: 3}
@@ -21,3 +22,4 @@ MonoBehaviour:
   gameOrder: 1
   animalTxt: COQ
   description: Cocorico
+  cell: {fileID: 0}

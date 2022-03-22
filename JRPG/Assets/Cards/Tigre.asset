@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 626e6bd677fc2604c945dd71681358f4, type: 3}
   m_Name: Tigre
   m_EditorClassIdentifier: 
+  frenchName: Tigre
   background: {fileID: 21300000, guid: 7d96db067c005744d8b545bb4bd93b98, type: 3}
   animalG: {fileID: 21300000, guid: f3c0afc70a55b0c48a5a5be2f4097743, type: 3}
   animalR: {fileID: 21300000, guid: 57ab72d2c70642142a0462ba0a65bb68, type: 3}
@@ -21,3 +22,4 @@ MonoBehaviour:
   gameOrder: 4
   animalTxt: TIGRE
   description: Roarrrrrrrrr
+  cell: {fileID: 0}

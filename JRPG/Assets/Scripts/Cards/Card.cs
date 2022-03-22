@@ -6,6 +6,7 @@ using TMPro;
 [CreateAssetMenu]
 public class Card : ScriptableObject
 {
+    public string frenchName;
     public Sprite background;
     public Sprite animalG;
     public Sprite animalR;
@@ -17,4 +18,6 @@ public class Card : ScriptableObject
 
     public string animalTxt;
     public string description;
+
+    public CaseSlot cell;
 }

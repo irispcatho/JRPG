@@ -429,7 +429,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.61960787, g: 0.6313726, b: 0.34117648, a: 1}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -510,6 +510,17 @@ MonoBehaviour:
   m_Spacing: {x: 30.09, y: 27.29}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &961375326 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 194577858009108244, guid: 225e0291a025e9b44b466a0fa8ab783e, type: 3}
+  m_PrefabInstance: {fileID: 194577857680369221}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961375324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4600e42ea1413b04196d8f7566345792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1058131615 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6220157289882805943, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
@@ -1175,6 +1186,10 @@ PrefabInstance:
       propertyPath: playerDeck
       value: 
       objectReference: {fileID: 2137303066}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: casesManager
+      value: 
+      objectReference: {fileID: 961375326}
     - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: parent
       value: 

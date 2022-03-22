@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    public void AttackCard()
+    public PlacedCards placedCards;
+    public CasesManager casesManager;
+
+
+    public void AttackCard(GameObject cell)
     {
+
     }
 }

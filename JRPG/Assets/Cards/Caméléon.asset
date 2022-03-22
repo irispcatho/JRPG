@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 626e6bd677fc2604c945dd71681358f4, type: 3}
   m_Name: "Cam\xE9l\xE9on"
   m_EditorClassIdentifier: 
+  frenchName: "Cam\xE9l\xE9on"
   background: {fileID: 21300000, guid: 7d96db067c005744d8b545bb4bd93b98, type: 3}
   animalG: {fileID: 21300000, guid: 00914e4b0964eb64f97c3dcf9eb00991, type: 3}
   animalR: {fileID: 21300000, guid: 64062a0f29a37bb4d9fee4539a59d66d, type: 3}
@@ -21,3 +22,4 @@ MonoBehaviour:
   gameOrder: 7
   animalTxt: CAMELEON
   description: ???????
+  cell: {fileID: 0}
