@@ -25,10 +25,12 @@ public class CardDisplay : MonoBehaviour
 
     public SpriteRenderer biome;
     //public TMP_Text descriptionText;
-    public TMP_Text onCaseText;
+    public TMP_Text onCaseTextOrder;
+    public TMP_Text onCaseTextPower;
     public SpriteRenderer onCaseImage;
     
-    public TMP_Text onCaseTextIA;
+    public TMP_Text onCaseTextIAOrder;
+    public TMP_Text onCaseTextIAPower;
     public SpriteRenderer onCaseImageIA;
 
     public GameObject onMouseOver;
@@ -47,9 +49,17 @@ public class CardDisplay : MonoBehaviour
         type.sprite = card.type;
         //descriptionText.text = card.description;
         onCaseImage.sprite = card.animalG;
-        onCaseText.text = card.gameOrder.ToString();
+        onCaseTextOrder.text = card.gameOrder.ToString();
+        onCaseTextPower.text = card.power.ToString();
 
         onCaseImageIA.sprite = card.animalR;
-        onCaseTextIA.text = card.gameOrder.ToString();
+        onCaseTextIAOrder.text = card.gameOrder.ToString();
+        onCaseTextIAPower.text = card.power.ToString();
+    }
+
+    private void Update()
+    {
+        onCaseTextPower.text = card.power.ToString();
+        onCaseTextIAPower.text = card.power.ToString();
     }
 }

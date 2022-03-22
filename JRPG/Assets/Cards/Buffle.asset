@@ -18,6 +18,7 @@ MonoBehaviour:
   animalR: {fileID: 21300000, guid: b25887162d6b7ef449057282589f514c, type: 3}
   biome: {fileID: 21300000, guid: c91138273545bf64386949a453189d59, type: 3}
   type: {fileID: 21300000, guid: 04fe09b4d75060f49b7beb6858a66559, type: 3}
+  typeTxt: Soutien
   power: 2
   gameOrder: 8
   animalTxt: BUFFLE

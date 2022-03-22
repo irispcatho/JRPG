@@ -24,132 +24,137 @@ public class PlacedCards : MonoBehaviour
                 {
                     CaseSlot slot = placedCardsList[i].GetComponent<CardDisplay>().card.cell;
                     print(slot);
-                    casesManager.DetectCardUL(slot);
-                    casesManager.DetectCardUR(slot);
-                    casesManager.DetectCardDL(slot);
-                    casesManager.DetectCardDL2(slot);
-                    casesManager.DetectCardDR(slot);
+                    casesManager.DetectCardUL(slot, slot.card.power);
+                    casesManager.DetectCardUR(slot, slot.card.power);
+                    casesManager.DetectCardDL(slot, slot.card.power);
+                    casesManager.DetectCardDL2(slot, slot.card.power);
+                    casesManager.DetectCardDR(slot, slot.card.power);
                 }
 
                 if (placedCardsList[i].GetComponent<CardDisplay>().card.frenchName == "Coq")
                 {
                     CaseSlot slot = placedCardsList[i].GetComponent<CardDisplay>().card.cell;
                     print(slot);
-                    casesManager.DetectCardRight(slot);
-                    casesManager.DetectCardLeft(slot);
-                    casesManager.DetectCardUp(slot);
-                    casesManager.DetectCardDown(slot);
+                    casesManager.DetectCardRight(slot, slot.card.power);
+                    casesManager.DetectCardLeft(slot, slot.card.power);
+                    casesManager.DetectCardUp(slot, slot.card.power);
+                    casesManager.DetectCardDown(slot, slot.card.power);
                 }
 
                 if (placedCardsList[i].GetComponent<CardDisplay>().card.frenchName == "Rat")
                 {
                     CaseSlot slot = placedCardsList[i].GetComponent<CardDisplay>().card.cell;
                     print(slot);
-                    casesManager.DetectCardLeft(slot);
-                    casesManager.DetectCardDown(slot);
+                    casesManager.DetectCardLeft(slot, slot.card.power);
+                    casesManager.DetectCardDown(slot, slot.card.power);
                 }
 
                 if (placedCardsList[i].GetComponent<CardDisplay>().card.frenchName == "Buffle")
                 {
                     CaseSlot slot = placedCardsList[i].GetComponent<CardDisplay>().card.cell;
                     print(slot);
-                    casesManager.DetectCardUp(slot);
-                    casesManager.DetectCardUp2(slot);
-                    casesManager.DetectCardDown(slot);
+                    casesManager.DetectCardUp(slot, slot.card.power);
+                    casesManager.DetectCardUp2(slot, slot.card.power);
+                    casesManager.DetectCardDown(slot, slot.card.power);
                 }
 
                 if (placedCardsList[i].GetComponent<CardDisplay>().card.frenchName == "Sanglier")
                 {
                     CaseSlot slot = placedCardsList[i].GetComponent<CardDisplay>().card.cell;
                     print(slot);
-                    casesManager.DetectCardDown(slot);
-                    casesManager.DetectCardDown2(slot);
-                    casesManager.DetectCardDown3(slot);
+                    casesManager.DetectCardDown(slot, slot.card.power);
+                    casesManager.DetectCardDown2(slot, slot.card.power);
+                    casesManager.DetectCardDown3(slot, slot.card.power);
                 }
 
                 if (placedCardsList[i].GetComponent<CardDisplay>().card.frenchName == "Abeille")
                 {
                     CaseSlot slot = placedCardsList[i].GetComponent<CardDisplay>().card.cell;
                     print(slot);
-                    casesManager.DetectCardLeft(slot);
+                    casesManager.DetectCardLeft(slot, slot.card.power);
                 }
 
                 if (placedCardsList[i].GetComponent<CardDisplay>().card.frenchName == "Dragon")
                 {
                     CaseSlot slot = placedCardsList[i].GetComponent<CardDisplay>().card.cell;
                     print(slot);
-                    casesManager.DetectCardRight(slot);
-                    casesManager.DetectCardLeft(slot);
-                    casesManager.DetectCardUp(slot);
-                    casesManager.DetectCardDown(slot);
-                    casesManager.DetectCardDL(slot);
-                    casesManager.DetectCardDR(slot);
-                    casesManager.DetectCardUR(slot);
-                    casesManager.DetectCardUL(slot);
+                    casesManager.DetectCardRight(slot, slot.card.power);
+                    casesManager.DetectCardLeft(slot, slot.card.power);
+                    casesManager.DetectCardUp(slot, slot.card.power);
+                    casesManager.DetectCardDown(slot, slot.card.power);
+                    casesManager.DetectCardDL(slot, slot.card.power);
+                    casesManager.DetectCardDR(slot, slot.card.power);
+                    casesManager.DetectCardUR(slot, slot.card.power);
+                    casesManager.DetectCardUL(slot, slot.card.power);
                 }
 
                 if (placedCardsList[i].GetComponent<CardDisplay>().card.frenchName == "Hippocampe")
                 {
                     CaseSlot slot = placedCardsList[i].GetComponent<CardDisplay>().card.cell;
                     print(slot);
-                    casesManager.DetectCardUL(slot);
-                    casesManager.DetectCardUR(slot);
-                    casesManager.DetectCardDL(slot);
-                    casesManager.DetectCardDL2(slot);
-                    casesManager.DetectCardDR(slot);
+                    casesManager.DetectCardUL(slot, slot.card.power);
+                    casesManager.DetectCardUR(slot, slot.card.power);
+                    casesManager.DetectCardDL(slot, slot.card.power);
+                    casesManager.DetectCardDL2(slot, slot.card.power);
+                    casesManager.DetectCardDR(slot, slot.card.power);
                 }
 
                 if (placedCardsList[i].GetComponent<CardDisplay>().card.frenchName == "Caméléon")
                 {
                     CaseSlot slot = placedCardsList[i].GetComponent<CardDisplay>().card.cell;
                     print(slot);
-                    casesManager.DetectCardUp(slot);
-                    casesManager.DetectCardLeft(slot);
+                    casesManager.DetectCardUp(slot, slot.card.power);
+                    casesManager.DetectCardLeft(slot, slot.card.power);
                 }
 
                 if (placedCardsList[i].GetComponent<CardDisplay>().card.frenchName == "Chèvre")
                 {
                     CaseSlot slot = placedCardsList[i].GetComponent<CardDisplay>().card.cell;
                     print(slot);
-                    casesManager.DetectCardUL(slot);
-                    casesManager.DetectCardUR(slot);
-                    casesManager.DetectCardLeft(slot);
-                    casesManager.DetectCardRight(slot);
+                    casesManager.DetectCardUL(slot, slot.card.power);
+                    casesManager.DetectCardUR(slot, slot.card.power);
+                    casesManager.DetectCardLeft(slot, slot.card.power);
+                    casesManager.DetectCardRight(slot, slot.card.power);
                 }
 
                 if (placedCardsList[i].GetComponent<CardDisplay>().card.frenchName == "Oursin")
                 {
                     CaseSlot slot = placedCardsList[i].GetComponent<CardDisplay>().card.cell;
                     print(slot);
-                    casesManager.DetectCardRight(slot);
-                    casesManager.DetectCardLeft(slot);
-                    casesManager.DetectCardUp(slot);
-                    casesManager.DetectCardDown(slot);
+                    casesManager.DetectCardRight(slot, slot.card.power);
+                    casesManager.DetectCardLeft(slot, slot.card.power);
+                    casesManager.DetectCardUp(slot, slot.card.power);
+                    casesManager.DetectCardDown(slot, slot.card.power);
                 }
 
                 if (placedCardsList[i].GetComponent<CardDisplay>().card.frenchName == "Panda")
                 {
                     CaseSlot slot = placedCardsList[i].GetComponent<CardDisplay>().card.cell;
                     print(slot);
-                    casesManager.DetectCardUp(slot);
-                    casesManager.DetectCardRight(slot);
+                    casesManager.DetectCardUp(slot, slot.card.power);
+                    casesManager.DetectCardRight(slot, slot.card.power);
                 }
 
                 if (placedCardsList[i].GetComponent<CardDisplay>().card.frenchName == "Renard")
                 {
                     CaseSlot slot = placedCardsList[i].GetComponent<CardDisplay>().card.cell;
                     print(slot);
-                    casesManager.DetectCardLeft(slot);
-                    casesManager.DetectCardRight(slot);
+                    casesManager.DetectCardLeft(slot, slot.card.power);
+                    casesManager.DetectCardRight(slot, slot.card.power);
                 }
 
                 if (placedCardsList[i].GetComponent<CardDisplay>().card.frenchName == "Carpe Koï")
                 {
                     CaseSlot slot = placedCardsList[i].GetComponent<CardDisplay>().card.cell;
                     print(slot);
-                    casesManager.DetectCardUp(slot);
-                    casesManager.DetectCardDown(slot);
+                    casesManager.DetectCardUp(slot, slot.card.power);
+                    casesManager.DetectCardDown(slot, slot.card.power);
                 }
+
+                //if(placedCardsList[i].GetComponent<CardDisplay>().card.power <= 0)
+                //{
+                //    placedCardsList[i].SetActive(false);
+                //}
             }
             count++;
         }
