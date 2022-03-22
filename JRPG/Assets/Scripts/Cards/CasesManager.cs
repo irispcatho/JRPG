@@ -66,7 +66,8 @@ public class CasesManager : MonoBehaviour
             placedCards.lastCardClicked.transform.position = position;
             visualCard = card.GetComponent<CardDisplay>().visual;
             visualCardOnCase = card.GetComponent<CardDisplay>().onCase;
-            card.GetComponent<BoxCollider2D>().size = new Vector2(101.1319f, 98.74604f);
+            card.GetComponent<BoxCollider2D>().size = new Vector2(100, 100);
+            card.GetComponent<BoxCollider2D>().offset = new Vector2(0, 0);
 
             visualCard.SetActive(false);
             visualCardOnCase.SetActive(true);
@@ -87,116 +88,176 @@ public class CasesManager : MonoBehaviour
             StartCoroutine(WaitToPlay());
         }
     }
-    public void DetectCardLeft(CaseSlot slot)
+    public void DetectCardLeft(CaseSlot slot, int damage)
     {
         CaseSlot leftCell = GetCellOnGrid(slot.coordinates.x - 1, slot.coordinates.y); // gauche
         if (leftCell)
         {
             if (leftCell.card)
-                print("Carte à gauche");
+            {
+                if(slot.card.typeTxt == "Attaque")
+                    leftCell.card.power -= damage;
+                else
+                    leftCell.card.power += damage;
+            }
         }
     }
-    public void DetectCardRight(CaseSlot slot)
+    public void DetectCardRight(CaseSlot slot, int damage)
     {
         CaseSlot rightCell = GetCellOnGrid(slot.coordinates.x + 1, slot.coordinates.y); // droite
         if (rightCell)
         {
             if (rightCell.card)
-                print("Carte à droite");
+            {
+                if (slot.card.typeTxt == "Attaque")
+                    rightCell.card.power -= damage;
+                else
+                    rightCell.card.power += damage;
+            }
         }
     }
-    public void DetectCardUp(CaseSlot slot)
+    public void DetectCardUp(CaseSlot slot, int damage)
     {
         CaseSlot upCell = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y + 1); // haut
         if (upCell)
         {
             if (upCell.card)
-                print("Carte en haut");
+            {
+                if (slot.card.typeTxt == "Attaque")
+                    upCell.card.power -= damage;
+                else
+                    upCell.card.power += damage;
+            }
         }
     }
-    public void DetectCardDown(CaseSlot slot)
+    public void DetectCardDown(CaseSlot slot, int damage)
     {
         CaseSlot downCell = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y - 1); // bas
         if (downCell)
         {
             if (downCell.card)
-                print("Carte en bas");
+            {
+                if (slot.card.typeTxt == "Attaque")
+                    downCell.card.power -= damage;
+                else
+                    downCell.card.power += damage;
+            }
         }
     }
-    public void DetectCardDR(CaseSlot slot)
+    public void DetectCardDR(CaseSlot slot, int damage)
     {
         CaseSlot diagDRCell = GetCellOnGrid(slot.coordinates.x + 1, slot.coordinates.y - 1);
         if (diagDRCell)
         {
             if (diagDRCell.card)
-                print("Carte en diagonale en bas à droite");
+            {
+                if (slot.card.typeTxt == "Attaque")
+                    diagDRCell.card.power -= damage;
+                else
+                    diagDRCell.card.power += damage;
+            }
         }
     }
-    public void DetectCardDL(CaseSlot slot)
+    public void DetectCardDL(CaseSlot slot, int damage)
     {
         CaseSlot diagDLCell = GetCellOnGrid(slot.coordinates.x - 1, slot.coordinates.y - 1);
         if (diagDLCell)
         {
             if (diagDLCell.card)
-                print("Carte en diagonale en bas à gauche");
+            {
+                if (slot.card.typeTxt == "Attaque")
+                    diagDLCell.card.power -= damage;
+                else
+                    diagDLCell.card.power += damage;
+            }
         }
     }
-    public void DetectCardUR(CaseSlot slot)
+    public void DetectCardUR(CaseSlot slot, int damage)
     {
         CaseSlot diagURCell = GetCellOnGrid(slot.coordinates.x + 1, slot.coordinates.y + 1);
         if (diagURCell)
         {
             if (diagURCell.card)
-                print("Carte en diagonale en haut à droite");
+            {
+                if (slot.card.typeTxt == "Attaque")
+                    diagURCell.card.power -= damage;
+                else
+                    diagURCell.card.power += damage;
+            }
         }
     }
-    public void DetectCardUL(CaseSlot slot)
+    public void DetectCardUL(CaseSlot slot, int damage)
     {
         CaseSlot diagULCell = GetCellOnGrid(slot.coordinates.x - 1, slot.coordinates.y + 1);
         if (diagULCell)
         {
             if (diagULCell.card)
-                print("Carte en diagonale en haut à gauche");
+            {
+                if (slot.card.typeTxt == "Attaque")
+                    diagULCell.card.power -= damage;
+                else
+                    diagULCell.card.power += damage;
+            }
         }
     }
                      
-    public void DetectCardDL2(CaseSlot slot)
+    public void DetectCardDL2(CaseSlot slot, int damage)
     {
         CaseSlot diagDL2Cell = GetCellOnGrid(slot.coordinates.x - 2, slot.coordinates.y - 2);
         if (diagDL2Cell)
         {
             if (diagDL2Cell.card)
-                print("Carte en diagonale en bas à gauche");
+            {
+                if (slot.card.typeTxt == "Attaque")
+                    diagDL2Cell.card.power -= damage;
+                else
+                    diagDL2Cell.card.power += damage;
+            }
         }
     }
 
-    public void DetectCardUp2(CaseSlot slot)
+    public void DetectCardUp2(CaseSlot slot, int damage)
     {
         CaseSlot upCell2 = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y + 2); // haut
         if (upCell2)
         {
             if (upCell2.card)
-                print("Carte en haut");
+            {
+                if (slot.card.typeTxt == "Attaque")
+                    upCell2.card.power -= damage;
+                else
+                    upCell2.card.power += damage;
+            }
         }
     }
 
-    public void DetectCardDown2(CaseSlot slot)
+    public void DetectCardDown2(CaseSlot slot, int damage)
     {
         CaseSlot downCell2 = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y - 2); // bas
         if (downCell2)
         {
             if (downCell2.card)
-                print("Carte en bas");
+            {
+                if (slot.card.typeTxt == "Attaque")
+                    downCell2.card.power -= damage;
+                else
+                    downCell2.card.power += damage;
+            }
         }
     }
 
-    public void DetectCardDown3(CaseSlot slot)
+    public void DetectCardDown3(CaseSlot slot, int damage)
     {
         CaseSlot downCell3 = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y - 3); // bas
         if (downCell3)
         {
             if (downCell3.card)
-                print("Carte en bas");
+            {
+                if (slot.card.typeTxt == "Attaque")
+                    downCell3.card.power -= damage;
+                else
+                    downCell3.card.power += damage;
+            }
         }
     }
 
@@ -236,7 +297,8 @@ public class CasesManager : MonoBehaviour
         visualCard.SetActive(false);
         visualCardOnCase.SetActive(true);
 
-        card.GetComponent<BoxCollider2D>().size = new Vector2(101.1319f, 98.74604f);
+        card.GetComponent<BoxCollider2D>().size = new Vector2(100 , 100);
+        card.GetComponent<BoxCollider2D>().offset = new Vector2(0, 0);
 
         placedCards.OrderList.Add(card);
         OrderManagement();

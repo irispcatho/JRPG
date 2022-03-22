@@ -18,6 +18,7 @@ MonoBehaviour:
   animalR: {fileID: 21300000, guid: 64062a0f29a37bb4d9fee4539a59d66d, type: 3}
   biome: {fileID: 21300000, guid: 2fdc85098f31be3438d7fe836aff0f74, type: 3}
   type: {fileID: 21300000, guid: 9f07995e308b70d498af163d8773fbe1, type: 3}
+  typeTxt: Attaque
   power: 3
   gameOrder: 7
   animalTxt: CAMELEON
