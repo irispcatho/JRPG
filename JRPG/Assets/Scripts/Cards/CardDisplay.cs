@@ -28,7 +28,7 @@ public class CardDisplay : MonoBehaviour
     public TMP_Text onCaseTextOrder;
     public TMP_Text onCaseTextPower;
     public SpriteRenderer onCaseImage;
-    
+
     public TMP_Text onCaseTextIAOrder;
     public TMP_Text onCaseTextIAPower;
     public SpriteRenderer onCaseImageIA;
@@ -55,9 +55,7 @@ public class CardDisplay : MonoBehaviour
         onCaseTextIAPower.text = card.power.ToString();
     }
 
-    private void Update()
-    {
-        onCaseTextPower.text = card.power.ToString();
-        onCaseTextIAPower.text = card.power.ToString();
-    }
+
+        
+
 }

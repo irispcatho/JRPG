@@ -36,7 +36,6 @@ public class PlayerDeck : MonoBehaviour
             go.GetComponent<CardDisplay>().card.isEnemy = true;
             go.GetComponent<CardDisplay>().visual.SetActive(false);
             go.GetComponent<CardDisplay>().cardIA.SetActive(true);
-            //initialPower = go.GetComponent<CardDisplay>().card.power;
             go.GetComponent<CardDisplay>().card.power += 2;
         }
     }

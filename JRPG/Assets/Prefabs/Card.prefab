@@ -1369,7 +1369,6 @@ GameObject:
   - component: {fileID: 4354206737431118377}
   - component: {fileID: -4092452893302620348}
   - component: {fileID: -2717689691261053903}
-  - component: {fileID: 550216989918775100}
   - component: {fileID: 7045365642929977948}
   m_Layer: 5
   m_Name: Card
@@ -1427,14 +1426,15 @@ MonoBehaviour:
   onCase: {fileID: 6388496382732105740}
   onCaseIA: {fileID: 8674299650449461832}
   biome: {fileID: 7088691865999037851}
+  OnCase: {fileID: 6388496382732105740}
   onCaseTextOrder: {fileID: 6113444981976645204}
   onCaseTextPower: {fileID: 6447440823009383017}
   onCaseImage: {fileID: 5489518346906419185}
+  OnCaseIA: {fileID: 8674299650449461832}
   onCaseTextIAOrder: {fileID: 5765482440543065639}
   onCaseTextIAPower: {fileID: 6835645573584933675}
   onCaseImageIA: {fileID: 5325554073560819172}
   onMouseOver: {fileID: 8229671646465281624}
-  isEnemy: 0
 --- !u!114 &-4092452893302620348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1466,20 +1466,6 @@ MonoBehaviour:
   powerTxt: {fileID: 2346719350508342930}
   orderTxt: {fileID: 4849316495668713502}
   biomeTxt: {fileID: 2398137589689620661}
---- !u!114 &550216989918775100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4354206737431118379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6f98a2744b26a248afa31a52dbc3533, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  placedCards: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
-  casesManager: {fileID: 194577858009108244, guid: 225e0291a025e9b44b466a0fa8ab783e, type: 3}
 --- !u!61 &7045365642929977948
 BoxCollider2D:
   m_ObjectHideFlags: 0
