@@ -242,9 +242,25 @@ public class PlacedCards : MonoBehaviour
                     casesManager.DetectCardDown(slot, slot.card.power);
                 }
 
-                Debug.Log(placedCardsList[i].GetComponent<CardDisplay>().card.frenchName + placedCardsList[i].GetComponent<CardDisplay>().card.power + placedCardsList[i].GetComponent<CardDisplay>().card.isEnemy);
+                int newPower = placedCardsList[i].GetComponent<CardDisplay>().card.power;
+                //print(placedCardsList[i].GetComponent<CardDisplay>().card.frenchName + newPower + placedCardsList[i].GetComponent<CardDisplay>().card.isEnemy);
+                placedCardsList[i].GetComponent<CardDisplay>().onCaseTextPower.text = newPower.ToString();
+                placedCardsList[i].GetComponent<CardDisplay>().onCaseTextIAPower.text = newPower.ToString();
+
+                if(newPower <= 0)
+                {
+                    CaseSlot cellToRemove = placedCardsList[i].GetComponent<CardDisplay>().card.cell;
+                    GameObject cellToRemoveGo = cellToRemove.gameObject;
+                    print("Carte " + placedCardsList[i] + " doit être retirée" + cellToRemove + "    " + cellToRemoveGo);
+                    placedCardsList[i].GetComponent<CardDisplay>().onCase.SetActive(false);
+                    placedCardsList[i].GetComponent<CardDisplay>().onCaseIA.SetActive(false);
+                    casesManager.CasesListUsed.Remove(cellToRemoveGo);
+                    OrderList.Remove(placedCardsList[i]);
+                    placedCardsList.Remove(placedCardsList[i]);
+                }
             }
             count++;
+            print("Manche finie !");
         }
     }
 

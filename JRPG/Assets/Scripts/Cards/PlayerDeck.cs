@@ -9,7 +9,6 @@ public class PlayerDeck : MonoBehaviour
     public GameObject parentPlayerDeck;
     public GameObject parentIADeck;
     public GameObject cardPrefab;
-    //public int initialPower;
 
     public PlacedCards placedCards;
 
