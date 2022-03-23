@@ -95,9 +95,9 @@ public class CasesManager : MonoBehaviour
         {
             if (leftCell.card)
             {
-                if(slot.card.typeTxt == "Attaque")
+                if(slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != leftCell.card.isEnemy))
                     leftCell.card.power -= damage;
-                else
+                else if(slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != leftCell.card.isEnemy))
                     leftCell.card.power += damage;
             }
         }
@@ -109,9 +109,9 @@ public class CasesManager : MonoBehaviour
         {
             if (rightCell.card)
             {
-                if (slot.card.typeTxt == "Attaque")
+                if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != rightCell.card.isEnemy))
                     rightCell.card.power -= damage;
-                else
+                else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != rightCell.card.isEnemy))
                     rightCell.card.power += damage;
             }
         }
@@ -123,9 +123,9 @@ public class CasesManager : MonoBehaviour
         {
             if (upCell.card)
             {
-                if (slot.card.typeTxt == "Attaque")
+                if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != upCell.card.isEnemy))
                     upCell.card.power -= damage;
-                else
+                else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != upCell.card.isEnemy))
                     upCell.card.power += damage;
             }
         }
@@ -137,9 +137,9 @@ public class CasesManager : MonoBehaviour
         {
             if (downCell.card)
             {
-                if (slot.card.typeTxt == "Attaque")
+                if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != downCell.card.isEnemy))
                     downCell.card.power -= damage;
-                else
+                else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != downCell.card.isEnemy))
                     downCell.card.power += damage;
             }
         }
@@ -151,9 +151,9 @@ public class CasesManager : MonoBehaviour
         {
             if (diagDRCell.card)
             {
-                if (slot.card.typeTxt == "Attaque")
+                if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != diagDRCell.card.isEnemy))
                     diagDRCell.card.power -= damage;
-                else
+                else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != diagDRCell.card.isEnemy))
                     diagDRCell.card.power += damage;
             }
         }
@@ -165,9 +165,9 @@ public class CasesManager : MonoBehaviour
         {
             if (diagDLCell.card)
             {
-                if (slot.card.typeTxt == "Attaque")
+                if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != diagDLCell.card.isEnemy))
                     diagDLCell.card.power -= damage;
-                else
+                else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != diagDLCell.card.isEnemy))
                     diagDLCell.card.power += damage;
             }
         }
@@ -179,9 +179,9 @@ public class CasesManager : MonoBehaviour
         {
             if (diagURCell.card)
             {
-                if (slot.card.typeTxt == "Attaque")
+                if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != diagURCell.card.isEnemy))
                     diagURCell.card.power -= damage;
-                else
+                else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != diagURCell.card.isEnemy))
                     diagURCell.card.power += damage;
             }
         }
@@ -193,9 +193,9 @@ public class CasesManager : MonoBehaviour
         {
             if (diagULCell.card)
             {
-                if (slot.card.typeTxt == "Attaque")
+                if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != diagULCell.card.isEnemy))
                     diagULCell.card.power -= damage;
-                else
+                else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != diagULCell.card.isEnemy))
                     diagULCell.card.power += damage;
             }
         }
@@ -208,9 +208,9 @@ public class CasesManager : MonoBehaviour
         {
             if (diagDL2Cell.card)
             {
-                if (slot.card.typeTxt == "Attaque")
+                if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != diagDL2Cell.card.isEnemy))
                     diagDL2Cell.card.power -= damage;
-                else
+                else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != diagDL2Cell.card.isEnemy))
                     diagDL2Cell.card.power += damage;
             }
         }
@@ -223,9 +223,9 @@ public class CasesManager : MonoBehaviour
         {
             if (upCell2.card)
             {
-                if (slot.card.typeTxt == "Attaque")
+                if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != upCell2.card.isEnemy))
                     upCell2.card.power -= damage;
-                else
+                else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != upCell2.card.isEnemy))
                     upCell2.card.power += damage;
             }
         }
@@ -238,9 +238,9 @@ public class CasesManager : MonoBehaviour
         {
             if (downCell2.card)
             {
-                if (slot.card.typeTxt == "Attaque")
+                if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != downCell2.card.isEnemy))
                     downCell2.card.power -= damage;
-                else
+                else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != downCell2.card.isEnemy))
                     downCell2.card.power += damage;
             }
         }
@@ -253,9 +253,9 @@ public class CasesManager : MonoBehaviour
         {
             if (downCell3.card)
             {
-                if (slot.card.typeTxt == "Attaque")
+                if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != downCell3.card.isEnemy))
                     downCell3.card.power -= damage;
-                else
+                else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != downCell3.card.isEnemy))
                     downCell3.card.power += damage;
             }
         }

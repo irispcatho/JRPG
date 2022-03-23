@@ -35,8 +35,6 @@ public class CardDisplay : MonoBehaviour
 
     public GameObject onMouseOver;
 
-    public bool isEnemy;
-
     void Start()
     {
         backgroundImage.sprite = card.background;
