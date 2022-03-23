@@ -20,6 +20,9 @@ public class CasesManager : MonoBehaviour
     public Vector2Int gridSize = new Vector2Int(4, 4);
     public CaseSlot[,] allCases;
 
+    public int numberIACards = 0;
+    public int numberCards = 0;
+
     private void Awake()
     {
         instance = this;
@@ -76,6 +79,7 @@ public class CasesManager : MonoBehaviour
             OrderManagement();
             playerCanPlay = false;
 
+            numberCards++;
 
             CaseSlot slot = cell.GetComponent<CaseSlot>();
             slot.card = card.GetComponent<CardDisplay>().card;
@@ -88,6 +92,56 @@ public class CasesManager : MonoBehaviour
             StartCoroutine(WaitToPlay());
         }
     }
+
+    void TakeCard(GameObject card, GameObject randomCell, int randomCellIndex)
+    {
+        placedCards.placedCardsList.Add(card);
+        Vector2 positionC = randomCell.transform.position;
+        CasesListUsed.Add(CasesList[randomCellIndex]);
+
+        visualCardOnCaseIA = card.GetComponent<CardDisplay>().cardIA;
+        visualCardOnCaseIA.SetActive(false);
+
+        SpriteRenderer AnimalG = card.GetComponent<CardDisplay>().animalG;
+        AnimalG.enabled = false;
+
+        card.transform.position = positionC;
+        CardDisplay display = card.GetComponent<CardDisplay>();
+        visualCard = display.visual;
+        visualCardOnCase = display.onCaseIA;
+
+        visualCard.SetActive(false);
+        visualCardOnCase.SetActive(true);
+
+        card.GetComponent<BoxCollider2D>().size = new Vector2(100 , 100);
+        card.GetComponent<BoxCollider2D>().offset = new Vector2(0, 0);
+
+        placedCards.OrderList.Add(card);
+        OrderManagement();
+
+        numberIACards++;
+
+        CaseSlot slot = randomCell.GetComponent<CaseSlot>();
+        slot.card = card.GetComponent<CardDisplay>().card;
+        card.GetComponent<CardDisplay>().card.cell = slot;
+    }
+
+    public void RandomC()
+    {
+        int randomCardIndex = Random.Range(0, playerDeck.cardsIA.Count);
+        int randomCellIndex = Random.Range(0, CasesList.Count);
+        GameObject randomCard = playerDeck.parentIADeck.transform.GetChild(randomCardIndex).gameObject;
+
+        while (placedCards.placedCardsList.Contains(randomCard) || CasesListUsed.Contains(CasesList[randomCellIndex]))
+        {
+            randomCardIndex = Random.Range(0, playerDeck.cardsIA.Count);
+            randomCellIndex = Random.Range(0, CasesList.Count);
+            randomCard = playerDeck.parentIADeck.transform.GetChild(randomCardIndex).gameObject;
+        }
+
+        TakeCard(randomCard, CasesList[randomCellIndex], randomCellIndex);
+    }
+
     public void DetectCardLeft(CaseSlot slot, int damage)
     {
         CaseSlot leftCell = GetCellOnGrid(slot.coordinates.x - 1, slot.coordinates.y); // gauche
@@ -95,9 +149,9 @@ public class CasesManager : MonoBehaviour
         {
             if (leftCell.card)
             {
-                if(slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != leftCell.card.isEnemy))
+                if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != leftCell.card.isEnemy))
                     leftCell.card.power -= damage;
-                else if(slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != leftCell.card.isEnemy))
+                else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != leftCell.card.isEnemy))
                     leftCell.card.power += damage;
             }
         }
@@ -200,7 +254,7 @@ public class CasesManager : MonoBehaviour
             }
         }
     }
-                     
+
     public void DetectCardDL2(CaseSlot slot, int damage)
     {
         CaseSlot diagDL2Cell = GetCellOnGrid(slot.coordinates.x - 2, slot.coordinates.y - 2);
@@ -259,54 +313,6 @@ public class CasesManager : MonoBehaviour
                     downCell3.card.power += damage;
             }
         }
-    }
-
-    public void RandomC()
-    {
-        int randomCardIndex = Random.Range(0, playerDeck.cardsIA.Count);
-        int randomCellIndex = Random.Range(0, CasesList.Count);
-        GameObject randomCard = playerDeck.parentIADeck.transform.GetChild(randomCardIndex).gameObject;
-
-        while (placedCards.placedCardsList.Contains(randomCard) || CasesListUsed.Contains(CasesList[randomCellIndex]))
-        {
-            randomCardIndex = Random.Range(0, playerDeck.cardsIA.Count);
-            randomCellIndex = Random.Range(0, CasesList.Count);
-            randomCard = playerDeck.parentIADeck.transform.GetChild(randomCardIndex).gameObject;
-        }
-
-        TakeCard(randomCard, CasesList[randomCellIndex], randomCellIndex);
-    }
-
-    void TakeCard(GameObject card, GameObject randomCell, int randomCellIndex)
-    {
-        placedCards.placedCardsList.Add(card);
-        Vector2 positionC = randomCell.transform.position;
-        CasesListUsed.Add(CasesList[randomCellIndex]);
-
-        visualCardOnCaseIA = card.GetComponent<CardDisplay>().cardIA;
-        visualCardOnCaseIA.SetActive(false);
-
-        SpriteRenderer AnimalG = card.GetComponent<CardDisplay>().animalG;
-        AnimalG.enabled = false;
-
-        card.transform.position = positionC;
-        CardDisplay display = card.GetComponent<CardDisplay>();
-        visualCard = display.visual;
-        visualCardOnCase = display.onCaseIA;
-
-        visualCard.SetActive(false);
-        visualCardOnCase.SetActive(true);
-
-        card.GetComponent<BoxCollider2D>().size = new Vector2(100 , 100);
-        card.GetComponent<BoxCollider2D>().offset = new Vector2(0, 0);
-
-        placedCards.OrderList.Add(card);
-        OrderManagement();
-
-
-        CaseSlot slot = randomCell.GetComponent<CaseSlot>();
-        slot.card = card.GetComponent<CardDisplay>().card;
-        card.GetComponent<CardDisplay>().card.cell = slot;
     }
 
     IEnumerator WaitToPlay()
