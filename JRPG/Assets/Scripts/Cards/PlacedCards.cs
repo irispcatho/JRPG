@@ -11,17 +11,17 @@ public class PlacedCards : MonoBehaviour
 
     private int pdvPlayer;
     private int pdvIA;
-
+    public int round = 0;
     public GameObject lastCardClicked;
     private int count = 0;
 
     void Update()
     {
         if (placedCardsList.Count >= 12 && count == 0)
-        {
-            print("Toutes les cartes ont été jouées");
+        { 
             for (int i = 0; i <= OrderList.Count - 1; i++)
             {
+
                 if (placedCardsList[i].GetComponent<CardDisplay>().card.frenchName == "Cheval")
                 {
                     CaseSlot slot = placedCardsList[i].GetComponent<CardDisplay>().card.cell;
@@ -246,9 +246,14 @@ public class PlacedCards : MonoBehaviour
                 }
 
                 int newPower = placedCardsList[i].GetComponent<CardDisplay>().card.power;
-                //print(placedCardsList[i].GetComponent<CardDisplay>().card.frenchName + newPower + placedCardsList[i].GetComponent<CardDisplay>().card.isEnemy);
+                print(placedCardsList[i].GetComponent<CardDisplay>().card.frenchName + newPower + placedCardsList[i].GetComponent<CardDisplay>().card.isEnemy);
                 placedCardsList[i].GetComponent<CardDisplay>().onCaseTextPower.text = newPower.ToString();
                 placedCardsList[i].GetComponent<CardDisplay>().onCaseTextIAPower.text = newPower.ToString();
+
+                if (placedCardsList[i].GetComponent<CardDisplay>().card.isEnemy == false && newPower > 0)
+                    pdvPlayer += newPower;
+                if (placedCardsList[i].GetComponent<CardDisplay>().card.isEnemy == true && newPower > 0)
+                    pdvIA += newPower;
 
                 if (newPower <= 0)
                 {
@@ -262,8 +267,9 @@ public class PlacedCards : MonoBehaviour
                     if (placedCardsList[i].GetComponent<CardDisplay>().card.isEnemy == false)
                         casesManager.numberCards--;
                     casesManager.CasesListUsed.Remove(cellToRemoveGo);
-                    OrderList.Remove(placedCardsList[i]);
-                    placedCardsList.Remove(placedCardsList[i]);
+                    placedCardsList[i].GetComponent<CardDisplay>().card.isDead = true;
+                    //OrderList.Remove(placedCardsList[i]);
+                    //placedCardsList.Remove(placedCardsList[i]);
 
                 }
             }
@@ -271,12 +277,29 @@ public class PlacedCards : MonoBehaviour
             print("Manche finie !");
             print(pdvIA + " pdv IA");
             print(pdvPlayer + " pdv Player");
-            print(casesManager.numberIACards);
 
             if (casesManager.numberCards < casesManager.numberIACards)
                 print("L'IA a gagné");
-            else
+            else if (casesManager.numberCards > casesManager.numberIACards)
                 print("Le joueur a gagné");
+            else if(casesManager.numberCards > casesManager.numberIACards)
+            {
+                if(pdvIA > pdvPlayer)
+                    print("L'IA a gagné");
+                else if (pdvIA < pdvPlayer)
+                    print("Le player a gagné");
+            }
+
+            for (int i = 0; i <= placedCardsList.Count - 1; i++)
+            {
+                if(placedCardsList[i].GetComponent<CardDisplay>().card.isDead == true)
+                {
+                    placedCardsList.Remove(placedCardsList[i]);
+                    OrderList.Remove(placedCardsList[i]);
+                }
+            }
+
+            round = 1;
         }
     }
 

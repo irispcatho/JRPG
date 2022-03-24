@@ -12,7 +12,7 @@ public class PlayerDeck : MonoBehaviour
 
     public PlacedCards placedCards;
 
-    private void Start()
+    void Start()
     {
         for (int i = 0; i < cardsPlayer.Count; i++)
         {
@@ -38,6 +38,33 @@ public class PlayerDeck : MonoBehaviour
             go.GetComponent<CardDisplay>().card.power += 2;
         }
     }
+
+    //void Update()
+    //{
+    //    if(placedCards.round == 1)
+    //    {
+    //        cardsIA.Clear();
+    //        cardsPlayer.Clear();
+
+    //        for (int i = 0; i <= placedCards.placedCardsList.Count - 1; i++)
+    //        {
+    //            Card card = placedCards.placedCardsList[i].GetComponent<CardDisplay>().card;
+    //            GameObject cardGo = placedCards.placedCardsList[i];
+                
+    //            if (card.isEnemy)
+    //            {
+    //                cardsIA.Add(card);
+    //                Destroy(cardGo);
+    //                //cardGo.transform.SetParent(parentIADeck.transform, false);
+    //            }
+    //            else
+    //            {
+    //                cardsPlayer.Add(card);
+    //                cardGo.transform.SetParent(parentPlayerDeck.transform, false);
+    //            }
+    //        }
+    //    }
+    //}
 
     //private Card GetRandomCard()
     //{

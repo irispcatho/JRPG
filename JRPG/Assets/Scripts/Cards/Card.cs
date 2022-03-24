@@ -23,4 +23,5 @@ public class Card : ScriptableObject
     public CaseSlot cell;
 
     public bool isEnemy;
+    public bool isDead;
 }

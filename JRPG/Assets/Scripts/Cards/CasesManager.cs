@@ -60,7 +60,7 @@ public class CasesManager : MonoBehaviour
     {
         GameObject cell = CasesList[casenumber];
         Vector2 position = cell.transform.position;
-        if (!placedCards.placedCardsList.Contains(placedCards.lastCardClicked) && playerCanPlay)
+        if (!placedCards.placedCardsList.Contains(placedCards.lastCardClicked) && playerCanPlay && !CasesListUsed.Contains(cell))
         {
             CasesListUsed.Add(cell);
             placedCards.placedCardsList.Add(placedCards.lastCardClicked);
