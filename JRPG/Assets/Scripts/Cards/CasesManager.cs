@@ -145,9 +145,20 @@ public class CasesManager : MonoBehaviour
             if (leftCell.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != leftCell.card.isEnemy))
+                {
                     leftCell.card.power -= damage;
+                    leftCell.card.damage = damage;
+                    leftCell.card.signeDamage = "-";
+                    leftCell.card.showDamage = true;
+                }
                 else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != leftCell.card.isEnemy))
+                {
                     leftCell.card.power += damage;
+                    leftCell.card.damage = damage;
+                    leftCell.card.signeDamage = "+";
+                    leftCell.card.showDamage = true;
+                }
+                StartCoroutine(placedCards.Damage(leftCell.card));
             }
         }
     }
@@ -159,9 +170,20 @@ public class CasesManager : MonoBehaviour
             if (rightCell.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != rightCell.card.isEnemy))
+                {
                     rightCell.card.power -= damage;
+                    rightCell.card.damage = damage;
+                    rightCell.card.signeDamage = "-";
+                    rightCell.card.showDamage = true;
+                }
                 else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != rightCell.card.isEnemy))
+                {
                     rightCell.card.power += damage;
+                    rightCell.card.damage = damage;
+                    rightCell.card.signeDamage = "+";
+                    rightCell.card.showDamage = true;
+                }
+                StartCoroutine(placedCards.Damage(rightCell.card));
             }
         }
     }
@@ -173,9 +195,20 @@ public class CasesManager : MonoBehaviour
             if (upCell.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != upCell.card.isEnemy))
+                {
                     upCell.card.power -= damage;
+                    upCell.card.damage = damage;
+                    upCell.card.signeDamage = "-";
+                    upCell.card.showDamage = true;
+                }
                 else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != upCell.card.isEnemy))
+                {
                     upCell.card.power += damage;
+                    upCell.card.damage = damage;
+                    upCell.card.signeDamage = "+";
+                    upCell.card.showDamage = true;
+                }
+                StartCoroutine(placedCards.Damage(upCell.card));
             }
         }
     }
@@ -187,9 +220,20 @@ public class CasesManager : MonoBehaviour
             if (downCell.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != downCell.card.isEnemy))
+                {
                     downCell.card.power -= damage;
+                    downCell.card.damage = damage;
+                    downCell.card.signeDamage = "-";
+                    downCell.card.showDamage = true;
+                }
                 else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != downCell.card.isEnemy))
+                {
                     downCell.card.power += damage;
+                    downCell.card.damage = damage;
+                    downCell.card.signeDamage = "+";
+                    downCell.card.showDamage = true;
+                }
+                StartCoroutine(placedCards.Damage(downCell.card));
             }
         }
     }
@@ -201,9 +245,20 @@ public class CasesManager : MonoBehaviour
             if (diagDRCell.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != diagDRCell.card.isEnemy))
+                {
                     diagDRCell.card.power -= damage;
+                    diagDRCell.card.damage = damage;
+                    diagDRCell.card.signeDamage = "-";
+                    diagDRCell.card.showDamage = true;
+                }
                 else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != diagDRCell.card.isEnemy))
+                {
                     diagDRCell.card.power += damage;
+                    diagDRCell.card.damage = damage;
+                    diagDRCell.card.signeDamage = "+";
+                    diagDRCell.card.showDamage = true;
+                }
+                StartCoroutine(placedCards.Damage(diagDRCell.card));
             }
         }
     }
@@ -215,9 +270,20 @@ public class CasesManager : MonoBehaviour
             if (diagDLCell.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != diagDLCell.card.isEnemy))
+                {
                     diagDLCell.card.power -= damage;
+                    diagDLCell.card.damage = damage;
+                    diagDLCell.card.signeDamage = "-";
+                    diagDLCell.card.showDamage = true;
+                }
                 else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != diagDLCell.card.isEnemy))
+                {
                     diagDLCell.card.power += damage;
+                    diagDLCell.card.damage = damage;
+                    diagDLCell.card.signeDamage = "+";
+                    diagDLCell.card.showDamage = true;
+                }
+                StartCoroutine(placedCards.Damage(diagDLCell.card));
             }
         }
     }
@@ -229,9 +295,20 @@ public class CasesManager : MonoBehaviour
             if (diagURCell.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != diagURCell.card.isEnemy))
+                {
                     diagURCell.card.power -= damage;
+                    diagURCell.card.damage = damage;
+                    diagURCell.card.signeDamage = "-";
+                    diagURCell.card.showDamage = true;
+                }
                 else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != diagURCell.card.isEnemy))
+                {
                     diagURCell.card.power += damage;
+                    diagURCell.card.damage = damage;
+                    diagURCell.card.signeDamage = "+";
+                    diagURCell.card.showDamage = true;
+                }
+                StartCoroutine(placedCards.Damage(diagURCell.card));
             }
         }
     }
@@ -243,9 +320,20 @@ public class CasesManager : MonoBehaviour
             if (diagULCell.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != diagULCell.card.isEnemy))
+                {
                     diagULCell.card.power -= damage;
+                    diagULCell.card.damage = damage;
+                    diagULCell.card.signeDamage = "-";
+                    diagULCell.card.showDamage = true;
+                }
                 else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != diagULCell.card.isEnemy))
+                {
                     diagULCell.card.power += damage;
+                    diagULCell.card.damage = damage;
+                    diagULCell.card.signeDamage = "+";
+                    diagULCell.card.showDamage = true;
+                }
+                StartCoroutine(placedCards.Damage(diagULCell.card));
             }
         }
     }
@@ -258,9 +346,18 @@ public class CasesManager : MonoBehaviour
             if (diagDL2Cell.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != diagDL2Cell.card.isEnemy))
+                {
                     diagDL2Cell.card.power -= damage;
+                    diagDL2Cell.card.damage = damage;
+                    diagDL2Cell.card.signeDamage = "-";
+                }
                 else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != diagDL2Cell.card.isEnemy))
+                {
                     diagDL2Cell.card.power += damage;
+                    diagDL2Cell.card.damage = damage;
+                    diagDL2Cell.card.signeDamage = "+";
+                }
+                StartCoroutine(placedCards.Damage(diagDL2Cell.card));
             }
         }
     }
@@ -273,9 +370,18 @@ public class CasesManager : MonoBehaviour
             if (upCell2.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != upCell2.card.isEnemy))
+                {
                     upCell2.card.power -= damage;
+                    upCell2.card.damage = damage;
+                    upCell2.card.signeDamage = "-";
+                }
                 else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != upCell2.card.isEnemy))
+                {
                     upCell2.card.power += damage;
+                    upCell2.card.damage = damage;
+                    upCell2.card.signeDamage = "+";
+                }
+                StartCoroutine(placedCards.Damage(upCell2.card));
             }
         }
     }
@@ -288,9 +394,18 @@ public class CasesManager : MonoBehaviour
             if (downCell2.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != downCell2.card.isEnemy))
+                {
                     downCell2.card.power -= damage;
+                    downCell2.card.damage = damage;
+                    downCell2.card.signeDamage = "-";
+                }
                 else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != downCell2.card.isEnemy))
+                {
                     downCell2.card.power += damage;
+                    downCell2.card.damage = damage;
+                    downCell2.card.signeDamage = "+";
+                }
+                StartCoroutine(placedCards.Damage(downCell2.card));
             }
         }
     }
@@ -303,9 +418,18 @@ public class CasesManager : MonoBehaviour
             if (downCell3.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != downCell3.card.isEnemy))
+                {
                     downCell3.card.power -= damage;
+                    downCell3.card.damage = damage;
+                    downCell3.card.signeDamage = "-";
+                }
                 else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy != downCell3.card.isEnemy))
+                {
                     downCell3.card.power += damage;
+                    downCell3.card.damage = damage;
+                    downCell3.card.signeDamage = "+";
+                }
+                StartCoroutine(placedCards.Damage(downCell3.card));
             }
         }
     }

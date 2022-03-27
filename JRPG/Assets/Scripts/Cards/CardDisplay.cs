@@ -36,6 +36,14 @@ public class CardDisplay : MonoBehaviour
     public GameObject cadreP;
     public GameObject cadreIA;
 
+    public GameObject damageGoP;
+    public GameObject damageGoIA;
+
+    public TMP_Text damageGoPText;
+    public TMP_Text damageGoIAText;
+    public TMP_Text signeDamageGoPText;
+    public TMP_Text signeDamageGoIAText;
+
     public GameObject onMouseOver;
 
     void Start()
@@ -56,5 +64,11 @@ public class CardDisplay : MonoBehaviour
         onCaseImageIA.sprite = card.animalR;
         onCaseTextIAOrder.text = card.gameOrder.ToString();
         onCaseTextIAPower.text = card.power.ToString();
+
+        damageGoPText.text = card.damage.ToString();
+        damageGoIAText.text = card.damage.ToString();
+        signeDamageGoPText.text = card.signeDamage;
+        signeDamageGoIAText.text = card.signeDamage;
+        card.showDamage = false;
     }
 }

@@ -24,4 +24,9 @@ public class Card : ScriptableObject
 
     public bool isEnemy;
     public bool isDead;
+
+    public int damage;
+    public string signeDamage;
+
+    public bool showDamage;
 }
