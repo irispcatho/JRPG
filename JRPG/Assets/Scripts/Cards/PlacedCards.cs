@@ -11,6 +11,8 @@ public class PlacedCards : MonoBehaviour
 
     private int pdvPlayer;
     private int pdvIA;
+    private int numberCardsPlayer;
+    private int numberCardsIA;
     public int round = 0;
     public GameObject lastCardClicked;
 
@@ -22,16 +24,28 @@ public class PlacedCards : MonoBehaviour
             StartCoroutine(Attack());
             launchedattack = true;
         }
+
+        for (int c = 0; c < OrderList.Count - 1; c++)
+        {
+            if (OrderList[c].GetComponent<CardDisplay>().card.power <= 0)
+            {
+                OrderList[c].GetComponent<CardDisplay>().card.isDead = true;
+                OrderList[c].GetComponent<CardDisplay>().onCaseIA.SetActive(false);
+                OrderList[c].GetComponent<CardDisplay>().onCase.SetActive(false);
+                OrderList[c].GetComponent<BoxCollider2D>().enabled = false;
+                placedCardsList.Remove(OrderList[c]);
+            }
+        }
     }
 
     public IEnumerator Attack()
     {
         for (int i = 0; i <= OrderList.Count - 1; i++)
         {
-            yield return new WaitForSeconds(2);
-            print("coroutine lancée");
-            print(OrderList[i].name);        
-            
+            yield return new WaitForSeconds(1);
+
+
+
             #region AttackPattern
             if (OrderList[i].GetComponent<CardDisplay>().card.frenchName == "Cheval")
             {
@@ -49,7 +63,7 @@ public class PlacedCards : MonoBehaviour
                 CaseSlot leftCell = casesManager.GetCellOnGrid(slot.coordinates.x - 1, slot.coordinates.y); // gauche
                 if (leftCell)
                 {
-                    if (leftCell.card)
+                    if (leftCell.card && slot.card.isDead == false)
                     {
                         if (slot.card.isEnemy != leftCell.card.isEnemy)
                             leftCell.card.power -= slot.card.power;
@@ -61,7 +75,7 @@ public class PlacedCards : MonoBehaviour
                 CaseSlot rightCell = casesManager.GetCellOnGrid(slot.coordinates.x + 1, slot.coordinates.y); // droite
                 if (rightCell)
                 {
-                    if (rightCell.card)
+                    if (rightCell.card && slot.card.isDead == false)
                     {
                         if (slot.card.isEnemy != rightCell.card.isEnemy)
                             rightCell.card.power -= slot.card.power;
@@ -73,7 +87,7 @@ public class PlacedCards : MonoBehaviour
                 CaseSlot upCell = casesManager.GetCellOnGrid(slot.coordinates.x, slot.coordinates.y + 1); // haut
                 if (upCell)
                 {
-                    if (upCell.card)
+                    if (upCell.card && slot.card.isDead == false)
                     {
                         if (slot.card.isEnemy != upCell.card.isEnemy)
                             upCell.card.power -= slot.card.power;
@@ -85,7 +99,7 @@ public class PlacedCards : MonoBehaviour
                 CaseSlot downCell = casesManager.GetCellOnGrid(slot.coordinates.x, slot.coordinates.y - 1); // bas
                 if (downCell)
                 {
-                    if (downCell.card)
+                    if (downCell.card && slot.card.isDead == false)
                     {
                         if (slot.card.isEnemy != downCell.card.isEnemy)
                             downCell.card.power -= slot.card.power;
@@ -133,28 +147,28 @@ public class PlacedCards : MonoBehaviour
                 CaseSlot leftCell = casesManager.GetCellOnGrid(slot.coordinates.x - 1, slot.coordinates.y); // gauche
                 if (leftCell)
                 {
-                    if (leftCell.card)
+                    if (leftCell.card && slot.card.isDead == false)
                         leftCell.card.power -= OrderList[i].GetComponent<CardDisplay>().card.power;
                 }
 
                 CaseSlot rightCell = casesManager.GetCellOnGrid(slot.coordinates.x + 1, slot.coordinates.y); // gauche
                 if (rightCell)
                 {
-                    if (rightCell.card)
+                    if (rightCell.card && slot.card.isDead == false)
                         rightCell.card.power -= OrderList[i].GetComponent<CardDisplay>().card.power;
                 }
 
                 CaseSlot upCell = casesManager.GetCellOnGrid(slot.coordinates.x, slot.coordinates.y + 1); // gauche
                 if (upCell)
                 {
-                    if (upCell.card)
+                    if (upCell.card && slot.card.isDead == false)
                         upCell.card.power -= OrderList[i].GetComponent<CardDisplay>().card.power;
                 }
 
                 CaseSlot downCell = casesManager.GetCellOnGrid(slot.coordinates.x, slot.coordinates.y - 1); // gauche
                 if (downCell)
                 {
-                    if (downCell.card)
+                    if (downCell.card && slot.card.isDead == false)
                         downCell.card.power -= OrderList[i].GetComponent<CardDisplay>().card.power;
                 }
 
@@ -163,7 +177,7 @@ public class PlacedCards : MonoBehaviour
                 {
                     if (diagDRCell.card)
                     {
-                        if (diagDRCell.card)
+                        if (diagDRCell.card && slot.card.isDead == false)
                             diagDRCell.card.power -= OrderList[i].GetComponent<CardDisplay>().card.power;
                     }
                 }
@@ -173,7 +187,7 @@ public class PlacedCards : MonoBehaviour
                 {
                     if (diagDLCell.card)
                     {
-                        if (diagDLCell.card)
+                        if (diagDLCell.card && slot.card.isDead == false)
                             diagDLCell.card.power -= OrderList[i].GetComponent<CardDisplay>().card.power;
                     }
                 }
@@ -183,7 +197,7 @@ public class PlacedCards : MonoBehaviour
                 {
                     if (diagURCell.card)
                     {
-                        if (diagURCell.card)
+                        if (diagURCell.card && slot.card.isDead == false)
                             diagURCell.card.power -= OrderList[i].GetComponent<CardDisplay>().card.power;
                     }
                 }
@@ -193,7 +207,7 @@ public class PlacedCards : MonoBehaviour
                 {
                     if (diagULCell.card)
                     {
-                        if (diagULCell.card)
+                        if (diagULCell.card && slot.card.isDead == false)
                             diagULCell.card.power -= OrderList[i].GetComponent<CardDisplay>().card.power;
                     }
                 }
@@ -257,64 +271,47 @@ public class PlacedCards : MonoBehaviour
                 casesManager.DetectCardDown(slot, slot.card.power);
             }
 
+            print(OrderList[i].name + " " + OrderList[i].GetComponent<CardDisplay>().card.frenchName + " " + OrderList[i].GetComponent<CardDisplay>().card.power);
+
+            //if (i >= 11)
+            //{
+            //    round = 1;
+            //    for (int j = 0; j <= placedCardsList.Count - 1; j++)
+            //    {
+            //        int power = placedCardsList[j].GetComponent<CardDisplay>().card.gameOrder;
+            //        if (placedCardsList[j].GetComponent<CardDisplay>().card.isEnemy == false)
+            //        {
+            //            numberCardsPlayer++;
+            //            pdvPlayer += power;
+            //        }
+            //        else
+            //        {
+            //            numberCardsIA++;
+            //            pdvIA += power;
+            //        }
+            //    }
+
+            //    print("Manche finie !");
+            //    print(pdvIA + " pdv IA");
+            //    print(pdvPlayer + " pdv Player");
+
+            //    if (numberCardsPlayer > numberCardsIA)
+            //        print("Le joueur a gagné");
+            //    else if (numberCardsPlayer < numberCardsIA)
+            //        print("L'IA a gagné");
+            //    else if (numberCardsPlayer == numberCardsIA)
+            //    {
+            //        if (pdvPlayer > pdvIA)
+            //            print("Le joueur a gagné");
+            //        else if (pdvPlayer < pdvIA)
+            //            print("L'IA a gagné");
+            //    }
+            //}
             #endregion
-            //for (int i = 0; i == placedCardsList.Count; i++)
-            //{
-            //    int newPower = placedCardsList[i].GetComponent<CardDisplay>().card.power;
-            //    if (placedCardsList[i].GetComponent<CardDisplay>().card.isEnemy == false)
-            //    {
-            //        placedCardsList[i].GetComponent<CardDisplay>().onCaseTextPower.text = newPower.ToString();
-            //    }
-            //    else
-            //        placedCardsList[i].GetComponent<CardDisplay>().onCaseTextIAPower.text = newPower.ToString();
-
-            //    if (placedCardsList[i].GetComponent<CardDisplay>().card.isEnemy == false && newPower > 0)
-            //        pdvPlayer += newPower;
-            //    if (placedCardsList[i].GetComponent<CardDisplay>().card.isEnemy == true && newPower > 0)
-            //        pdvIA += newPower;
-
-            //    if (newPower <= 0)
-            //    {
-            //        CaseSlot cellToRemove = placedCardsList[i].GetComponent<CardDisplay>().card.cell;
-            //        GameObject cellToRemoveGo = cellToRemove.gameObject;
-            //        print("Carte " + placedCardsList[i] + " doit être retirée" + cellToRemove + "    " + cellToRemoveGo);
-            //        placedCardsList[i].GetComponent<CardDisplay>().onCase.SetActive(false);
-            //        placedCardsList[i].GetComponent<CardDisplay>().onCaseIA.SetActive(false);
-            //        if (placedCardsList[i].GetComponent<CardDisplay>().card.isEnemy == true)
-            //            casesManager.numberIACards--;
-            //        if (placedCardsList[i].GetComponent<CardDisplay>().card.isEnemy == false)
-            //            casesManager.numberCards--;
-            //        casesManager.CasesListUsed.Remove(cellToRemoveGo);
-            //        placedCardsList[i].GetComponent<CardDisplay>().card.isDead = true;
-
-            //    }
 
 
 
-            //print("Manche finie !");
-            //print(pdvIA + " pdv IA");
-            //print(pdvPlayer + " pdv Player");
 
-            //if (casesManager.numberCards < casesManager.numberIACards)
-            //print("L'IA a gagné");
-            //else if (casesManager.numberCards > casesManager.numberIACards)
-            //print("Le joueur a gagné");
-            //else if (casesManager.numberCards > casesManager.numberIACards)
-            //{
-            //if (pdvIA > pdvPlayer)
-            //print("L'IA a gagné");
-            //else if (pdvIA < pdvPlayer)
-            //print("Le player a gagné");
-            //}
-
-            //for (int j = 0; j <= placedCardsList.Count - 1; j++)
-            //{
-            //    if (placedCardsList[j].GetComponent<CardDisplay>().card.isDead == true)
-            //    {
-            //        placedCardsList.Remove(placedCardsList[j]);
-            //        OrderList.Remove(placedCardsList[j]);
-            //    }
-            //}
         }
 
     }

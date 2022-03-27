@@ -54,8 +54,4 @@ public class CardDisplay : MonoBehaviour
         onCaseTextIAOrder.text = card.gameOrder.ToString();
         onCaseTextIAPower.text = card.power.ToString();
     }
-
-
-        
-
 }

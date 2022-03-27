@@ -20,9 +20,6 @@ public class CasesManager : MonoBehaviour
     public Vector2Int gridSize = new Vector2Int(4, 4);
     public CaseSlot[,] allCases;
 
-    public int numberIACards = 0;
-    public int numberCards = 0;
-
     private void Awake()
     {
         instance = this;
@@ -79,8 +76,6 @@ public class CasesManager : MonoBehaviour
             OrderManagement();
             playerCanPlay = false;
 
-            numberCards++;
-
             CaseSlot slot = cell.GetComponent<CaseSlot>();
             slot.card = card.GetComponent<CardDisplay>().card;
             card.GetComponent<CardDisplay>().card.cell = slot;
@@ -119,8 +114,6 @@ public class CasesManager : MonoBehaviour
         placedCards.OrderList.Add(card);
         OrderManagement();
 
-        numberIACards++;
-
         CaseSlot slot = randomCell.GetComponent<CaseSlot>();
         slot.card = card.GetComponent<CardDisplay>().card;
         card.GetComponent<CardDisplay>().card.cell = slot;
@@ -147,7 +140,7 @@ public class CasesManager : MonoBehaviour
         CaseSlot leftCell = GetCellOnGrid(slot.coordinates.x - 1, slot.coordinates.y); // gauche
         if (leftCell)
         {
-            if (leftCell.card)
+            if (leftCell.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != leftCell.card.isEnemy))
                     leftCell.card.power -= damage;
@@ -161,7 +154,7 @@ public class CasesManager : MonoBehaviour
         CaseSlot rightCell = GetCellOnGrid(slot.coordinates.x + 1, slot.coordinates.y); // droite
         if (rightCell)
         {
-            if (rightCell.card)
+            if (rightCell.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != rightCell.card.isEnemy))
                     rightCell.card.power -= damage;
@@ -175,7 +168,7 @@ public class CasesManager : MonoBehaviour
         CaseSlot upCell = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y + 1); // haut
         if (upCell)
         {
-            if (upCell.card)
+            if (upCell.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != upCell.card.isEnemy))
                     upCell.card.power -= damage;
@@ -189,7 +182,7 @@ public class CasesManager : MonoBehaviour
         CaseSlot downCell = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y - 1); // bas
         if (downCell)
         {
-            if (downCell.card)
+            if (downCell.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != downCell.card.isEnemy))
                     downCell.card.power -= damage;
@@ -203,7 +196,7 @@ public class CasesManager : MonoBehaviour
         CaseSlot diagDRCell = GetCellOnGrid(slot.coordinates.x + 1, slot.coordinates.y - 1);
         if (diagDRCell)
         {
-            if (diagDRCell.card)
+            if (diagDRCell.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != diagDRCell.card.isEnemy))
                     diagDRCell.card.power -= damage;
@@ -217,7 +210,7 @@ public class CasesManager : MonoBehaviour
         CaseSlot diagDLCell = GetCellOnGrid(slot.coordinates.x - 1, slot.coordinates.y - 1);
         if (diagDLCell)
         {
-            if (diagDLCell.card)
+            if (diagDLCell.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != diagDLCell.card.isEnemy))
                     diagDLCell.card.power -= damage;
@@ -231,7 +224,7 @@ public class CasesManager : MonoBehaviour
         CaseSlot diagURCell = GetCellOnGrid(slot.coordinates.x + 1, slot.coordinates.y + 1);
         if (diagURCell)
         {
-            if (diagURCell.card)
+            if (diagURCell.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != diagURCell.card.isEnemy))
                     diagURCell.card.power -= damage;
@@ -245,7 +238,7 @@ public class CasesManager : MonoBehaviour
         CaseSlot diagULCell = GetCellOnGrid(slot.coordinates.x - 1, slot.coordinates.y + 1);
         if (diagULCell)
         {
-            if (diagULCell.card)
+            if (diagULCell.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != diagULCell.card.isEnemy))
                     diagULCell.card.power -= damage;
@@ -260,7 +253,7 @@ public class CasesManager : MonoBehaviour
         CaseSlot diagDL2Cell = GetCellOnGrid(slot.coordinates.x - 2, slot.coordinates.y - 2);
         if (diagDL2Cell)
         {
-            if (diagDL2Cell.card)
+            if (diagDL2Cell.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != diagDL2Cell.card.isEnemy))
                     diagDL2Cell.card.power -= damage;
@@ -275,7 +268,7 @@ public class CasesManager : MonoBehaviour
         CaseSlot upCell2 = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y + 2); // haut
         if (upCell2)
         {
-            if (upCell2.card)
+            if (upCell2.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != upCell2.card.isEnemy))
                     upCell2.card.power -= damage;
@@ -290,7 +283,7 @@ public class CasesManager : MonoBehaviour
         CaseSlot downCell2 = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y - 2); // bas
         if (downCell2)
         {
-            if (downCell2.card)
+            if (downCell2.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != downCell2.card.isEnemy))
                     downCell2.card.power -= damage;
@@ -305,7 +298,7 @@ public class CasesManager : MonoBehaviour
         CaseSlot downCell3 = GetCellOnGrid(slot.coordinates.x, slot.coordinates.y - 3); // bas
         if (downCell3)
         {
-            if (downCell3.card)
+            if (downCell3.card && slot.card.isDead == false)
             {
                 if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != downCell3.card.isEnemy))
                     downCell3.card.power -= damage;

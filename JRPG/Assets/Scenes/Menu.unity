@@ -425,7 +425,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 838145263}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: OnClickPlay
+        m_MethodName: OnClickCredits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -842,7 +842,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 838145263}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: OnClickPlay
+        m_MethodName: OnClickQuit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
