@@ -46,7 +46,19 @@ public class PlacedCards : MonoBehaviour
     {
         for (int i = 0; i <= OrderList.Count - 1; i++)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(2);
+            GameObject cadreP = OrderList[i].GetComponent<CardDisplay>().cadreP;
+            GameObject cadreIA = OrderList[i].GetComponent<CardDisplay>().cadreIA;
+            cadreP.SetActive(true);
+            cadreIA.SetActive(true);
+            if(i > 0)
+            {
+                if(OrderList[i] != OrderList[i-1])
+                {
+                    OrderList[i - 1].GetComponent<CardDisplay>().cadreP.SetActive(false);
+                    OrderList[i - 1].GetComponent<CardDisplay>().cadreIA.SetActive(false);
+                }
+            }
 
             #region AttackPattern
             if (OrderList[i].GetComponent<CardDisplay>().card.frenchName == "Cheval")
@@ -60,7 +72,7 @@ public class PlacedCards : MonoBehaviour
             }
 
             if (OrderList[i].GetComponent<CardDisplay>().card.frenchName == "Coq")
-            {
+            {            
                 CaseSlot slot = OrderList[i].GetComponent<CardDisplay>().card.cell;
                 CaseSlot leftCell = casesManager.GetCellOnGrid(slot.coordinates.x - 1, slot.coordinates.y); // gauche
                 if (leftCell)
@@ -79,6 +91,7 @@ public class PlacedCards : MonoBehaviour
                         }
                     }
                 }
+
 
                 CaseSlot rightCell = casesManager.GetCellOnGrid(slot.coordinates.x + 1, slot.coordinates.y); // droite
                 if (rightCell)
@@ -297,7 +310,7 @@ public class PlacedCards : MonoBehaviour
                 casesManager.DetectCardDown(slot, slot.card.power);
             }
 
-            print(OrderList[i].name + " " + OrderList[i].GetComponent<CardDisplay>().card.frenchName + " " + OrderList[i].GetComponent<CardDisplay>().card.power);
+            print(OrderList[i].name + OrderList[i].GetComponent<CardDisplay>().card.frenchName + OrderList[i].GetComponent<CardDisplay>().card.power);
 
             if (i >= 11)
             {
@@ -334,10 +347,6 @@ public class PlacedCards : MonoBehaviour
                 round = 1;
             }
             #endregion
-
-
-
-
         }
 
     }

@@ -12,6 +12,9 @@ public class PlayerDeck : MonoBehaviour
 
     public PlacedCards placedCards;
 
+    private int count = 0;
+
+
     void Start()
     {
         for (int i = 0; i < cardsPlayer.Count; i++)
@@ -35,35 +38,41 @@ public class PlayerDeck : MonoBehaviour
             go.GetComponent<CardDisplay>().card.isEnemy = true;
             go.GetComponent<CardDisplay>().visual.SetActive(false);
             go.GetComponent<CardDisplay>().cardIA.SetActive(true);
-            go.GetComponent<CardDisplay>().card.power += 2;
         }
     }
 
-    //void Update()
-    //{
-    //    if (placedCards.round == 1)
-    //    {
-    //        cardsIA.Clear();
-    //        cardsPlayer.Clear();
+    void Update()
+    {
+        if (placedCards.round == 1)
+        {
+            cardsIA.Clear();
+            cardsPlayer.Clear();
 
-    //        for (int i = 0; i <= placedCards.placedCardsList.Count - 1; i++)
-    //        {
-    //            Card card = placedCards.placedCardsList[i].GetComponent<CardDisplay>().card;
-    //            GameObject cardGo = placedCards.placedCardsList[i];
+            for (int i = 0; i <= placedCards.placedCardsList.Count - 1; i++)
+            {
+                Card card = placedCards.placedCardsList[i].GetComponent<CardDisplay>().card;
+                GameObject cardGo = placedCards.placedCardsList[i];
 
-    //            if (card.isEnemy)
-    //            {
-    //                cardsIA.Add(card);
-    //                //cardGo.transform.SetParent(parentIADeck.transform, false);
-    //            }
-    //            else
-    //            {
-    //                cardsPlayer.Add(card);
-    //                //cardGo.transform.SetParent(parentPlayerDeck.transform, false);
-    //            }
-    //        }
-    //    }
-    //}
+                if (card.isEnemy)
+                {
+                    cardsIA.Add(card);
+                    if(count == 0)
+                    {
+                        //cardGo.transform.position = new Vector3(cardGo.transform.position.x + 0.2f, cardGo.transform.position.y + 0.2f, 0);
+                        count++;
+                    }
+                }
+                else
+                {
+                    cardsPlayer.Add(card);
+                    //cardGo.transform.SetParent(parentPlayerDeck.transform, false);
+                }
+                count = 0;
+            }
+            //placedCards.placedCardsList.Clear();
+            //placedCards.OrderList.Clear();
+        }
+    }
 
     //private Card GetRandomCard()
     //{

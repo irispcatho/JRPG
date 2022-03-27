@@ -33,6 +33,9 @@ public class CardDisplay : MonoBehaviour
     public TMP_Text onCaseTextIAPower;
     public SpriteRenderer onCaseImageIA;
 
+    public GameObject cadreP;
+    public GameObject cadreIA;
+
     public GameObject onMouseOver;
 
     void Start()
