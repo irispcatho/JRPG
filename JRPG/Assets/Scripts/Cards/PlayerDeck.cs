@@ -20,19 +20,19 @@ public class PlayerDeck : MonoBehaviour
         for (int i = 0; i < cardsPlayer.Count; i++)
         {
             GameObject go = Instantiate(cardPrefab);
-            go.name = "Carte joueur " + i ;
-            go.transform.SetParent(parentPlayerDeck.transform, false);
             go.GetComponent<CardDisplay>().card = GameObject.Instantiate(cardsPlayer[i]);
+            go.name = "Carte joueur " + go.GetComponent<CardDisplay>().card.frenchName;
+            go.transform.SetParent(parentPlayerDeck.transform, false);
             go.GetComponent<OnClickCard>().placedCards = placedCards;
             go.GetComponent<CardDisplay>().card.isEnemy = false;
         }
-        
+
         for (int i = 0; i < cardsIA.Count; i++)
         {
             GameObject go = Instantiate(cardPrefab);
-            go.name = "Carte IA " + i;
-            go.transform.SetParent(parentIADeck.transform, false);
             go.GetComponent<CardDisplay>().card = GameObject.Instantiate(cardsIA[i]);
+            go.name = "Carte IA " + go.GetComponent<CardDisplay>().card.frenchName;
+            go.transform.SetParent(parentIADeck.transform, false);
             go.GetComponent<OnClickCard>().placedCards = placedCards;
             go.GetComponent<BoxCollider2D>().enabled = false;
             go.GetComponent<CardDisplay>().card.isEnemy = true;
@@ -41,38 +41,45 @@ public class PlayerDeck : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        if (placedCards.round == 1)
-        {
-            cardsIA.Clear();
-            cardsPlayer.Clear();
+    //void Update()
+    //{
+    //    if (placedCards.round == 1)
+    //    {
+    //        bool canDelete = false;
+    //        cardsIA.Clear();
+    //        cardsPlayer.Clear();
 
-            for (int i = 0; i <= placedCards.placedCardsList.Count - 1; i++)
-            {
-                Card card = placedCards.placedCardsList[i].GetComponent<CardDisplay>().card;
-                GameObject cardGo = placedCards.placedCardsList[i];
+    //        for (int i = 0; i <= placedCards.placedCardsList.Count - 1; i++)
+    //        {
+    //            Card card = placedCards.placedCardsList[i].GetComponent<CardDisplay>().card;
 
-                if (card.isEnemy)
-                {
-                    cardsIA.Add(card);
-                    if(count == 0)
-                    {
-                        //cardGo.transform.position = new Vector3(cardGo.transform.position.x + 0.2f, cardGo.transform.position.y + 0.2f, 0);
-                        count++;
-                    }
-                }
-                else
-                {
-                    cardsPlayer.Add(card);
-                    //cardGo.transform.SetParent(parentPlayerDeck.transform, false);
-                }
-                count = 0;
-            }
-            //placedCards.placedCardsList.Clear();
-            //placedCards.OrderList.Clear();
-        }
-    }
+    //            if (card.isEnemy)
+    //            {
+    //                GameObject go = Instantiate(cardPrefab);
+    //                go.GetComponent<CardDisplay>().card = GameObject.Instantiate(cardsIA[i]);
+    //                cardsIA.Add(card);
+    //            }
+    //            else
+    //            {
+    //                GameObject go = Instantiate(cardPrefab);
+    //                go.GetComponent<CardDisplay>().card = GameObject.Instantiate(cardsIA[i]);
+    //                cardsPlayer.Add(card);
+    //            }
+
+    //            if (i >= placedCards.placedCardsList.Count - 1)
+    //            {
+    //                canDelete = true;
+    //                print("can delete");
+    //            }
+    //        }
+
+    //        if (canDelete)
+    //        {
+    //            placedCards.placedCardsList.Clear();
+    //            placedCards.OrderList.Clear();
+    //        }
+    //    }
+    //}
 
     //private Card GetRandomCard()
     //{

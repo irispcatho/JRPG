@@ -68,6 +68,8 @@ public class PlacedCards : MonoBehaviour
             GameObject cadreIA = OrderList[i].GetComponent<CardDisplay>().cadreIA;
             cadreP.SetActive(true);
             cadreIA.SetActive(true);
+
+            #region AttackPattern
             if (i > 0)
             {
                 if (OrderList[i] != OrderList[i - 1])
@@ -77,7 +79,6 @@ public class PlacedCards : MonoBehaviour
                 }
             }
 
-            #region AttackPattern
             if (OrderList[i].GetComponent<CardDisplay>().card.frenchName == "Cheval")
             {
                 CaseSlot slot = OrderList[i].GetComponent<CardDisplay>().card.cell;
@@ -101,7 +102,7 @@ public class PlacedCards : MonoBehaviour
                             leftCell.card.power -= slot.card.power;
                             leftCell.card.damage = slot.card.power;
                             leftCell.card.signeDamage = "-";
-                            leftCell.card.showDamage = true;                            
+                            leftCell.card.showDamage = true;
                         }
                         else
                         {
@@ -449,12 +450,11 @@ public class PlacedCards : MonoBehaviour
             }
             #endregion
         }
-
     }
 
     public IEnumerator Damage(Card card)
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         card.showDamage = false;
     }
 }

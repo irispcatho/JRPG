@@ -44,8 +44,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11f5a59c79573945ad6732059f92f56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardsPlayer: []
-  cardsIA: []
+  cardsPlayer:
+  - {fileID: 11400000, guid: 76cd8f5d5496b144b8310782c3dcb03a, type: 2}
+  - {fileID: 11400000, guid: 1936fe9968878374ca517bd56ec504dd, type: 2}
+  - {fileID: 11400000, guid: aa65f2dfe75050a458d496f2fb11aef3, type: 2}
+  - {fileID: 11400000, guid: ab99aad8fbef3cb489d0a183a0cb861f, type: 2}
+  - {fileID: 11400000, guid: 2d6ee4dde06942342bf949310d8c9cb9, type: 2}
+  - {fileID: 11400000, guid: 6b66d12eff988ae42a55d99250b67eaa, type: 2}
+  cardsIA:
+  - {fileID: 11400000, guid: 1936fe9968878374ca517bd56ec504dd, type: 2}
+  - {fileID: 11400000, guid: a5b00aca7a2b1694f99ca28fd7533509, type: 2}
+  - {fileID: 11400000, guid: b76f9a888c547e3499fa0e278254525c, type: 2}
+  - {fileID: 11400000, guid: a13918d5f7c57cf4bb2eb483b5e5b74b, type: 2}
+  - {fileID: 11400000, guid: ab99aad8fbef3cb489d0a183a0cb861f, type: 2}
+  - {fileID: 11400000, guid: 85c547224b82f46418e9b3baa2f9a587, type: 2}
   parentPlayerDeck: {fileID: 0}
   parentIADeck: {fileID: 0}
   cardPrefab: {fileID: 4354206737431118379, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
@@ -64,7 +76,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   placedCardsList: []
   OrderList: []
-  casesManager: {fileID: 194577858009108244, guid: 225e0291a025e9b44b466a0fa8ab783e, type: 3}
-  cardDisplay: {fileID: 4354206737431118377, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
+  casesManager: {fileID: 0}
   round: 0
   lastCardClicked: {fileID: 6220157289882805943}
