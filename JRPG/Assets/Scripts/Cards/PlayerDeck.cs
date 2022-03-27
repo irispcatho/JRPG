@@ -41,7 +41,7 @@ public class PlayerDeck : MonoBehaviour
 
     //void Update()
     //{
-    //    if(placedCards.round == 1)
+    //    if (placedCards.round == 1)
     //    {
     //        cardsIA.Clear();
     //        cardsPlayer.Clear();
@@ -50,17 +50,16 @@ public class PlayerDeck : MonoBehaviour
     //        {
     //            Card card = placedCards.placedCardsList[i].GetComponent<CardDisplay>().card;
     //            GameObject cardGo = placedCards.placedCardsList[i];
-                
+
     //            if (card.isEnemy)
     //            {
     //                cardsIA.Add(card);
-    //                Destroy(cardGo);
     //                //cardGo.transform.SetParent(parentIADeck.transform, false);
     //            }
     //            else
     //            {
     //                cardsPlayer.Add(card);
-    //                cardGo.transform.SetParent(parentPlayerDeck.transform, false);
+    //                //cardGo.transform.SetParent(parentPlayerDeck.transform, false);
     //            }
     //        }
     //    }

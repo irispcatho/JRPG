@@ -25,16 +25,20 @@ public class PlacedCards : MonoBehaviour
             launchedattack = true;
         }
 
-        for (int c = 0; c < OrderList.Count - 1; c++)
+        for (int c = 0; c <= OrderList.Count - 1; c++)
         {
             if (OrderList[c].GetComponent<CardDisplay>().card.power <= 0)
             {
+                OrderList[c].GetComponent<CardDisplay>().card.power = 0;
                 OrderList[c].GetComponent<CardDisplay>().card.isDead = true;
                 OrderList[c].GetComponent<CardDisplay>().onCaseIA.SetActive(false);
                 OrderList[c].GetComponent<CardDisplay>().onCase.SetActive(false);
                 OrderList[c].GetComponent<BoxCollider2D>().enabled = false;
                 placedCardsList.Remove(OrderList[c]);
             }
+
+            OrderList[c].GetComponent<CardDisplay>().onCaseTextIAPower.text = OrderList[c].GetComponent<CardDisplay>().card.power.ToString();
+            OrderList[c].GetComponent<CardDisplay>().onCaseTextPower.text = OrderList[c].GetComponent<CardDisplay>().card.power.ToString();
         }
     }
 
@@ -43,8 +47,6 @@ public class PlacedCards : MonoBehaviour
         for (int i = 0; i <= OrderList.Count - 1; i++)
         {
             yield return new WaitForSeconds(1);
-
-
 
             #region AttackPattern
             if (OrderList[i].GetComponent<CardDisplay>().card.frenchName == "Cheval")
@@ -67,8 +69,14 @@ public class PlacedCards : MonoBehaviour
                     {
                         if (slot.card.isEnemy != leftCell.card.isEnemy)
                             leftCell.card.power -= slot.card.power;
-                        else if (slot.card.isEnemy == leftCell.card.isEnemy)
-                            leftCell.card.power += 2;
+                        else
+                        {
+                            print("La carte d'à côté est un allié (gauche)");
+                            if (slot.card.power > 0)
+                                leftCell.card.power += 2;
+                            else
+                                leftCell.card.power += 0;
+                        }
                     }
                 }
 
@@ -79,8 +87,14 @@ public class PlacedCards : MonoBehaviour
                     {
                         if (slot.card.isEnemy != rightCell.card.isEnemy)
                             rightCell.card.power -= slot.card.power;
-                        else if (slot.card.isEnemy == rightCell.card.isEnemy)
-                            rightCell.card.power += 2;
+                        else
+                        {
+                            print("La carte d'à côté est un allié (droite)");
+                            if (slot.card.power > 0)
+                                rightCell.card.power += 2;
+                            else
+                                rightCell.card.power += 0;
+                        }
                     }
                 }
 
@@ -91,8 +105,14 @@ public class PlacedCards : MonoBehaviour
                     {
                         if (slot.card.isEnemy != upCell.card.isEnemy)
                             upCell.card.power -= slot.card.power;
-                        else if (slot.card.isEnemy == upCell.card.isEnemy)
-                            upCell.card.power += 2;
+                        else
+                        {
+                            print("La carte d'à côté est un allié (haut)");
+                            if (slot.card.power > 0)
+                                upCell.card.power += 2;
+                            else
+                                upCell.card.power += 0;
+                        }
                     }
                 }
 
@@ -103,8 +123,14 @@ public class PlacedCards : MonoBehaviour
                     {
                         if (slot.card.isEnemy != downCell.card.isEnemy)
                             downCell.card.power -= slot.card.power;
-                        else if (slot.card.isEnemy == downCell.card.isEnemy)
-                            downCell.card.power += 2;
+                        else
+                        {
+                            print("La carte d'à côté est un allié (bas)");
+                            if (slot.card.power > 0)
+                                downCell.card.power += 2;
+                            else
+                                downCell.card.power += 0;
+                        }
                     }
                 }
             }
@@ -273,40 +299,40 @@ public class PlacedCards : MonoBehaviour
 
             print(OrderList[i].name + " " + OrderList[i].GetComponent<CardDisplay>().card.frenchName + " " + OrderList[i].GetComponent<CardDisplay>().card.power);
 
-            //if (i >= 11)
-            //{
-            //    round = 1;
-            //    for (int j = 0; j <= placedCardsList.Count - 1; j++)
-            //    {
-            //        int power = placedCardsList[j].GetComponent<CardDisplay>().card.gameOrder;
-            //        if (placedCardsList[j].GetComponent<CardDisplay>().card.isEnemy == false)
-            //        {
-            //            numberCardsPlayer++;
-            //            pdvPlayer += power;
-            //        }
-            //        else
-            //        {
-            //            numberCardsIA++;
-            //            pdvIA += power;
-            //        }
-            //    }
+            if (i >= 11)
+            {
+                for (int j = 0; j <= placedCardsList.Count - 1; j++)
+                {
+                    int power = placedCardsList[j].GetComponent<CardDisplay>().card.power;
+                    if (placedCardsList[j].GetComponent<CardDisplay>().card.isEnemy == false)
+                    {
+                        numberCardsPlayer++;
+                        pdvPlayer += power;
+                    }
+                    else
+                    {
+                        numberCardsIA++;
+                        pdvIA += power;
+                    }
+                }
 
-            //    print("Manche finie !");
-            //    print(pdvIA + " pdv IA");
-            //    print(pdvPlayer + " pdv Player");
+                print("Manche finie !");
+                print(pdvIA + " pdv IA");
+                print(pdvPlayer + " pdv Player");
 
-            //    if (numberCardsPlayer > numberCardsIA)
-            //        print("Le joueur a gagné");
-            //    else if (numberCardsPlayer < numberCardsIA)
-            //        print("L'IA a gagné");
-            //    else if (numberCardsPlayer == numberCardsIA)
-            //    {
-            //        if (pdvPlayer > pdvIA)
-            //            print("Le joueur a gagné");
-            //        else if (pdvPlayer < pdvIA)
-            //            print("L'IA a gagné");
-            //    }
-            //}
+                if (numberCardsPlayer > numberCardsIA)
+                    print("Le joueur a gagné");
+                else if (numberCardsPlayer < numberCardsIA)
+                    print("L'IA a gagné");
+                else if (numberCardsPlayer == numberCardsIA)
+                {
+                    if (pdvPlayer > pdvIA)
+                        print("Le joueur a gagné");
+                    else if (pdvPlayer < pdvIA)
+                        print("L'IA a gagné");
+                }
+                round = 1;
+            }
             #endregion
 
 
