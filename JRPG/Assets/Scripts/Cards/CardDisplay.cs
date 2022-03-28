@@ -47,6 +47,9 @@ public class CardDisplay : MonoBehaviour
     public TMP_Text signeDamageGoPText;
     public TMP_Text signeDamageGoIAText;
 
+    public GameObject imageDeadP;
+    public GameObject imageDeadIA;
+
     public GameObject onMouseOver;
 
     void Start()

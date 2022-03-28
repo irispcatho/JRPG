@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 
 public class PlacedCards : MonoBehaviour
@@ -34,6 +35,10 @@ public class PlacedCards : MonoBehaviour
                 OrderList[c].GetComponent<CardDisplay>().card.isDead = true;
                 OrderList[c].GetComponent<CardDisplay>().onCaseIA.SetActive(false);
                 OrderList[c].GetComponent<CardDisplay>().onCase.SetActive(false);
+                if(OrderList[c].GetComponent<CardDisplay>().card.isEnemy == false)
+                    OrderList[c].GetComponent<CardDisplay>().imageDeadP.SetActive(true);
+                else
+                    OrderList[c].GetComponent<CardDisplay>().imageDeadIA.SetActive(true);
                 OrderList[c].GetComponent<BoxCollider2D>().enabled = false;
                 placedCardsList.Remove(OrderList[c]);
             }
@@ -53,7 +58,7 @@ public class PlacedCards : MonoBehaviour
                 OrderList[c].GetComponent<CardDisplay>().damageGoIA.SetActive(true);
             }
             else
-            {
+            {                
                 OrderList[c].GetComponent<CardDisplay>().damageGoP.SetActive(false);
                 OrderList[c].GetComponent<CardDisplay>().damageGoIA.SetActive(false);
             }
