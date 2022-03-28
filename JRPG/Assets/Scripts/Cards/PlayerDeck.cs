@@ -14,8 +14,7 @@ public class PlayerDeck : MonoBehaviour
 
     private int count = 0;
 
-
-    void Start()
+    void Awake()
     {
         for (int i = 0; i < cardsPlayer.Count; i++)
         {
@@ -41,45 +40,37 @@ public class PlayerDeck : MonoBehaviour
         }
     }
 
-    //void Update()
-    //{
-    //    if (placedCards.round == 1)
-    //    {
-    //        bool canDelete = false;
-    //        cardsIA.Clear();
-    //        cardsPlayer.Clear();
+    IEnumerator Start()
+    {
+        yield return new WaitForEndOfFrame();
+        foreach (var item in FindObjectsOfType<CardDisplay>())
+            item.SavePosition();
+    }
 
-    //        for (int i = 0; i <= placedCards.placedCardsList.Count - 1; i++)
-    //        {
-    //            Card card = placedCards.placedCardsList[i].GetComponent<CardDisplay>().card;
+    void Update()
+    {
+        if (placedCards.round == 1)
+        {
+            bool canDelete = false;
+            cardsIA.Clear();
+            cardsPlayer.Clear();
 
-    //            if (card.isEnemy)
-    //            {
-    //                GameObject go = Instantiate(cardPrefab);
-    //                go.GetComponent<CardDisplay>().card = GameObject.Instantiate(cardsIA[i]);
-    //                cardsIA.Add(card);
-    //            }
-    //            else
-    //            {
-    //                GameObject go = Instantiate(cardPrefab);
-    //                go.GetComponent<CardDisplay>().card = GameObject.Instantiate(cardsIA[i]);
-    //                cardsPlayer.Add(card);
-    //            }
+            for (int i = 0; i <= placedCards.placedCardsList.Count - 1; i++)
+            {
+                Card card = placedCards.placedCardsList[i].GetComponent<CardDisplay>().card;
+                if (card.isEnemy)
+                    cardsIA.Add(card);
+                else
+                    cardsPlayer.Add(card);
 
-    //            if (i >= placedCards.placedCardsList.Count - 1)
-    //            {
-    //                canDelete = true;
-    //                print("can delete");
-    //            }
-    //        }
-
-    //        if (canDelete)
-    //        {
-    //            placedCards.placedCardsList.Clear();
-    //            placedCards.OrderList.Clear();
-    //        }
-    //    }
-    //}
+                if (i >= placedCards.placedCardsList.Count - 1)
+                {
+                    canDelete = true;
+                    print("can delete");
+                }
+            }
+        }
+    }
 
     //private Card GetRandomCard()
     //{

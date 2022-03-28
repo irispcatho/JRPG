@@ -8,6 +8,9 @@ public class CardDisplay : MonoBehaviour
 {
     public Card card;
 
+    public Vector3 startPosition;
+
+
     public SpriteRenderer backgroundImage;
     public SpriteRenderer type;
     public SpriteRenderer animalG;
@@ -70,5 +73,12 @@ public class CardDisplay : MonoBehaviour
         signeDamageGoPText.text = card.signeDamage;
         signeDamageGoIAText.text = card.signeDamage;
         card.showDamage = false;
+    }
+
+    public void SavePosition()
+    {
+        RectTransform rect = GetComponent<RectTransform>();
+        startPosition = rect.position;
+        print(startPosition);
     }
 }

@@ -17,6 +17,7 @@ public class PlacedCards : MonoBehaviour
     public GameObject lastCardClicked;
 
     bool launchedattack = false;
+
     public void Update()
     {
         if (OrderList.Count >= 12 && launchedattack == false)
@@ -446,9 +447,21 @@ public class PlacedCards : MonoBehaviour
                     else if (pdvPlayer < pdvIA)
                         print("L'IA a gagné");
                 }
+
                 round = 1;
+                StartCoroutine(ResetCards());
             }
             #endregion
+        }
+    }
+
+    IEnumerator ResetCards()
+    {
+        foreach (var item in placedCardsList)
+        {
+            CardDisplay card = item.GetComponent<CardDisplay>();
+            card.transform.position = card.startPosition;
+            yield return new WaitForEndOfFrame();
         }
     }
 
@@ -456,5 +469,11 @@ public class PlacedCards : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         card.showDamage = false;
+    }
+
+    private void FixedUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+            StartCoroutine(ResetCards());
     }
 }
