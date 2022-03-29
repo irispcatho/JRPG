@@ -9,6 +9,7 @@ public class PlacedCards : MonoBehaviour
     public List<GameObject> placedCardsList;
     public List<GameObject> OrderList;
     public CasesManager casesManager;
+    public PlayerDeck playerDeck;
 
     private int pdvPlayer;
     private int pdvIA;
@@ -30,39 +31,38 @@ public class PlacedCards : MonoBehaviour
         for (int c = 0; c <= OrderList.Count - 1; c++)
         {
             CardDisplay cardDisplay = OrderList[c].GetComponent<CardDisplay>();
-
-            if (OrderList[c].GetComponent<CardDisplay>().card.power <= 0)
+            if (cardDisplay.card.power <= 0)
             {
-                OrderList[c].GetComponent<CardDisplay>().card.power = 0;
-                OrderList[c].GetComponent<CardDisplay>().card.isDead = true;
-                OrderList[c].GetComponent<CardDisplay>().onCaseIA.SetActive(false);
-                OrderList[c].GetComponent<CardDisplay>().onCase.SetActive(false);
-                if(OrderList[c].GetComponent<CardDisplay>().card.isEnemy == false)
-                    OrderList[c].GetComponent<CardDisplay>().imageDeadP.SetActive(true);
+                cardDisplay.card.power = 0;
+                cardDisplay.card.isDead = true;
+                cardDisplay.onCaseIA.SetActive(false);
+                cardDisplay.onCase.SetActive(false);
+                if (cardDisplay.card.isEnemy == false)
+                    cardDisplay.imageDeadP.SetActive(true);
                 else
-                    OrderList[c].GetComponent<CardDisplay>().imageDeadIA.SetActive(true);
+                    cardDisplay.imageDeadIA.SetActive(true);
                 OrderList[c].GetComponent<BoxCollider2D>().enabled = false;
                 placedCardsList.Remove(OrderList[c]);
             }
 
-            OrderList[c].GetComponent<CardDisplay>().onCaseTextIAPower.text = OrderList[c].GetComponent<CardDisplay>().card.power.ToString();
-            OrderList[c].GetComponent<CardDisplay>().onCaseTextPower.text = OrderList[c].GetComponent<CardDisplay>().card.power.ToString();
+            cardDisplay.onCaseTextIAPower.text = cardDisplay.card.power.ToString();
+            cardDisplay.onCaseTextPower.text = cardDisplay.card.power.ToString();
 
-            OrderList[c].GetComponent<CardDisplay>().damageGoPText.text = OrderList[c].GetComponent<CardDisplay>().card.damage.ToString();
-            OrderList[c].GetComponent<CardDisplay>().damageGoIAText.text = OrderList[c].GetComponent<CardDisplay>().card.damage.ToString();
+            cardDisplay.damageGoPText.text = cardDisplay.card.damage.ToString();
+            cardDisplay.damageGoIAText.text = cardDisplay.card.damage.ToString();
 
-            OrderList[c].GetComponent<CardDisplay>().signeDamageGoPText.text = OrderList[c].GetComponent<CardDisplay>().card.signeDamage.ToString();
-            OrderList[c].GetComponent<CardDisplay>().signeDamageGoIAText.text = OrderList[c].GetComponent<CardDisplay>().card.signeDamage.ToString();
+            cardDisplay.signeDamageGoPText.text = cardDisplay.card.signeDamage.ToString();
+            cardDisplay.signeDamageGoIAText.text = cardDisplay.card.signeDamage.ToString();
 
-            if (OrderList[c].GetComponent<CardDisplay>().card.showDamage)
+            if (cardDisplay.card.showDamage)
             {
-                OrderList[c].GetComponent<CardDisplay>().damageGoP.SetActive(true);
-                OrderList[c].GetComponent<CardDisplay>().damageGoIA.SetActive(true);
+                cardDisplay.damageGoP.SetActive(true);
+                cardDisplay.damageGoIA.SetActive(true);
             }
             else
-            {                
-                OrderList[c].GetComponent<CardDisplay>().damageGoP.SetActive(false);
-                OrderList[c].GetComponent<CardDisplay>().damageGoIA.SetActive(false);
+            {
+                cardDisplay.damageGoP.SetActive(false);
+                cardDisplay.damageGoIA.SetActive(false);
             }
         }
     }
@@ -72,6 +72,9 @@ public class PlacedCards : MonoBehaviour
         for (int i = 0; i <= OrderList.Count - 1; i++)
         {
             yield return new WaitForSeconds(2);
+            CaseSlot slot = OrderList[i].GetComponent<CardDisplay>().card.cell;
+
+
             GameObject cadreP = OrderList[i].GetComponent<CardDisplay>().cadreP;
             GameObject cadreIA = OrderList[i].GetComponent<CardDisplay>().cadreIA;
             cadreP.SetActive(true);
@@ -89,17 +92,16 @@ public class PlacedCards : MonoBehaviour
 
             if (OrderList[i].GetComponent<CardDisplay>().card.frenchName == "Cheval")
             {
-                CaseSlot slot = OrderList[i].GetComponent<CardDisplay>().card.cell;
-                casesManager.DetectCardUL(slot, slot.card.power);
-                casesManager.DetectCardUR(slot, slot.card.power);
-                casesManager.DetectCardDL(slot, slot.card.power);
-                casesManager.DetectCardDL2(slot, slot.card.power);
-                casesManager.DetectCardDR(slot, slot.card.power);
+                Vector2 cardToAttack = new Vector2(slot.coordinates.x, slot.coordinates.y);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, 1, 1);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, 1, -1);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, -1, -1);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, -1, 1);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, -2, -2);
             }
 
             if (OrderList[i].GetComponent<CardDisplay>().card.frenchName == "Coq")
             {
-                CaseSlot slot = OrderList[i].GetComponent<CardDisplay>().card.cell;
                 CaseSlot leftCell = casesManager.GetCellOnGrid(slot.coordinates.x - 1, slot.coordinates.y); // gauche
                 if (leftCell)
                 {
@@ -213,38 +215,35 @@ public class PlacedCards : MonoBehaviour
 
             if (OrderList[i].GetComponent<CardDisplay>().card.frenchName == "Rat")
             {
-                CaseSlot slot = OrderList[i].GetComponent<CardDisplay>().card.cell;
-                casesManager.DetectCardLeft(slot, slot.card.power);
-                casesManager.DetectCardDown(slot, slot.card.power);
+                Vector2 cardToAttack = new Vector2(slot.coordinates.x, slot.coordinates.y);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, 0, -1);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, -1, 0);
             }
 
             if (OrderList[i].GetComponent<CardDisplay>().card.frenchName == "Buffle")
             {
-                CaseSlot slot = OrderList[i].GetComponent<CardDisplay>().card.cell;
-                casesManager.DetectCardUp(slot, slot.card.power);
-                casesManager.DetectCardUp2(slot, slot.card.power);
-                casesManager.DetectCardDown(slot, slot.card.power);
+                Vector2 cardToAttack = new Vector2(slot.coordinates.x, slot.coordinates.y);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, 0, -1);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, 0, 1);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, 0, 2);
             }
 
             if (OrderList[i].GetComponent<CardDisplay>().card.frenchName == "Sanglier")
             {
-                CaseSlot slot = OrderList[i].GetComponent<CardDisplay>().card.cell;
-
-                casesManager.DetectCardDown(slot, slot.card.power);
-                casesManager.DetectCardDown2(slot, slot.card.power);
-                casesManager.DetectCardDown3(slot, slot.card.power);
+                Vector2 cardToAttack = new Vector2(slot.coordinates.x, slot.coordinates.y);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, 0, -1);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, 0, -2);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, 0, -3);
             }
 
             if (OrderList[i].GetComponent<CardDisplay>().card.frenchName == "Abeille")
             {
-                CaseSlot slot = OrderList[i].GetComponent<CardDisplay>().card.cell;
-                casesManager.DetectCardLeft(slot, slot.card.power);
+                Vector2 cardToAttack = new Vector2(slot.coordinates.x, slot.coordinates.y);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, -1, 0);
             }
 
             if (OrderList[i].GetComponent<CardDisplay>().card.frenchName == "Dragon")
             {
-                CaseSlot slot = OrderList[i].GetComponent<CardDisplay>().card.cell;
-
                 CaseSlot leftCell = casesManager.GetCellOnGrid(slot.coordinates.x - 1, slot.coordinates.y); // gauche
                 if (leftCell)
                 {
@@ -366,58 +365,58 @@ public class PlacedCards : MonoBehaviour
 
             if (OrderList[i].GetComponent<CardDisplay>().card.frenchName == "Hippocampe")
             {
-                CaseSlot slot = OrderList[i].GetComponent<CardDisplay>().card.cell;
-                casesManager.DetectCardUL(slot, slot.card.power);
-                casesManager.DetectCardUR(slot, slot.card.power);
-                casesManager.DetectCardDL(slot, slot.card.power);
-                casesManager.DetectCardDL2(slot, slot.card.power);
-                casesManager.DetectCardDR(slot, slot.card.power);
+                Vector2 cardToAttack = new Vector2(slot.coordinates.x, slot.coordinates.y);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, 1, 1);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, 1, -1);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, -1, -1);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, -1, 1);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, -2, -2);
             }
 
             if (OrderList[i].GetComponent<CardDisplay>().card.frenchName == "Caméléon")
             {
-                CaseSlot slot = OrderList[i].GetComponent<CardDisplay>().card.cell;
-                casesManager.DetectCardUp(slot, slot.card.power);
-                casesManager.DetectCardLeft(slot, slot.card.power);
+                Vector2 cardToAttack = new Vector2(slot.coordinates.x, slot.coordinates.y);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, 0, 1);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, -1, 0);
             }
 
             if (OrderList[i].GetComponent<CardDisplay>().card.frenchName == "Chèvre")
             {
-                CaseSlot slot = OrderList[i].GetComponent<CardDisplay>().card.cell;
-                casesManager.DetectCardUL(slot, slot.card.power);
-                casesManager.DetectCardUR(slot, slot.card.power);
-                casesManager.DetectCardLeft(slot, slot.card.power);
-                casesManager.DetectCardRight(slot, slot.card.power);
+                Vector2 cardToAttack = new Vector2(slot.coordinates.x, slot.coordinates.y);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, 1, 0);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, -1, 0);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, -1, 1);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, 1, 1);
             }
 
             if (OrderList[i].GetComponent<CardDisplay>().card.frenchName == "Oursin")
             {
-                CaseSlot slot = OrderList[i].GetComponent<CardDisplay>().card.cell;
-                casesManager.DetectCardRight(slot, slot.card.power);
-                casesManager.DetectCardLeft(slot, slot.card.power);
-                casesManager.DetectCardUp(slot, slot.card.power);
-                casesManager.DetectCardDown(slot, slot.card.power);
+                Vector2 cardToAttack = new Vector2(slot.coordinates.x, slot.coordinates.y);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, 1, 0);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, -1, 0);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, 0, 1);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, 0, -1);
             }
 
             if (OrderList[i].GetComponent<CardDisplay>().card.frenchName == "Panda")
             {
-                CaseSlot slot = OrderList[i].GetComponent<CardDisplay>().card.cell;
-                casesManager.DetectCardUp(slot, slot.card.power);
-                casesManager.DetectCardRight(slot, slot.card.power);
+                Vector2 cardToAttack = new Vector2(slot.coordinates.x, slot.coordinates.y);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, 1, 0);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, 0, 1);
             }
 
             if (OrderList[i].GetComponent<CardDisplay>().card.frenchName == "Renard")
             {
-                CaseSlot slot = OrderList[i].GetComponent<CardDisplay>().card.cell;
-                casesManager.DetectCardLeft(slot, slot.card.power);
-                casesManager.DetectCardRight(slot, slot.card.power);
+                Vector2 cardToAttack = new Vector2(slot.coordinates.x, slot.coordinates.y);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, 1, 0);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, -1, 0);
             }
 
             if (OrderList[i].GetComponent<CardDisplay>().card.frenchName == "Carpe Koï")
             {
-                CaseSlot slot = OrderList[i].GetComponent<CardDisplay>().card.cell;
-                casesManager.DetectCardUp(slot, slot.card.power);
-                casesManager.DetectCardDown(slot, slot.card.power);
+                Vector2 cardToAttack = new Vector2(slot.coordinates.x, slot.coordinates.y);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, 0, 1);
+                casesManager.DetectCard(slot, slot.card.power, cardToAttack, 0, -1);
             }
 
             print(OrderList[i].name + OrderList[i].GetComponent<CardDisplay>().card.frenchName + OrderList[i].GetComponent<CardDisplay>().card.power);
@@ -456,42 +455,31 @@ public class PlacedCards : MonoBehaviour
                 }
 
                 round = 1;
-                StartCoroutine(ResetCards());
+                ResetCards();
             }
             #endregion
         }
     }
 
-    IEnumerator ResetCards()
+    public void ResetCards()
     {
-        foreach (var item in placedCardsList)
-        {
-            CardDisplay card = item.GetComponent<CardDisplay>();
-            card.transform.position = card.startPosition;
-            card.onCase.SetActive(false);
-            if(card.card.isEnemy == false)
-                card.visual.SetActive(true);
-
-            card.onCaseIA.SetActive(false);
-            if(card.card.isEnemy == true)
-                card.cardIA.SetActive(true);
-
-            yield return new WaitForEndOfFrame();
-        }
-        
-        foreach(var item in OrderList)
-        {
-            if (item.GetComponent<CardDisplay>().card.isDead == false)
-                placedCardsList.Remove(item);
-        }
+        placedCardsList.Clear();
+        OrderList.Clear();
         casesManager.CasesListUsed.Clear();
+
+        for (int i = playerDeck.parentPlayerDeck.transform.childCount - 1; i >= 0; i--)
+        {
+            GameObject.Destroy(playerDeck.parentPlayerDeck.transform.GetChild(i).gameObject);
+        }
+
+        for (int i = playerDeck.parentIADeck.transform.childCount - 1; i >= 0; i--)
+        {
+            GameObject.Destroy(playerDeck.parentIADeck.transform.GetChild(i).gameObject);
+        }
+        playerDeck.CardsCreation();
+       
     }
 
-    private void FixedUpdate()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-            StartCoroutine(ResetCards());
-    }
 
     public IEnumerator Damage(Card card)
     {

@@ -16,6 +16,11 @@ public class PlayerDeck : MonoBehaviour
 
     void Awake()
     {
+        CardsCreation();
+    }
+
+    public void CardsCreation()
+    {
         for (int i = 0; i < cardsPlayer.Count; i++)
         {
             GameObject go = Instantiate(cardPrefab);
@@ -40,12 +45,12 @@ public class PlayerDeck : MonoBehaviour
         }
     }
 
-    IEnumerator Start()
-    {
-        yield return new WaitForEndOfFrame();
-        foreach (var item in FindObjectsOfType<CardDisplay>())
-            item.SavePosition();
-    }
+    //IEnumerator Start()
+    //{
+    //    yield return new WaitForEndOfFrame();
+    //    foreach (var item in FindObjectsOfType<CardDisplay>())
+    //        item.SavePosition();
+    //}
 
     //private Card GetRandomCard()
     //{
