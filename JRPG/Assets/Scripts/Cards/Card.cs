@@ -18,7 +18,7 @@ public class Card : ScriptableObject
     {
         Attack,
         Backup,
-        Bis,
+        Both,
         Dragon
     }
 

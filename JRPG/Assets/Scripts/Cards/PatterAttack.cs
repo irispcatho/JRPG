@@ -11,6 +11,9 @@ using UnityEngine;
     {
         public string name;
         public List<Vector2Int> position;
+
+
+
         //public PatternType type;       
         //public enum PatternType
         //{

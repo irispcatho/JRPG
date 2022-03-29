@@ -140,11 +140,11 @@ public class CasesManager : MonoBehaviour
     }
 
 
-    private void AttackGlobal(CaseSlot cellToAttack, int damage)
+    private void AttackGlobal(CaseSlot cellToAttack, int damage, string signe)
     {
         cellToAttack.card.power -= damage;
         cellToAttack.card.damage = damage;
-        cellToAttack.card.signeDamage = "-";
+        cellToAttack.card.signeDamage = signe;
         cellToAttack.card.showDamage = true;
     }
 
@@ -157,40 +157,34 @@ public class CasesManager : MonoBehaviour
             {                
                 if (slot.card.cardType == Card.CardType.Attack && (slot.card.isEnemy != cellToAttack.card.isEnemy))
                 {
-                    AttackGlobal(cellToAttack, damage);
+                    AttackGlobal(cellToAttack, damage, "-");
                 }
                 else if (slot.card.cardType == Card.CardType.Backup && (slot.card.isEnemy == cellToAttack.card.isEnemy))
                 {
                     if(cellToAttack.card.power > 0)
                     {
-                        cellToAttack.card.power += damage;
-                        cellToAttack.card.damage = damage;
-                        cellToAttack.card.signeDamage = "+";
-                        cellToAttack.card.showDamage = true;
+                        AttackGlobal(cellToAttack, -damage, "+");
                     }
                 }
-                else if(slot.card.cardType == Card.CardType.Bis)
+                else if(slot.card.cardType == Card.CardType.Both)
                 {
                     if(slot.card.isEnemy != cellToAttack.card.isEnemy)
                     {
-                        AttackGlobal(cellToAttack, damage);
+                        AttackGlobal(cellToAttack, damage, "-");
                     }
                     else
                     {
                         if (slot.card.power > 0)
                         {
-                            cellToAttack.card.power += 2;
-                            cellToAttack.card.damage = slot.card.power;
-                            cellToAttack.card.signeDamage = "+";
-                            cellToAttack.card.showDamage = true;
+                            AttackGlobal(cellToAttack, -damage, "+");
                         }
-                        else
-                            cellToAttack.card.power += 0;
+                        //else
+                        //    cellToAttack.card.power += 0;
                     }
                 }
                 else if(slot.card.cardType == Card.CardType.Dragon)
                 {
-                    AttackGlobal(cellToAttack, damage);
+                    AttackGlobal(cellToAttack, damage, "-");
                 }
                 StartCoroutine(placedCards.Damage(cellToAttack.card));
             }
