@@ -1247,6 +1247,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: playerDeck
+      value: 
+      objectReference: {fileID: 2137303066}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: casesManager
       value: 
       objectReference: {fileID: 961375326}

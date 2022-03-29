@@ -16,6 +16,11 @@ public class PlayerDeck : MonoBehaviour
 
     void Awake()
     {
+        CardsCreation();
+    }
+
+    public void CardsCreation()
+    {
         for (int i = 0; i < cardsPlayer.Count; i++)
         {
             GameObject go = Instantiate(cardPrefab);
@@ -40,37 +45,12 @@ public class PlayerDeck : MonoBehaviour
         }
     }
 
-    IEnumerator Start()
-    {
-        yield return new WaitForEndOfFrame();
-        foreach (var item in FindObjectsOfType<CardDisplay>())
-            item.SavePosition();
-    }
-
-    void Update()
-    {
-        if (placedCards.round == 1)
-        {
-            bool canDelete = false;
-            cardsIA.Clear();
-            cardsPlayer.Clear();
-
-            for (int i = 0; i <= placedCards.placedCardsList.Count - 1; i++)
-            {
-                Card card = placedCards.placedCardsList[i].GetComponent<CardDisplay>().card;
-                if (card.isEnemy)
-                    cardsIA.Add(card);
-                else
-                    cardsPlayer.Add(card);
-
-                if (i >= placedCards.placedCardsList.Count - 1)
-                {
-                    canDelete = true;
-                    print("can delete");
-                }
-            }
-        }
-    }
+    //IEnumerator Start()
+    //{
+    //    yield return new WaitForEndOfFrame();
+    //    foreach (var item in FindObjectsOfType<CardDisplay>())
+    //        item.SavePosition();
+    //}
 
     //private Card GetRandomCard()
     //{
