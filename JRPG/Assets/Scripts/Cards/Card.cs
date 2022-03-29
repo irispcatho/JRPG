@@ -11,8 +11,16 @@ public class Card : ScriptableObject
     public Sprite animalG;
     public Sprite animalR;
     public Sprite biome;
-    public Sprite type;
-    public string typeTxt;
+    public Sprite typeImage;
+
+    public CardType cardType;
+    public enum CardType
+    {
+        Attack,
+        Backup,
+        Bis,
+        Dragon
+    }
 
     public int power;
     public int gameOrder;
