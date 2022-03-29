@@ -45,13 +45,6 @@ public class PlayerDeck : MonoBehaviour
         }
     }
 
-    //IEnumerator Start()
-    //{
-    //    yield return new WaitForEndOfFrame();
-    //    foreach (var item in FindObjectsOfType<CardDisplay>())
-    //        item.SavePosition();
-    //}
-
     //private Card GetRandomCard()
     //{
     //    int rnd = Random.Range(0, cards.Count);

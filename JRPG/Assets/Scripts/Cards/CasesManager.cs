@@ -10,8 +10,6 @@ public class CasesManager : MonoBehaviour
     public PlacedCards placedCards;
     public PlayerDeck playerDeck;
 
-    public List<PatternAttack> patternAttacks;
-
     public List<GameObject> CasesList;
     public List<GameObject> CasesListUsed;
     public bool playerCanPlay = true;

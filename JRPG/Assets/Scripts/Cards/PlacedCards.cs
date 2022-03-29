@@ -111,7 +111,7 @@ public class PlacedCards : MonoBehaviour
             }            
 
 
-            if (i >= 11)
+            if (i >= 11 && round <= 2)
             {
                 for (int j = 0; j <= placedCardsList.Count - 1; j++)
                 {
@@ -144,7 +144,7 @@ public class PlacedCards : MonoBehaviour
                         print("L'IA a gagné");
                 }
 
-                round = 1;
+                round++;
                 ResetCards();
             }
             #endregion

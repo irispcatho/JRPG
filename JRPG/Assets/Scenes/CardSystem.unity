@@ -1323,6 +1323,186 @@ PrefabInstance:
       value: "Carpe Ko\xEF"
       objectReference: {fileID: 0}
     - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[1].healAllies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[3].healAllies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[7].healAllies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[6].attackAllie
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[0].attackEnnemy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[1].attackAllies
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[1].attackEnnemy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[2].attackEnnemy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[3].attackEnnemy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[4].attackEnnemy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[5].attackEnnemy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[6].attackAllies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[6].attackEnnemy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[7].attackEnnemy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[8].attackEnnemy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[9].attackEnnemy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[0].attackEnnemys
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[10].attackEnnemy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[11].attackEnnemy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[12].attackEnnemy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[13].attackEnnemy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[1].attackEnnemys
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[2].attackEnnemys
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[4].attackEnnemys
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[5].attackEnnemys
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[6].attackEnnemys
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[7].attackEnnemys
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[8].attackEnnemys
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[9].attackEnnemys
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[0].attackEnnemies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[10].attackEnnemys
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[11].attackEnnemys
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[12].attackEnnemys
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[13].attackEnnemys
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[1].attackEnnemies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[2].attackEnnemies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[4].attackEnnemies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[5].attackEnnemies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[6].attackEnnemies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[8].attackEnnemies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[9].attackEnnemies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[10].attackEnnemies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[11].attackEnnemies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[12].attackEnnemies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[13].attackEnnemies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: patternAttacks.Array.data[0].position.Array.size
       value: 5
       objectReference: {fileID: 0}
