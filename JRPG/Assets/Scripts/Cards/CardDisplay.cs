@@ -61,7 +61,7 @@ public class CardDisplay : MonoBehaviour
         animalR.sprite = card.animalR;
         animalTxt.text = card.animalTxt;
         biome.sprite = card.biome;
-        type.sprite = card.type;
+        type.sprite = card.typeImage;
         //descriptionText.text = card.description;
         onCaseImage.sprite = card.animalG;
         onCaseTextOrder.text = card.gameOrder.ToString();

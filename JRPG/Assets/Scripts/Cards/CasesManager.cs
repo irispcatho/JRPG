@@ -10,6 +10,8 @@ public class CasesManager : MonoBehaviour
     public PlacedCards placedCards;
     public PlayerDeck playerDeck;
 
+    public List<PatternAttack> patternAttacks;
+
     public List<GameObject> CasesList;
     public List<GameObject> CasesListUsed;
     public bool playerCanPlay = true;
@@ -137,21 +139,27 @@ public class CasesManager : MonoBehaviour
         TakeCard(randomCard, CasesList[randomCellIndex], randomCellIndex);
     }
 
+
+    private void AttackGlobal(CaseSlot cellToAttack, int damage)
+    {
+        cellToAttack.card.power -= damage;
+        cellToAttack.card.damage = damage;
+        cellToAttack.card.signeDamage = "-";
+        cellToAttack.card.showDamage = true;
+    }
+
     public void DetectCard(CaseSlot slot, int damage, Vector2 newVector, int x, int y)
     {
         CaseSlot cellToAttack = GetCellOnGrid((int)newVector.x + x, (int)newVector.y + y);
         if(cellToAttack)
         {
             if(cellToAttack.card && slot.card.isDead == false)
-            {
-                if (slot.card.typeTxt == "Attaque" && (slot.card.isEnemy != cellToAttack.card.isEnemy))
+            {                
+                if (slot.card.cardType == Card.CardType.Attack && (slot.card.isEnemy != cellToAttack.card.isEnemy))
                 {
-                    cellToAttack.card.power -= damage;
-                    cellToAttack.card.damage = damage;
-                    cellToAttack.card.signeDamage = "-";
-                    cellToAttack.card.showDamage = true;
+                    AttackGlobal(cellToAttack, damage);
                 }
-                else if (slot.card.typeTxt == "Soutien" && (slot.card.isEnemy == cellToAttack.card.isEnemy))
+                else if (slot.card.cardType == Card.CardType.Backup && (slot.card.isEnemy == cellToAttack.card.isEnemy))
                 {
                     if(cellToAttack.card.power > 0)
                     {
@@ -161,9 +169,31 @@ public class CasesManager : MonoBehaviour
                         cellToAttack.card.showDamage = true;
                     }
                 }
+                else if(slot.card.cardType == Card.CardType.Bis)
+                {
+                    if(slot.card.isEnemy != cellToAttack.card.isEnemy)
+                    {
+                        AttackGlobal(cellToAttack, damage);
+                    }
+                    else
+                    {
+                        if (slot.card.power > 0)
+                        {
+                            cellToAttack.card.power += 2;
+                            cellToAttack.card.damage = slot.card.power;
+                            cellToAttack.card.signeDamage = "+";
+                            cellToAttack.card.showDamage = true;
+                        }
+                        else
+                            cellToAttack.card.power += 0;
+                    }
+                }
+                else if(slot.card.cardType == Card.CardType.Dragon)
+                {
+                    AttackGlobal(cellToAttack, damage);
+                }
                 StartCoroutine(placedCards.Damage(cellToAttack.card));
             }
-
         }
     }
 
