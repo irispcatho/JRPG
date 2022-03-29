@@ -77,5 +77,124 @@ MonoBehaviour:
   placedCardsList: []
   OrderList: []
   casesManager: {fileID: 0}
+  playerDeck: {fileID: 6220157289882805940}
   round: 0
   lastCardClicked: {fileID: 6220157289882805943}
+  patternAttacks:
+  - name: Cheval
+    position:
+    - {x: 1, y: 1}
+    - {x: 1, y: -1}
+    - {x: -1, y: -1}
+    - {x: -1, y: 1}
+    - {x: -2, y: -2}
+    attackEnnemies: 1
+    attackAllies: 0
+    healAllies: 0
+  - name: Coq
+    position:
+    - {x: 1, y: 0}
+    - {x: -1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 0, y: -1}
+    attackEnnemies: 1
+    attackAllies: 0
+    healAllies: 1
+  - name: Rat
+    position:
+    - {x: -1, y: 0}
+    - {x: 0, y: -1}
+    attackEnnemies: 1
+    attackAllies: 0
+    healAllies: 0
+  - name: Buffle
+    position:
+    - {x: 0, y: -1}
+    - {x: 0, y: 1}
+    - {x: 0, y: 1}
+    attackEnnemies: 0
+    attackAllies: 0
+    healAllies: 1
+  - name: Sanglier
+    position:
+    - {x: 0, y: -1}
+    - {x: 0, y: -2}
+    - {x: 0, y: -3}
+    attackEnnemies: 1
+    attackAllies: 0
+    healAllies: 0
+  - name: Abeille
+    position:
+    - {x: -1, y: 0}
+    attackEnnemies: 1
+    attackAllies: 0
+    healAllies: 0
+  - name: Dragon
+    position:
+    - {x: 1, y: 0}
+    - {x: -1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 0, y: -1}
+    - {x: 1, y: 1}
+    - {x: 1, y: -1}
+    - {x: -1, y: 1}
+    - {x: -1, y: -1}
+    attackEnnemies: 1
+    attackAllies: 1
+    healAllies: 0
+  - name: Hippocampe
+    position:
+    - {x: 1, y: 1}
+    - {x: 1, y: -1}
+    - {x: -1, y: -1}
+    - {x: -1, y: 1}
+    - {x: -2, y: -2}
+    attackEnnemies: 0
+    attackAllies: 0
+    healAllies: 1
+  - name: "Cam\xE9l\xE9on"
+    position:
+    - {x: 0, y: 1}
+    - {x: -1, y: 0}
+    attackEnnemies: 1
+    attackAllies: 0
+    healAllies: 0
+  - name: "Ch\xE8vre"
+    position:
+    - {x: -1, y: 0}
+    - {x: -1, y: -1}
+    - {x: 1, y: 0}
+    - {x: 1, y: 1}
+    attackEnnemies: 1
+    attackAllies: 0
+    healAllies: 0
+  - name: Oursin
+    position:
+    - {x: 1, y: 0}
+    - {x: -1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 0, y: -1}
+    attackEnnemies: 1
+    attackAllies: 0
+    healAllies: 0
+  - name: Panda
+    position:
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    attackEnnemies: 1
+    attackAllies: 0
+    healAllies: 0
+  - name: Renard
+    position:
+    - {x: -1, y: 0}
+    - {x: 1, y: 0}
+    attackEnnemies: 1
+    attackAllies: 0
+    healAllies: 0
+  - name: "Carpe Ko\xEF"
+    position:
+    - {x: 0, y: 1}
+    - {x: 0, y: -1}
+    attackEnnemies: 1
+    attackAllies: 0
+    healAllies: 0

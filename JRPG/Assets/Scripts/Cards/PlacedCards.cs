@@ -86,7 +86,6 @@ public class PlacedCards : MonoBehaviour
         {
             yield return new WaitForSeconds(2);
             CaseSlot slot = OrderList[i].GetComponent<CardDisplay>().card.cell;
-
             GameObject cadreP = OrderList[i].GetComponent<CardDisplay>().cadreP;
             GameObject cadreIA = OrderList[i].GetComponent<CardDisplay>().cadreIA;
             cadreP.SetActive(true);
@@ -102,7 +101,6 @@ public class PlacedCards : MonoBehaviour
                 }
             }
 
-
             PatternAttack pattern = GetPattern(OrderList[i].GetComponent<CardDisplay>().card.frenchName);
             Vector2 cardToAttack = new Vector2(slot.coordinates.x, slot.coordinates.y);
             foreach (var item in pattern.position)
@@ -111,7 +109,7 @@ public class PlacedCards : MonoBehaviour
             }            
 
 
-            if (i >= 11 && round <= 2)
+            if (i >= 11)
             {
                 for (int j = 0; j <= placedCardsList.Count - 1; j++)
                 {
@@ -145,7 +143,8 @@ public class PlacedCards : MonoBehaviour
                 }
 
                 round++;
-                ResetCards();
+                if(round < 3)
+                    StartCoroutine(WaitForRound());
             }
             #endregion
         }
@@ -167,10 +166,15 @@ public class PlacedCards : MonoBehaviour
             GameObject.Destroy(playerDeck.parentIADeck.transform.GetChild(i).gameObject);
         }
         playerDeck.CardsCreation();
+        launchedattack = false;
 
     }
 
-
+    private IEnumerator WaitForRound()
+    {
+        yield return new WaitForSeconds(4);
+        ResetCards();
+    }
     public IEnumerator Damage(Card card)
     {
         yield return new WaitForSeconds(2);

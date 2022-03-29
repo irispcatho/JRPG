@@ -14,13 +14,5 @@ using UnityEngine;
         public bool attackEnnemies;
         public bool attackAllies;
         public bool healAllies;
-
-
-        //public PatternType type;       
-        //public enum PatternType
-        //{
-        //    Normal,
-        //    Special
-        //}
     }
 
