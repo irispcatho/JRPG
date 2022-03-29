@@ -28,7 +28,7 @@ public class PlayerDeck : MonoBehaviour
             go.name = "Carte joueur " + go.GetComponent<CardDisplay>().card.frenchName;
             go.transform.SetParent(parentPlayerDeck.transform, false);
             go.GetComponent<OnClickCard>().placedCards = placedCards;
-            go.GetComponent<CardDisplay>().card.isEnemy = false;
+            go.GetComponent<CardDisplay>().card.isEnnemy = false;
         }
 
         for (int i = 0; i < cardsIA.Count; i++)
@@ -39,7 +39,7 @@ public class PlayerDeck : MonoBehaviour
             go.transform.SetParent(parentIADeck.transform, false);
             go.GetComponent<OnClickCard>().placedCards = placedCards;
             go.GetComponent<BoxCollider2D>().enabled = false;
-            go.GetComponent<CardDisplay>().card.isEnemy = true;
+            go.GetComponent<CardDisplay>().card.isEnnemy = true;
             go.GetComponent<CardDisplay>().visual.SetActive(false);
             go.GetComponent<CardDisplay>().cardIA.SetActive(true);
         }

@@ -39,7 +39,7 @@ public class PlacedCards : MonoBehaviour
                 cardDisplay.card.isDead = true;
                 cardDisplay.onCaseIA.SetActive(false);
                 cardDisplay.onCase.SetActive(false);
-                if (cardDisplay.card.isEnemy == false)
+                if (cardDisplay.card.isEnnemy == false)
                     cardDisplay.imageDeadP.SetActive(true);
                 else
                     cardDisplay.imageDeadIA.SetActive(true);
@@ -107,7 +107,7 @@ public class PlacedCards : MonoBehaviour
             Vector2 cardToAttack = new Vector2(slot.coordinates.x, slot.coordinates.y);
             foreach (var item in pattern.position)
             {
-                casesManager.DetectCard(slot, slot.card.power, cardToAttack, item.x, item.y);
+                casesManager.DetectCard(pattern,  slot, slot.card.power, cardToAttack, item.x, item.y);
             }            
 
 
@@ -116,7 +116,7 @@ public class PlacedCards : MonoBehaviour
                 for (int j = 0; j <= placedCardsList.Count - 1; j++)
                 {
                     int power = placedCardsList[j].GetComponent<CardDisplay>().card.power;
-                    if (placedCardsList[j].GetComponent<CardDisplay>().card.isEnemy == false)
+                    if (placedCardsList[j].GetComponent<CardDisplay>().card.isEnnemy == false)
                     {
                         numberCardsPlayer++;
                         pdvPlayer += power;

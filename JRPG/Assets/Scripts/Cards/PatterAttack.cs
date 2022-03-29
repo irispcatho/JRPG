@@ -11,7 +11,9 @@ using UnityEngine;
     {
         public string name;
         public List<Vector2Int> position;
-
+        public bool attackEnnemies;
+        public bool attackAllies;
+        public bool healAllies;
 
 
         //public PatternType type;       

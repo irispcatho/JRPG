@@ -148,43 +148,25 @@ public class CasesManager : MonoBehaviour
         cellToAttack.card.showDamage = true;
     }
 
-    public void DetectCard(CaseSlot slot, int damage, Vector2 newVector, int x, int y)
+    public void DetectCard(PatternAttack pattern, CaseSlot slot, int damage, Vector2 newVector, int x, int y)
     {
         CaseSlot cellToAttack = GetCellOnGrid((int)newVector.x + x, (int)newVector.y + y);
         if(cellToAttack)
         {
             if(cellToAttack.card && slot.card.isDead == false)
             {                
-                if (slot.card.cardType == Card.CardType.Attack && (slot.card.isEnemy != cellToAttack.card.isEnemy))
-                {
+                if (pattern.attackEnnemies && (slot.card.isEnnemy != cellToAttack.card.isEnnemy))
                     AttackGlobal(cellToAttack, damage, "-");
-                }
-                else if (slot.card.cardType == Card.CardType.Backup && (slot.card.isEnemy == cellToAttack.card.isEnemy))
+
+                else if(pattern.attackAllies && (slot.card.isEnnemy == cellToAttack.card.isEnnemy))
+                    AttackGlobal(cellToAttack, damage, "-");
+
+                else if (pattern.healAllies && (slot.card.isEnnemy == cellToAttack.card.isEnnemy))
                 {
                     if(cellToAttack.card.power > 0)
                     {
                         AttackGlobal(cellToAttack, -damage, "+");
                     }
-                }
-                else if(slot.card.cardType == Card.CardType.Both)
-                {
-                    if(slot.card.isEnemy != cellToAttack.card.isEnemy)
-                    {
-                        AttackGlobal(cellToAttack, damage, "-");
-                    }
-                    else
-                    {
-                        if (slot.card.power > 0)
-                        {
-                            AttackGlobal(cellToAttack, -damage, "+");
-                        }
-                        //else
-                        //    cellToAttack.card.power += 0;
-                    }
-                }
-                else if(slot.card.cardType == Card.CardType.Dragon)
-                {
-                    AttackGlobal(cellToAttack, damage, "-");
                 }
                 StartCoroutine(placedCards.Damage(cellToAttack.card));
             }

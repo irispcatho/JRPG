@@ -13,15 +13,6 @@ public class Card : ScriptableObject
     public Sprite biome;
     public Sprite typeImage;
 
-    public CardType cardType;
-    public enum CardType
-    {
-        Attack,
-        Backup,
-        Both,
-        Dragon
-    }
-
     public int power;
     public int gameOrder;
 
@@ -30,7 +21,7 @@ public class Card : ScriptableObject
 
     public CaseSlot cell;
 
-    public bool isEnemy;
+    public bool isEnnemy;
     public bool isDead;
 
     public int damage;
