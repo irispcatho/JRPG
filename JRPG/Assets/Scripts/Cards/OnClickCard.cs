@@ -17,7 +17,7 @@ public class OnClickCard : MonoBehaviour
         if (!isPlaced && countUp == 0)
         {
             initalPos = gameObject.transform.position;
-            gameObject.transform.DOMove(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 0.5f), 0.5f, false);
+            gameObject.transform.DOMove(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 2), 0.5f, false);
             countUp++;
             //description.SetActive(true);
         }
@@ -32,7 +32,7 @@ public class OnClickCard : MonoBehaviour
                 gameObject.transform.DOMove(new Vector2(initalPos.x, initalPos.y), 0.5f, false);
                 countDown++;
                 //description.SetActive(false);
-                countUp = 0;
+                //countUp = 0;
             }
         }
     }

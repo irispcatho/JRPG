@@ -47,31 +47,6 @@ public class PlayerDeck : MonoBehaviour
             item.SavePosition();
     }
 
-    void Update()
-    {
-        if (placedCards.round == 1)
-        {
-            bool canDelete = false;
-            cardsIA.Clear();
-            cardsPlayer.Clear();
-
-            for (int i = 0; i <= placedCards.placedCardsList.Count - 1; i++)
-            {
-                Card card = placedCards.placedCardsList[i].GetComponent<CardDisplay>().card;
-                if (card.isEnemy)
-                    cardsIA.Add(card);
-                else
-                    cardsPlayer.Add(card);
-
-                if (i >= placedCards.placedCardsList.Count - 1)
-                {
-                    canDelete = true;
-                    print("can delete");
-                }
-            }
-        }
-    }
-
     //private Card GetRandomCard()
     //{
     //    int rnd = Random.Range(0, cards.Count);

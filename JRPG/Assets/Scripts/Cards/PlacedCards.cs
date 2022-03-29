@@ -29,6 +29,8 @@ public class PlacedCards : MonoBehaviour
 
         for (int c = 0; c <= OrderList.Count - 1; c++)
         {
+            CardDisplay cardDisplay = OrderList[c].GetComponent<CardDisplay>();
+
             if (OrderList[c].GetComponent<CardDisplay>().card.power <= 0)
             {
                 OrderList[c].GetComponent<CardDisplay>().card.power = 0;
@@ -466,19 +468,34 @@ public class PlacedCards : MonoBehaviour
         {
             CardDisplay card = item.GetComponent<CardDisplay>();
             card.transform.position = card.startPosition;
+            card.onCase.SetActive(false);
+            if(card.card.isEnemy == false)
+                card.visual.SetActive(true);
+
+            card.onCaseIA.SetActive(false);
+            if(card.card.isEnemy == true)
+                card.cardIA.SetActive(true);
+
             yield return new WaitForEndOfFrame();
         }
-    }
-
-    public IEnumerator Damage(Card card)
-    {
-        yield return new WaitForSeconds(2);
-        card.showDamage = false;
+        
+        foreach(var item in OrderList)
+        {
+            if (item.GetComponent<CardDisplay>().card.isDead == false)
+                placedCardsList.Remove(item);
+        }
+        casesManager.CasesListUsed.Clear();
     }
 
     private void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.P))
             StartCoroutine(ResetCards());
+    }
+
+    public IEnumerator Damage(Card card)
+    {
+        yield return new WaitForSeconds(2);
+        card.showDamage = false;
     }
 }
