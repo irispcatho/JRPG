@@ -62,7 +62,7 @@ public class CasesManager : MonoBehaviour
             CasesListUsed.Add(cell);
             placedCards.placedCardsList.Add(placedCards.lastCardClicked);
             GameObject card = placedCards.lastCardClicked;
-            //card.GetComponent<OnClickCard>().isPlaced = true;
+            card.GetComponent<OnClickCard>().isPlaced = true;
             placedCards.lastCardClicked.transform.position = position;
             visualCard = card.GetComponent<CardDisplay>().visual;
             visualCardOnCase = card.GetComponent<CardDisplay>().onCase;
@@ -173,7 +173,7 @@ public class CasesManager : MonoBehaviour
 
     IEnumerator WaitToPlay()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1);
         RandomC();
         playerCanPlay = true;
     }
