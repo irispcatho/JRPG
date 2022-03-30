@@ -13,23 +13,27 @@ public class OnClickCard : MonoBehaviour
 
     private void OnMouseDown()
     {
-        placedCards.lastCardClicked = gameObject;
         if (!isPlaced && countUp == 0)
         {
-            initalPos = gameObject.transform.position;
-            gameObject.transform.DOMove(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 0.5f), 0.5f, false);
-            countUp++;
-            //description.SetActive(true);
+            if(gameObject != placedCards.lastCardClicked)
+            {
+                initalPos = gameObject.transform.position;
+                gameObject.transform.DOMove(new Vector2(initalPos.x, initalPos.y + 0.5f), 0.5f, false);
+                countUp++;
+                countDown = 0;
+
+            }
         }
 
         if (!isPlaced && countDown == 0)
         {
             if (gameObject != placedCards.lastCardClicked)
             {
-                placedCards.lastCardClicked.transform.DOMove(new Vector2(initalPos.x, initalPos.y), 0.5f, false);
+                placedCards.lastCardClicked.transform.DOMove(new Vector2(placedCards.lastCardClicked.transform.position.x, placedCards.lastCardClicked.transform.position.y - 0.5f), 0.5f, false);
                 countDown++;
+                countUp = 0;
             }
         }
-
+        placedCards.lastCardClicked = gameObject;
     }
 }

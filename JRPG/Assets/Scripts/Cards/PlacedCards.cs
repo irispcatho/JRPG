@@ -11,6 +11,7 @@ public class PlacedCards : MonoBehaviour
     public List<GameObject> OrderList;
     public CasesManager casesManager;
     public PlayerDeck playerDeck;
+    public OnClickCard onClickCard;
 
     private int pdvPlayer;
     private int pdvIA;
@@ -25,6 +26,11 @@ public class PlacedCards : MonoBehaviour
 
     public void Update()
     {
+        //if(Input.GetMouseButtonDown(0))
+        //{
+
+        //    if(lastCardClicked != )
+        //}
         if (OrderList.Count >= 12 && launchedattack == false)
         {
             StartCoroutine(Attack());
