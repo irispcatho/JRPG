@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
 
 public class DialogManager : MonoBehaviour
@@ -95,7 +95,8 @@ public class DialogManager : MonoBehaviour
 
         if (discoverMap01)
         {
-            SceneManager.LoadScene("CardSystem", LoadSceneMode.Additive);
+            wall[0].SetActive(false);
+            maps[1].SetActive(true);
         }
         dialogUI.SetActive(false);
         PlayerMovement.instance.moveSpeed = PlayerMovement.instance.initMoveSpeed;
