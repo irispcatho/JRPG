@@ -17,6 +17,8 @@ public class CasesManager : MonoBehaviour
     private GameObject visualCardOnCase;
     private GameObject visualCardOnCaseIA;
 
+    private bool healer;
+
     public Vector2Int gridSize = new Vector2Int(4, 4);
     public CaseSlot[,] allCases;
 
@@ -140,7 +142,10 @@ public class CasesManager : MonoBehaviour
 
     private void AttackGlobal(CaseSlot cellToAttack, int damage, string signe)
     {
-        cellToAttack.card.power -= damage;
+        if(!healer)
+            cellToAttack.card.power -= damage;
+        else
+            cellToAttack.card.power += damage;
         cellToAttack.card.damage = damage;
         cellToAttack.card.signeDamage = signe;
         cellToAttack.card.showDamage = true;
@@ -154,16 +159,23 @@ public class CasesManager : MonoBehaviour
             if(cellToAttack.card && slot.card.isDead == false)
             {                
                 if (pattern.attackEnnemies && (slot.card.isEnnemy != cellToAttack.card.isEnnemy))
+                {
+                    healer = false;
                     AttackGlobal(cellToAttack, damage, "-");
+                }
 
                 else if(pattern.attackAllies && (slot.card.isEnnemy == cellToAttack.card.isEnnemy))
+                {
+                    healer = false;
                     AttackGlobal(cellToAttack, damage, "-");
+                }
 
                 else if (pattern.healAllies && (slot.card.isEnnemy == cellToAttack.card.isEnnemy))
                 {
                     if(cellToAttack.card.power > 0)
                     {
-                        AttackGlobal(cellToAttack, -damage, "+");
+                        healer = true;
+                        AttackGlobal(cellToAttack, damage, "+");
                     }
                 }
                 StartCoroutine(placedCards.Damage(cellToAttack.card));

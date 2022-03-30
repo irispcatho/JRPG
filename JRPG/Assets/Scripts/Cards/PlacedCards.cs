@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 
 public class PlacedCards : MonoBehaviour
@@ -105,7 +106,7 @@ public class PlacedCards : MonoBehaviour
             Vector2 cardToAttack = new Vector2(slot.coordinates.x, slot.coordinates.y);
             foreach (var item in pattern.position)
             {
-                casesManager.DetectCard(pattern,  slot, slot.card.power, cardToAttack, item.x, item.y);
+                casesManager.DetectCard(pattern, slot, slot.card.power, cardToAttack, item.x, item.y);
             }            
 
 
@@ -143,8 +144,10 @@ public class PlacedCards : MonoBehaviour
                 }
 
                 round++;
-                if(round < 3)
+                if (round < 3)
                     StartCoroutine(WaitForRound());
+                else
+                    SceneManager.UnloadSceneAsync("CardSystem");
             }
             #endregion
         }

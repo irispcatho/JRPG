@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class DialogManager : MonoBehaviour
@@ -13,7 +13,7 @@ public class DialogManager : MonoBehaviour
 
     public float letterSpeed = 0.05f;
 
-    public bool discoverMap01 = false;
+    public bool playCombat1 = false;
 
     public GameObject dialogUI;
 
@@ -41,7 +41,7 @@ public class DialogManager : MonoBehaviour
 
         if(pnj == pnjs[0])
         {
-            discoverMap01 = true;            
+            playCombat1 = true;            
         }
 
         PlayerMovement.instance.moveSpeed = 0;
@@ -93,10 +93,9 @@ public class DialogManager : MonoBehaviour
     {
         ZoomCamera.instance.zoomActive = false;
 
-        if (discoverMap01)
+        if (playCombat1)
         {
-            wall[0].SetActive(false);
-            maps[1].SetActive(true);
+            SceneManager.LoadScene("CardSystem", LoadSceneMode.Additive);
         }
         dialogUI.SetActive(false);
         PlayerMovement.instance.moveSpeed = PlayerMovement.instance.initMoveSpeed;
