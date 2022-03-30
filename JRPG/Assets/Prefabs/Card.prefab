@@ -1753,6 +1753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 0}
+  startPosition: {x: 0, y: 0, z: 0}
   backgroundImage: {fileID: 3618050465253588302}
   type: {fileID: 4919225043340536355}
   animalG: {fileID: 7080484880474888544}
@@ -1795,7 +1796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placedCards: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
-  isPlaced: 0
+  selectionManager: {fileID: 7503442938316854571, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
 --- !u!61 &7045365642929977948
 BoxCollider2D:
   m_ObjectHideFlags: 0

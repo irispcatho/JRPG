@@ -167,6 +167,8 @@ public class PlacedCards : MonoBehaviour
         }
         playerDeck.CardsCreation();
         launchedattack = false;
+        pdvPlayer = 0;
+        pdvIA = 0;
 
     }
 

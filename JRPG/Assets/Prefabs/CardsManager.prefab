@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6220157289882805941}
   - component: {fileID: 6220157289882805940}
   - component: {fileID: 61903488}
+  - component: {fileID: 7503442938316854571}
   m_Layer: 0
   m_Name: CardsManager
   m_TagString: Untagged
@@ -198,3 +199,17 @@ MonoBehaviour:
     attackEnnemies: 1
     attackAllies: 0
     healAllies: 0
+--- !u!114 &7503442938316854571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6220157289882805943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 623f9e701771404429dc440a85614d96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClickCard: {fileID: -4092452893302620348, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
+  placedCards: {fileID: 61903488}
