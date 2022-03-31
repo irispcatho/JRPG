@@ -16,8 +16,7 @@ public class OnClickCard : MonoBehaviour
 
     private void OnMouseDown()
     {
-
-
+        infoClone.SetActive(true);
         InfosCard infosCard = infoClone.GetComponent<InfosDisplay>().infosCard;
         Card vars = gameObject.GetComponent<CardDisplay>().card;
         infosCard.cardName = vars.frenchName;

@@ -1798,7 +1798,7 @@ MonoBehaviour:
   placedCards: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
   playerDeck: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
   infos: {fileID: 7845671428455921933, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
-  infoClone: {fileID: 0}
+  infoClone: {fileID: 7845671428455921929, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
 --- !u!61 &7045365642929977948
 BoxCollider2D:
   m_ObjectHideFlags: 0

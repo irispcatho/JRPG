@@ -18,6 +18,7 @@ public class PlacedCards : MonoBehaviour
     private int numberCardsIA;
     public int round = 0;
     public GameObject lastCardClicked;
+    public GameObject infoClone;
 
     public List<PatternAttack> patternAttacks;
 
@@ -52,6 +53,8 @@ public class PlacedCards : MonoBehaviour
                 OrderList[c].GetComponent<BoxCollider2D>().enabled = false;
                 placedCardsList.Remove(OrderList[c]);
             }
+
+
 
             cardDisplay.onCaseTextIAPower.text = cardDisplay.card.power.ToString();
             cardDisplay.onCaseTextPower.text = cardDisplay.card.power.ToString();
@@ -96,6 +99,16 @@ public class PlacedCards : MonoBehaviour
             GameObject cadreIA = OrderList[i].GetComponent<CardDisplay>().cadreIA;
             cadreP.SetActive(true);
             cadreIA.SetActive(true);
+
+            gameObject.GetComponent<PlacedCards>().infoClone = infoClone;
+            InfosCard infosCard = infoClone.GetComponent<InfosDisplay>().infosCard;
+            Card vars = OrderList[i].GetComponent<CardDisplay>().card;
+            infosCard.cardName = vars.frenchName;
+            infosCard.power = vars.power;
+            infosCard.order = vars.gameOrder;
+            infosCard.description = vars.description;
+            infosCard.pattern = vars.pattern;
+
 
             #region AttackPattern
             if (i > 0)
