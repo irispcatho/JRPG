@@ -99,32 +99,34 @@ public class DialogManager : MonoBehaviour
 
         if (playCombat1)
         {
-
-            StartCoroutine(WaitOneFrame(2));
+            SceneManager.LoadScene("CardSystem", LoadSceneMode.Additive);
+            //StartCoroutine(WaitOneFrame(2));
 
         }
 
 
-        IEnumerator WaitOneFrame(float timeToWait)
+        /*IEnumerator WaitOneFrame(float timeToWait)
         {
-            _simpleBlit.transitionIsActive = true;
-            yield return new WaitForSeconds(timeToWait);
-            _simpleBlit.cutoffVal = 0f;
-            _simpleBlit.TransitionMaterial.SetFloat("_Cutoff", _simpleBlit.cutoffVal);
-            _simpleBlit.transitionIsActive = false;
-            SceneManager.LoadScene("CardSystem", LoadSceneMode.Additive);
+            //_simpleBlit.transitionIsActive = true;
+            //yield return new WaitForSeconds(timeToWait);
+            //_simpleBlit.cutoffVal = 0f;
+            //_simpleBlit.TransitionMaterial.SetFloat("_Cutoff", _simpleBlit.cutoffVal);
+            //_simpleBlit.transitionIsActive = false;
+            //SceneManager.LoadScene("CardSystem", LoadSceneMode.Additive);
         }
         
 
         dialogUI.SetActive(false);
-        PlayerMovement.instance.moveSpeed = PlayerMovement.instance.initMoveSpeed;
-        PlayerMovement.instance.animator.enabled = true;
+        //PlayerMovement.instance.moveSpeed = PlayerMovement.instance.initMoveSpeed;
+        //PlayerMovement.instance.animator.enabled = true;
+        */
     }
 
-    private void Start()
+    /*private void Start()
     {
-        _simpleBlit.cutoffVal = 0f;
-        _simpleBlit.TransitionMaterial.SetFloat("_Cutoff", _simpleBlit.cutoffVal);
+        //_simpleBlit.cutoffVal = 0f;
+        //_simpleBlit.TransitionMaterial.SetFloat("_Cutoff", _simpleBlit.cutoffVal);
         _simpleBlit.transitionIsActive = false;
     }
+    */
 }
