@@ -12,6 +12,7 @@ public class OnClickCard : MonoBehaviour
 
     private void OnMouseDown()
     {
+        print(countUp);
         if (countUp == 0)
         {
             if (gameObject != placedCards.lastCardClicked)
@@ -31,9 +32,9 @@ public class OnClickCard : MonoBehaviour
                 {
                     if(placedCards.lastCardClicked.GetComponent<CardDisplay>().card.isPlaced == false)
                         placedCards.lastCardClicked.transform.DOMove(new Vector2(placedCards.lastCardClicked.transform.position.x, placedCards.lastCardClicked.transform.position.y - 0.5f), 0.5f, false);
+                }
                     countDown++;
                     countUp = 0;
-                }
             }
         }
         placedCards.lastCardClicked = gameObject;

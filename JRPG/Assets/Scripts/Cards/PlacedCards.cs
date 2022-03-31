@@ -163,7 +163,7 @@ public class PlacedCards : MonoBehaviour
         placedCardsList.Clear();
         OrderList.Clear();
         casesManager.CasesListUsed.Clear();
-
+        lastCardClicked = gameObject;
         for (int i = playerDeck.parentPlayerDeck.transform.childCount - 1; i >= 0; i--)
         {
             GameObject.Destroy(playerDeck.parentPlayerDeck.transform.GetChild(i).gameObject);
