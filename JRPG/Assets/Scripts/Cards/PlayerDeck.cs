@@ -17,7 +17,6 @@ public class PlayerDeck : MonoBehaviour
     void Awake()
     {
         CardsCreation();
-        infoClone = Instantiate(infoPrefab);
     }
 
     public void CardsCreation()
@@ -30,6 +29,8 @@ public class PlayerDeck : MonoBehaviour
             go.transform.SetParent(parentPlayerDeck.transform, false);
             go.GetComponent<OnClickCard>().placedCards = placedCards;
             go.GetComponent<CardDisplay>().card.isEnnemy = false;
+
+            go.GetComponent<OnClickCard>().infoClone = infoClone;
         }
 
         for (int i = 0; i < cardsIA.Count; i++)

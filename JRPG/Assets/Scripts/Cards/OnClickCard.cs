@@ -13,13 +13,11 @@ public class OnClickCard : MonoBehaviour
     Vector2 initalPos;
     public GameObject infoClone;
 
-    private void Start()
-    {
-        infoClone = playerDeck.infoClone;        
-    }
 
     private void OnMouseDown()
     {
+
+
         InfosCard infosCard = infoClone.GetComponent<InfosDisplay>().infosCard;
         Card vars = gameObject.GetComponent<CardDisplay>().card;
         infosCard.cardName = vars.frenchName;
