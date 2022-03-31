@@ -25,6 +25,8 @@ public class DialogManager : MonoBehaviour
     private Queue<string> sentences;
     private Queue<string> names;
 
+    public SimpleBlit _simpleBlit;
+
     private void Awake()
     {
         instance = this;
@@ -89,16 +91,40 @@ public class DialogManager : MonoBehaviour
         }
     }
 
+
+
     void EndDialog()
     {
         ZoomCamera.instance.zoomActive = false;
 
         if (playCombat1)
         {
+
+            StartCoroutine(WaitOneFrame(2));
+
+        }
+
+
+        IEnumerator WaitOneFrame(float timeToWait)
+        {
+            _simpleBlit.transitionIsActive = true;
+            yield return new WaitForSeconds(timeToWait);
+            _simpleBlit.cutoffVal = 0f;
+            _simpleBlit.TransitionMaterial.SetFloat("_Cutoff", _simpleBlit.cutoffVal);
+            _simpleBlit.transitionIsActive = false;
             SceneManager.LoadScene("CardSystem", LoadSceneMode.Additive);
         }
+        
+
         dialogUI.SetActive(false);
         PlayerMovement.instance.moveSpeed = PlayerMovement.instance.initMoveSpeed;
         PlayerMovement.instance.animator.enabled = true;
+    }
+
+    private void Start()
+    {
+        _simpleBlit.cutoffVal = 0f;
+        _simpleBlit.TransitionMaterial.SetFloat("_Cutoff", _simpleBlit.cutoffVal);
+        _simpleBlit.transitionIsActive = false;
     }
 }
