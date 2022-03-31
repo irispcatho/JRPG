@@ -11,7 +11,6 @@ public class PlacedCards : MonoBehaviour
     public List<GameObject> OrderList;
     public CasesManager casesManager;
     public PlayerDeck playerDeck;
-    public OnClickCard onClickCard;
 
     private int pdvPlayer;
     private int pdvIA;

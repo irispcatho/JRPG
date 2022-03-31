@@ -23,6 +23,7 @@ public class Card : ScriptableObject
 
     public bool isEnnemy;
     public bool isDead;
+    public bool isPlaced;
 
     public int damage;
     public string signeDamage;

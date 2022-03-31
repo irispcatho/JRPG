@@ -64,7 +64,7 @@ public class CasesManager : MonoBehaviour
             CasesListUsed.Add(cell);
             placedCards.placedCardsList.Add(placedCards.lastCardClicked);
             GameObject card = placedCards.lastCardClicked;
-            card.GetComponent<OnClickCard>().isPlaced = true;
+            card.GetComponent<CardDisplay>().card.isPlaced = true;
             placedCards.lastCardClicked.transform.position = position;
             visualCard = card.GetComponent<CardDisplay>().visual;
             visualCardOnCase = card.GetComponent<CardDisplay>().onCase;

@@ -12,8 +12,6 @@ public class PlayerDeck : MonoBehaviour
 
     public PlacedCards placedCards;
 
-    private int count = 0;
-
     void Awake()
     {
         CardsCreation();
