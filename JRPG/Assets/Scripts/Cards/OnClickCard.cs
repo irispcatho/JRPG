@@ -6,13 +6,29 @@ using DG.Tweening;
 public class OnClickCard : MonoBehaviour
 {
     public PlacedCards placedCards;
+    public PlayerDeck playerDeck;
+    public InfosDisplay infos;
     private int countUp = 0;
     private int countDown = 0;
     Vector2 initalPos;
+    public GameObject infoClone;
+
+    private void Start()
+    {
+        infoClone = playerDeck.infoClone;        
+    }
 
     private void OnMouseDown()
     {
-        print(countUp);
+        InfosCard infosCard = infoClone.GetComponent<InfosDisplay>().infosCard;
+        Card vars = gameObject.GetComponent<CardDisplay>().card;
+        infosCard.cardName = vars.frenchName;
+        infosCard.power = vars.power;
+        infosCard.order = vars.gameOrder;
+        infosCard.description = vars.description;
+        infosCard.pattern = vars.pattern;
+        print(infosCard.cardName);
+
         if (countUp == 0)
         {
             if (gameObject != placedCards.lastCardClicked)
@@ -30,13 +46,14 @@ public class OnClickCard : MonoBehaviour
             {
                 if (placedCards.lastCardClicked.GetComponent<CardDisplay>() != null)
                 {
-                    if(placedCards.lastCardClicked.GetComponent<CardDisplay>().card.isPlaced == false)
+                    if (placedCards.lastCardClicked.GetComponent<CardDisplay>().card.isPlaced == false)
                         placedCards.lastCardClicked.transform.DOMove(new Vector2(placedCards.lastCardClicked.transform.position.x, placedCards.lastCardClicked.transform.position.y - 0.5f), 0.5f, false);
                 }
-                    countDown++;
-                    countUp = 0;
+                countDown++;
+                countUp = 0;
             }
         }
         placedCards.lastCardClicked = gameObject;
     }
+
 }

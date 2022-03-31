@@ -9,12 +9,15 @@ public class PlayerDeck : MonoBehaviour
     public GameObject parentPlayerDeck;
     public GameObject parentIADeck;
     public GameObject cardPrefab;
+    public GameObject infoPrefab;
+    public GameObject infoClone;
 
     public PlacedCards placedCards;
 
     void Awake()
     {
         CardsCreation();
+        infoClone = Instantiate(infoPrefab);
     }
 
     public void CardsCreation()

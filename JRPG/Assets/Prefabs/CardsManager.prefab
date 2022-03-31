@@ -61,6 +61,8 @@ MonoBehaviour:
   parentPlayerDeck: {fileID: 0}
   parentIADeck: {fileID: 0}
   cardPrefab: {fileID: 4354206737431118379, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
+  infoPrefab: {fileID: 7845671428455921929, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
+  go1: {fileID: 0}
   placedCards: {fileID: 61903488}
 --- !u!114 &61903488
 MonoBehaviour:

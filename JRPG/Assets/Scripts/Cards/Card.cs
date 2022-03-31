@@ -12,6 +12,7 @@ public class Card : ScriptableObject
     public Sprite animalR;
     public Sprite biome;
     public Sprite typeImage;
+    public Sprite pattern;
 
     public int power;
     public int gameOrder;
