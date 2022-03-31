@@ -18,7 +18,7 @@ MonoBehaviour:
   animalR: {fileID: 21300000, guid: b25887162d6b7ef449057282589f514c, type: 3}
   biome: {fileID: 21300000, guid: c91138273545bf64386949a453189d59, type: 3}
   typeImage: {fileID: 0}
-  power: 2
+  power: 4
   gameOrder: 8
   animalTxt: BUFFLE
   description: MeuhMeuhMeuh
