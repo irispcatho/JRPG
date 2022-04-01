@@ -42,10 +42,9 @@ public class DialogManager : MonoBehaviour
     public void StartDialog(Dialog dialog, GameObject pnj)
     {
         ZoomCamera.instance.zoomActive = true;
-
-        if(pnj == pnjs[0])
+        if (pnj == pnjs[0])
         {
-            playCombat1 = true;            
+            playCombat1 = true;
         }
 
         PlayerMovement.instance.moveSpeed = 0;
@@ -100,7 +99,10 @@ public class DialogManager : MonoBehaviour
         ZoomCamera.instance.zoomActive = false;
 
         if (playCombat1)
+        {
             StartCoroutine(WaitOneFrame(2));
+            
+        }
 
 
         IEnumerator WaitOneFrame(float timeToWait)

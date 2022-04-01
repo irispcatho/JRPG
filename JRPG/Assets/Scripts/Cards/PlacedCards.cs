@@ -29,56 +29,14 @@ public class PlacedCards : MonoBehaviour
 
     public void Update()
     {
-        //if(Input.GetMouseButtonDown(0))
-        //{
-
-        //    if(lastCardClicked != )
-        //}
         if (OrderList.Count >= 12 && launchedattack == false)
         {
             StartCoroutine(Attack());
             launchedattack = true;
         }
 
-        for (int c = 0; c <= OrderList.Count - 1; c++) //show damage
-        {
-            CardDisplay cardDisplay = OrderList[c].GetComponent<CardDisplay>();
-            cardDisplay.onCaseTextIAPower.text = cardDisplay.card.power.ToString();
-            cardDisplay.onCaseTextPower.text = cardDisplay.card.power.ToString();
-
-            cardDisplay.damageGoPText.text = cardDisplay.card.damage.ToString();
-            cardDisplay.damageGoIAText.text = cardDisplay.card.damage.ToString();
-
-            cardDisplay.signeDamageGoPText.text = cardDisplay.card.signeDamage.ToString();
-            cardDisplay.signeDamageGoIAText.text = cardDisplay.card.signeDamage.ToString();
-
-            if (cardDisplay.card.showDamage)
-            {
-                cardDisplay.damageGoP.SetActive(true);
-                cardDisplay.damageGoIA.SetActive(true);
-            }
-            else
-            {
-                cardDisplay.damageGoP.SetActive(false);
-                cardDisplay.damageGoIA.SetActive(false);
-            }
-            if (cardDisplay.card.power <= 0)
-            {
-                cardDisplay.card.power = 0;
-                cardDisplay.card.isDead = true;
-                cardDisplay.onCaseIA.SetActive(false);
-                cardDisplay.onCase.SetActive(false);
-                if (cardDisplay.card.isEnnemy == false)
-                    cardDisplay.imageDeadP.SetActive(true);
-                else
-                    cardDisplay.imageDeadIA.SetActive(true);
-                OrderList[c].GetComponent<BoxCollider2D>().enabled = false;
-                placedCardsList.Remove(OrderList[c]);
-            }
-        }
-
-
-
+        Damage();
+   
     }
 
     public PatternAttack GetPattern(string name)
@@ -96,7 +54,28 @@ public class PlacedCards : MonoBehaviour
     {
         for (int i = 0; i <= OrderList.Count - 1; i++)
         {
-            yield return new WaitForSeconds(2);
+            for (int j = 0; j <= OrderList.Count - 1; j++)
+            {
+                if (j > 0)
+                {
+                    if (OrderList[j] != OrderList[j - 1])
+                    {
+                        OrderList[j - 1].GetComponent<CardDisplay>().cadreP.SetActive(false);
+                        OrderList[j - 1].GetComponent<CardDisplay>().cadreIA.SetActive(false);
+                    }
+                    if (j == OrderList.Count && OrderList[j].GetComponent<CardDisplay>().card.isDead)
+                        break;
+                }
+
+            }
+            if (OrderList[i].GetComponent<CardDisplay>().card.power <= 0)
+            {
+                print("carte morte");
+                i++;
+            }
+
+
+
             CaseSlot slot = OrderList[i].GetComponent<CardDisplay>().card.cell;
             GameObject cadreP = OrderList[i].GetComponent<CardDisplay>().cadreP;
             GameObject cadreIA = OrderList[i].GetComponent<CardDisplay>().cadreIA;
@@ -114,14 +93,6 @@ public class PlacedCards : MonoBehaviour
 
 
             #region AttackPattern
-            if (i > 0)
-            {
-                if (OrderList[i] != OrderList[i - 1])
-                {
-                    OrderList[i - 1].GetComponent<CardDisplay>().cadreP.SetActive(false);
-                    OrderList[i - 1].GetComponent<CardDisplay>().cadreIA.SetActive(false);
-                }
-            }
 
             PatternAttack pattern = GetPattern(OrderList[i].GetComponent<CardDisplay>().card.frenchName);
             Vector2 cardToAttack = new Vector2(slot.coordinates.x, slot.coordinates.y);
@@ -130,6 +101,7 @@ public class PlacedCards : MonoBehaviour
                 casesManager.DetectCard(pattern, slot, slot.card.power, cardToAttack, item.x, item.y);
             }            
 
+            yield return new WaitForSeconds(2);
 
             if (i >= 11)
             {
@@ -186,6 +158,45 @@ public class PlacedCards : MonoBehaviour
         }
     }
 
+    private void Damage()
+    {
+        for (int c = 0; c <= OrderList.Count - 1; c++) //show damage
+        {
+            CardDisplay cardDisplay = OrderList[c].GetComponent<CardDisplay>();
+            cardDisplay.onCaseTextIAPower.text = cardDisplay.card.power.ToString();
+            cardDisplay.onCaseTextPower.text = cardDisplay.card.power.ToString();
+
+            cardDisplay.damageGoPText.text = cardDisplay.card.damage.ToString();
+            cardDisplay.damageGoIAText.text = cardDisplay.card.damage.ToString();
+
+            cardDisplay.signeDamageGoPText.text = cardDisplay.card.signeDamage.ToString();
+            cardDisplay.signeDamageGoIAText.text = cardDisplay.card.signeDamage.ToString();
+
+            if (cardDisplay.card.showDamage)
+            {
+                cardDisplay.damageGoP.SetActive(true);
+                cardDisplay.damageGoIA.SetActive(true);
+            }
+            else
+            {
+                cardDisplay.damageGoP.SetActive(false);
+                cardDisplay.damageGoIA.SetActive(false);
+            }
+            if (cardDisplay.card.power <= 0)
+            {
+                cardDisplay.card.power = 0;
+                cardDisplay.card.isDead = true;
+                cardDisplay.onCaseIA.SetActive(false);
+                cardDisplay.onCase.SetActive(false);
+                if (cardDisplay.card.isEnnemy == false)
+                    cardDisplay.imageDeadP.SetActive(true);
+                else
+                    cardDisplay.imageDeadIA.SetActive(true);
+                OrderList[c].GetComponent<BoxCollider2D>().enabled = false;
+                placedCardsList.Remove(OrderList[c]);
+            }
+        }
+    }
     public void ResetCards()
     {
         placedCardsList.Clear();
@@ -230,6 +241,8 @@ public class PlacedCards : MonoBehaviour
     {
         yield return new WaitForSeconds(1.95f);
         SceneManager.UnloadSceneAsync("CardSystem");
+        round = 0;
+        whoWon = -1;
     }
     public IEnumerator Damage(Card card)
     {
