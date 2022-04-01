@@ -21,9 +21,4 @@ public class InfosDisplay : MonoBehaviour
         description.text = infosCard.description;
         pattern.sprite = infosCard.pattern;
     }
-
-    public void Test()
-    {
-        print("testttt");
-    }
 }

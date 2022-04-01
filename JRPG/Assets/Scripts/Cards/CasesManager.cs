@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class CasesManager : MonoBehaviour
 {
@@ -65,6 +66,9 @@ public class CasesManager : MonoBehaviour
             placedCards.placedCardsList.Add(placedCards.lastCardClicked);
             GameObject card = placedCards.lastCardClicked;
             card.GetComponent<CardDisplay>().card.isPlaced = true;
+
+
+            placedCards.lastCardClicked.transform.DOComplete();
             placedCards.lastCardClicked.transform.position = position;
             visualCard = card.GetComponent<CardDisplay>().visual;
             visualCardOnCase = card.GetComponent<CardDisplay>().onCase;
