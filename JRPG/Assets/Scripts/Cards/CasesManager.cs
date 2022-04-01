@@ -72,8 +72,7 @@ public class CasesManager : MonoBehaviour
             placedCards.lastCardClicked.transform.position = position;
             visualCard = card.GetComponent<CardDisplay>().visual;
             visualCardOnCase = card.GetComponent<CardDisplay>().onCase;
-            card.GetComponent<BoxCollider2D>().size = new Vector2(164, 164);
-            card.GetComponent<BoxCollider2D>().offset = new Vector2(0, 0);
+            card.GetComponent<BoxCollider2D>().enabled = false;
 
             visualCard.SetActive(false);
             visualCardOnCase.SetActive(true);
@@ -115,9 +114,7 @@ public class CasesManager : MonoBehaviour
         visualCard.SetActive(false);
         visualCardOnCase.SetActive(true);
         card.GetComponent<CardDisplay>().cadreIA.SetActive(false);
-
-        card.GetComponent<BoxCollider2D>().size = new Vector2(164, 164);
-        card.GetComponent<BoxCollider2D>().offset = new Vector2(0, 0);
+        card.GetComponent<BoxCollider2D>().enabled = false;
 
         placedCards.OrderList.Add(card);
         OrderManagement();

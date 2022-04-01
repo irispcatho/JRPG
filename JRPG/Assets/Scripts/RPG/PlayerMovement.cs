@@ -40,9 +40,5 @@ public class PlayerMovement : MonoBehaviour
     {
         // Movement
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-        //if (movement.x > 0)
-        //    sr.flipX = false;
-        //else
-        //    sr.flipX = true;
     }
 }

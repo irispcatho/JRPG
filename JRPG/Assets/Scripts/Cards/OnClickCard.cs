@@ -31,6 +31,7 @@ public class OnClickCard : MonoBehaviour
             if (gameObject != placedCards.lastCardClicked)
             {
                 initalPos = gameObject.transform.position;
+                gameObject.transform.DOComplete();
                 gameObject.transform.DOMove(new Vector2(initalPos.x, initalPos.y + 0.5f), 0.5f, false);
                 countUp++;
                 countDown = 0;
@@ -44,7 +45,10 @@ public class OnClickCard : MonoBehaviour
                 if (placedCards.lastCardClicked.GetComponent<CardDisplay>() != null)
                 {
                     if (placedCards.lastCardClicked.GetComponent<CardDisplay>().card.isPlaced == false)
+                    {
+                        placedCards.lastCardClicked.transform.DOComplete();
                         placedCards.lastCardClicked.transform.DOMove(new Vector2(placedCards.lastCardClicked.transform.position.x, placedCards.lastCardClicked.transform.position.y - 0.5f), 0.5f, false);
+                    }
                 }
                 countDown++;
                 countUp = 0;
