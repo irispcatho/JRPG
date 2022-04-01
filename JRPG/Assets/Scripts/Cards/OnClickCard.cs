@@ -13,10 +13,6 @@ public class OnClickCard : MonoBehaviour
     Vector2 initalPos;
     public GameObject infoClone;
 
-    private void Start()
-    {
-        
-    }
     private void OnMouseDown()
     {
         infoClone.SetActive(true);
@@ -27,7 +23,6 @@ public class OnClickCard : MonoBehaviour
         infosCard.order = vars.gameOrder;
         infosCard.description = vars.description;
         infosCard.pattern = vars.pattern;
-        print(infosCard.cardName);
 
         if (countUp == 0)
         {

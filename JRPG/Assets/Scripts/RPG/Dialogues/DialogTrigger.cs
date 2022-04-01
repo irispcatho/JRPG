@@ -5,6 +5,7 @@ using UnityEngine;
 public class DialogTrigger : MonoBehaviour
 {
     public Dialog dialog;
+    public DialogManager dialogManager;
     public bool isInRange;
     public GameObject pnj;
 

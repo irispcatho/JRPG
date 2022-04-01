@@ -19,6 +19,9 @@ public class PlacedCards : MonoBehaviour
     public int round = 0;
     public GameObject lastCardClicked;
     public GameObject infoClone;
+    public int whoWon = -1;
+    public int numberWinPlayer = 0;
+    public int numberWinIA = 0;
 
     public List<PatternAttack> patternAttacks;
 
@@ -37,25 +40,9 @@ public class PlacedCards : MonoBehaviour
             launchedattack = true;
         }
 
-        for (int c = 0; c <= OrderList.Count - 1; c++)
+        for (int c = 0; c <= OrderList.Count - 1; c++) //show damage
         {
             CardDisplay cardDisplay = OrderList[c].GetComponent<CardDisplay>();
-            if (cardDisplay.card.power <= 0)
-            {
-                cardDisplay.card.power = 0;
-                cardDisplay.card.isDead = true;
-                cardDisplay.onCaseIA.SetActive(false);
-                cardDisplay.onCase.SetActive(false);
-                if (cardDisplay.card.isEnnemy == false)
-                    cardDisplay.imageDeadP.SetActive(true);
-                else
-                    cardDisplay.imageDeadIA.SetActive(true);
-                OrderList[c].GetComponent<BoxCollider2D>().enabled = false;
-                placedCardsList.Remove(OrderList[c]);
-            }
-
-
-
             cardDisplay.onCaseTextIAPower.text = cardDisplay.card.power.ToString();
             cardDisplay.onCaseTextPower.text = cardDisplay.card.power.ToString();
 
@@ -75,7 +62,23 @@ public class PlacedCards : MonoBehaviour
                 cardDisplay.damageGoP.SetActive(false);
                 cardDisplay.damageGoIA.SetActive(false);
             }
+            if (cardDisplay.card.power <= 0)
+            {
+                cardDisplay.card.power = 0;
+                cardDisplay.card.isDead = true;
+                cardDisplay.onCaseIA.SetActive(false);
+                cardDisplay.onCase.SetActive(false);
+                if (cardDisplay.card.isEnnemy == false)
+                    cardDisplay.imageDeadP.SetActive(true);
+                else
+                    cardDisplay.imageDeadIA.SetActive(true);
+                OrderList[c].GetComponent<BoxCollider2D>().enabled = false;
+                placedCardsList.Remove(OrderList[c]);
+            }
         }
+
+
+
     }
 
     public PatternAttack GetPattern(string name)
@@ -144,28 +147,40 @@ public class PlacedCards : MonoBehaviour
                         pdvIA += power;
                     }
                 }
-
-                print("Manche finie !");
-                print(pdvIA + " pdv IA");
-                print(pdvPlayer + " pdv Player");
-
                 if (numberCardsPlayer > numberCardsIA)
+                {
+                    whoWon = 0;
+                    numberWinPlayer++;
                     print("Le joueur a gagné");
+
+                }
                 else if (numberCardsPlayer < numberCardsIA)
+                {
+                    whoWon = 1;
+                    numberWinIA++;
                     print("L'IA a gagné");
+
+                }
                 else if (numberCardsPlayer == numberCardsIA)
                 {
                     if (pdvPlayer > pdvIA)
+                    {
+                        whoWon = 0;
+                        numberWinPlayer++;
                         print("Le joueur a gagné");
+
+                    }
                     else if (pdvPlayer < pdvIA)
+                    {
+                        whoWon = 1;
+                        numberWinIA++;
                         print("L'IA a gagné");
+
+                    }
                 }
 
-                round++;
-                if (round < 3)
-                    StartCoroutine(WaitForRound());
-                else
-                    SceneManager.UnloadSceneAsync("CardSystem");
+                StartCoroutine(WaitToUpdateRound());
+
             }
             #endregion
         }
@@ -188,13 +203,33 @@ public class PlacedCards : MonoBehaviour
         }
         playerDeck.CardsCreation();
         launchedattack = false;
-
     }
 
     private IEnumerator WaitForRound()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(2);
         ResetCards();
+    }
+
+    private IEnumerator WaitToUpdateRound()
+    {
+        yield return new WaitForSeconds(3);
+        if (numberWinPlayer == 2 || numberWinIA == 2)
+            StartCoroutine(WaitForClose());
+
+        whoWon = -1;
+        round++;
+
+        if (round < 3)
+            StartCoroutine(WaitForRound());
+        else
+            StartCoroutine(WaitForClose());
+    }
+
+    IEnumerator WaitForClose()
+    {
+        yield return new WaitForSeconds(1.95f);
+        SceneManager.UnloadSceneAsync("CardSystem");
     }
     public IEnumerator Damage(Card card)
     {

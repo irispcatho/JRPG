@@ -62,6 +62,7 @@ public class CasesManager : MonoBehaviour
         Vector2 position = cell.transform.position;
         if (!placedCards.placedCardsList.Contains(placedCards.lastCardClicked) && playerCanPlay && !CasesListUsed.Contains(cell))
         {
+            playerCanPlay = false;
             CasesListUsed.Add(cell);
             placedCards.placedCardsList.Add(placedCards.lastCardClicked);
             GameObject card = placedCards.lastCardClicked;
@@ -80,7 +81,6 @@ public class CasesManager : MonoBehaviour
 
             placedCards.OrderList.Add(card);
             OrderManagement();
-            playerCanPlay = false;
 
             CaseSlot slot = cell.GetComponent<CaseSlot>();
             slot.card = card.GetComponent<CardDisplay>().card;
@@ -96,32 +96,39 @@ public class CasesManager : MonoBehaviour
 
     void TakeCard(GameObject card, GameObject randomCell, int randomCellIndex)
     {
-        placedCards.placedCardsList.Add(card);
-        Vector2 positionC = randomCell.transform.position;
-        CasesListUsed.Add(CasesList[randomCellIndex]);
+        if(!playerCanPlay)
+        {
+            placedCards.placedCardsList.Add(card);
+            Vector2 positionC = randomCell.transform.position;
+            CasesListUsed.Add(CasesList[randomCellIndex]);
 
-        visualCardOnCaseIA = card.GetComponent<CardDisplay>().cardIA;
-        visualCardOnCaseIA.SetActive(false);
+            visualCardOnCaseIA = card.GetComponent<CardDisplay>().cardIA;
+            visualCardOnCaseIA.SetActive(false);
 
-        SpriteRenderer AnimalG = card.GetComponent<CardDisplay>().animalG;
-        AnimalG.enabled = false;
+            SpriteRenderer AnimalG = card.GetComponent<CardDisplay>().animalG;
+            AnimalG.enabled = false;
 
-        card.transform.position = positionC;
-        CardDisplay display = card.GetComponent<CardDisplay>();
-        visualCard = display.visual;
-        visualCardOnCase = display.onCaseIA;
+            card.transform.position = positionC;
+            CardDisplay display = card.GetComponent<CardDisplay>();
+            visualCard = display.visual;
+            visualCardOnCase = display.onCaseIA;
 
-        visualCard.SetActive(false);
-        visualCardOnCase.SetActive(true);
-        card.GetComponent<CardDisplay>().cadreIA.SetActive(false);
-        card.GetComponent<BoxCollider2D>().enabled = false;
+            visualCard.SetActive(false);
+            visualCardOnCase.SetActive(true);
+            card.GetComponent<CardDisplay>().cadreIA.SetActive(false);
+            card.GetComponent<BoxCollider2D>().enabled = false;
 
-        placedCards.OrderList.Add(card);
-        OrderManagement();
+            placedCards.OrderList.Add(card);
+            OrderManagement();
 
-        CaseSlot slot = randomCell.GetComponent<CaseSlot>();
-        slot.card = card.GetComponent<CardDisplay>().card;
-        card.GetComponent<CardDisplay>().card.cell = slot;
+            CaseSlot slot = randomCell.GetComponent<CaseSlot>();
+            slot.card = card.GetComponent<CardDisplay>().card;
+            card.GetComponent<CardDisplay>().card.cell = slot;
+
+            playerCanPlay = true;
+
+        }
+
     }
 
     public void RandomC()
@@ -188,7 +195,6 @@ public class CasesManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         RandomC();
-        playerCanPlay = true;
     }
 
     private static int CompareCardOrder(GameObject cardone, GameObject cardtwo)

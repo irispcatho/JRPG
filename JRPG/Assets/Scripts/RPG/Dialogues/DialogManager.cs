@@ -22,11 +22,13 @@ public class DialogManager : MonoBehaviour
 
     public GameObject[] wall;
 
-    private Queue<string> sentences;
+    public Queue<string> sentences;
     private Queue<string> names;
 
     public SimpleBlit _simpleBlit;
 
+
+    public bool combatAlreadyLauched = false;
     private void Awake()
     {
         instance = this;
@@ -98,11 +100,7 @@ public class DialogManager : MonoBehaviour
         ZoomCamera.instance.zoomActive = false;
 
         if (playCombat1)
-        {
-
             StartCoroutine(WaitOneFrame(2));
-
-        }
 
 
         IEnumerator WaitOneFrame(float timeToWait)
@@ -112,7 +110,11 @@ public class DialogManager : MonoBehaviour
             _simpleBlit.cutoffVal = 0f;
             _simpleBlit.TransitionMaterial.SetFloat("_Cutoff", _simpleBlit.cutoffVal);
             _simpleBlit.transitionIsActive = false;
-            SceneManager.LoadScene("CardSystem", LoadSceneMode.Additive);
+            if(!combatAlreadyLauched)
+            {
+                SceneManager.LoadScene("CardSystem", LoadSceneMode.Additive);
+                combatAlreadyLauched = true;
+            }
         }
         
 
