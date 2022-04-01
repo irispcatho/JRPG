@@ -240,9 +240,11 @@ public class PlacedCards : MonoBehaviour
     IEnumerator WaitForClose()
     {
         yield return new WaitForSeconds(1.95f);
-        SceneManager.UnloadSceneAsync("CardSystem");
+        ResetCards();
         round = 0;
         whoWon = -1;
+        DialogManager.instance.combatAlreadyLauched = false;
+        SceneManager.UnloadSceneAsync("CardSystem");
     }
     public IEnumerator Damage(Card card)
     {
