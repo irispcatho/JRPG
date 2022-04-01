@@ -13,7 +13,10 @@ public class OnClickCard : MonoBehaviour
     Vector2 initalPos;
     public GameObject infoClone;
 
-
+    private void Start()
+    {
+        
+    }
     private void OnMouseDown()
     {
         infoClone.SetActive(true);
@@ -30,8 +33,8 @@ public class OnClickCard : MonoBehaviour
         {
             if (gameObject != placedCards.lastCardClicked)
             {
-                initalPos = gameObject.transform.position;
                 gameObject.transform.DOComplete();
+                initalPos = gameObject.transform.position;
                 gameObject.transform.DOMove(new Vector2(initalPos.x, initalPos.y + 0.5f), 0.5f, false);
                 countUp++;
                 countDown = 0;
