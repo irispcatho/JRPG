@@ -268,16 +268,11 @@ public class PlacedCards : MonoBehaviour
         round = 0;
         whoWon = -1;
         DialogManager.instance.combatAlreadyLauched = false;
-        Scene scene = SceneManager.GetActiveScene();
-        print(scene.buildIndex);
-        if (scene.buildIndex == 3)
-        {
+        if(DialogManager.instance.playCombat1)
             SceneManager.UnloadSceneAsync("Fight1");
-            DialogManager.instance.DisplayNextSentence();
-        }
-        if (scene.buildIndex == 4)
+        if (DialogManager.instance.playCombat2)
             SceneManager.UnloadSceneAsync("Fight2");
-        if (scene.buildIndex == 5)
+        if (DialogManager.instance.playCombat3)
             SceneManager.UnloadSceneAsync("Fight3");
     }
     public IEnumerator Damage(Card card)

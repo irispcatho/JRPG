@@ -27,6 +27,7 @@ public class DialogManager : MonoBehaviour
     public Queue<string> sentences;
 
     public SimpleBlit _simpleBlit;
+    private bool beenPlayed;
 
 
     public bool combatAlreadyLauched = false;
@@ -98,20 +99,18 @@ public class DialogManager : MonoBehaviour
     }
     public void EndDialogWithCombat()
     {
-        if (playCombat1)
+        if (playCombat1 && !beenPlayed)
         {
             StartCoroutine(WaitOneFrame(2, "Fight1"));
-            playCombat1 = false;
+            beenPlayed = true;
         }
         if (playCombat2)
         {
             StartCoroutine(WaitOneFrame(2, "Fight2"));
-            playCombat2 = false;
         }
         if (playCombat3)
         {
             StartCoroutine(WaitOneFrame(2, "Fight3"));
-            playCombat3 = false;
         }
 
         IEnumerator WaitOneFrame(float timeToWait, string scene)
@@ -125,6 +124,7 @@ public class DialogManager : MonoBehaviour
             {
                 AudioManager.instance.Play("FightLaunch");
                 SceneManager.LoadScene(scene, LoadSceneMode.Additive);
+                SceneManager.GetSceneByName(scene);
                 combatAlreadyLauched = true;
             }
         }
