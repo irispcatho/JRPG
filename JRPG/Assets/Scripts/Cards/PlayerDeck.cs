@@ -25,15 +25,6 @@ public class PlayerDeck : MonoBehaviour
             GameObject go = Instantiate(cardPrefab);
             Card cardProperties = Instantiate(cardsPlayer[i]);
             go.GetComponent<CardDisplay>().card = cardProperties;
-            Upgrade[] upgrade = SafeManager.instance.upgrade;
-            for (int j = 0; j < upgrade.Length; j++)
-            {
-                if(upgrade[j].asBeenDiscovered)
-                {
-                    if(upgrade[j].cardAffected.frenchName == cardsPlayer[i].frenchName)
-                        cardProperties.power += upgrade[j].attackUpgrade;
-                }
-            }
             go.name = "Carte joueur " + go.GetComponent<CardDisplay>().card.frenchName;
             go.transform.SetParent(parentPlayerDeck.transform, false);
             go.GetComponent<OnClickCard>().placedCards = placedCards;

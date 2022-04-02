@@ -14,7 +14,8 @@ public class Card : ScriptableObject
     public Sprite typeImage;
     public Sprite pattern;
 
-    public int power;
+    public int powerIA;
+    public int powerPlayer;
     public int gameOrder;
 
     public string animalTxt;

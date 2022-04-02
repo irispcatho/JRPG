@@ -19,7 +19,10 @@ public class OnClickCard : MonoBehaviour
         InfosCard infosCard = infoClone.GetComponent<InfosDisplay>().infosCard;
         Card vars = gameObject.GetComponent<CardDisplay>().card;
         infosCard.cardName = vars.frenchName;
-        infosCard.power = vars.power;
+        if(!vars.isEnnemy)
+            infosCard.power = vars.powerPlayer;
+        if (vars.isEnnemy)
+            infosCard.power = vars.powerIA;
         infosCard.order = vars.gameOrder;
         infosCard.description = vars.description;
         infosCard.pattern = vars.pattern;

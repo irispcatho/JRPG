@@ -55,7 +55,10 @@ public class CardDisplay : MonoBehaviour
     void Start()
     {
         backgroundImage.sprite = card.background;
-        powerText.text = card.power.ToString();
+        if(card.isEnnemy)
+            powerText.text = card.powerIA.ToString();
+        if (!card.isEnnemy)
+            powerText.text = card.powerPlayer.ToString();
         gameOrderText.text = card.gameOrder.ToString();
         animalG.sprite = card.animalG;
         animalR.sprite = card.animalR;
@@ -65,11 +68,16 @@ public class CardDisplay : MonoBehaviour
         //descriptionText.text = card.description;
         onCaseImage.sprite = card.animalG;
         onCaseTextOrder.text = card.gameOrder.ToString();
-        onCaseTextPower.text = card.power.ToString();
-
+        if (card.isEnnemy)
+            onCaseTextPower.text = card.powerIA.ToString();
+        if (!card.isEnnemy)
+            onCaseTextPower.text = card.powerIA.ToString();
         onCaseImageIA.sprite = card.animalR;
         onCaseTextIAOrder.text = card.gameOrder.ToString();
-        onCaseTextIAPower.text = card.power.ToString();
+        if(card.isEnnemy)
+            onCaseTextIAPower.text = card.powerIA.ToString();
+        if (!card.isEnnemy)
+            onCaseTextIAPower.text = card.powerPlayer.ToString();
 
         damageGoPText.text = card.damage.ToString();
         damageGoIAText.text = card.damage.ToString();

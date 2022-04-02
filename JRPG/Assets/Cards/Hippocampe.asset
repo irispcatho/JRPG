@@ -19,7 +19,8 @@ MonoBehaviour:
   biome: {fileID: 21300000, guid: ad7208320d4d2f74cb133b18bca8d1b8, type: 3}
   typeImage: {fileID: 0}
   pattern: {fileID: 21300000, guid: 6d28419bc58e1614c98bfc76d5d00a78, type: 3}
-  power: 3
+  powerIA: 3
+  powerPlayer: 3
   gameOrder: 4
   animalTxt: HIPPOCAMPE
   description: ??????

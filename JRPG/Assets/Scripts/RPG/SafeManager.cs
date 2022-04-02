@@ -8,6 +8,7 @@ public class SafeManager : MonoBehaviour
     public Upgrade[] upgrade;
     public bool isInRange;
     public GameObject[] safeSprite;
+    public int index;
 
     private void Start()
     {
@@ -41,10 +42,10 @@ public class SafeManager : MonoBehaviour
     private void TriggerSafe()
     {
         int rnd = Random.Range(3, 5);
-        print(rnd);
         for (int i = 0; i < rnd; i++)
         {
             upgrade[i].asBeenDiscovered = true;
+            upgrade[i].cardAffected.powerPlayer += upgrade[i].attackUpgrade;
         }
     }
 }

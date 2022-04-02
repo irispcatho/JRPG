@@ -19,7 +19,8 @@ MonoBehaviour:
   biome: {fileID: 21300000, guid: 2fdc85098f31be3438d7fe836aff0f74, type: 3}
   typeImage: {fileID: 0}
   pattern: {fileID: 21300000, guid: 3935f8ce04ff947498e63f1b1f90b3b8, type: 3}
-  power: 2
+  powerIA: 2
+  powerPlayer: 2
   gameOrder: 3
   animalTxt: CHEVAL
   description: HuHuHuHu

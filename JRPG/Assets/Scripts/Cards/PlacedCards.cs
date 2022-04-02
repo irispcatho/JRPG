@@ -36,7 +36,7 @@ public class PlacedCards : MonoBehaviour
         }
 
         Damage();
-   
+
     }
 
     public PatternAttack GetPattern(string name)
@@ -54,6 +54,13 @@ public class PlacedCards : MonoBehaviour
     {
         for (int i = 0; i <= OrderList.Count - 1; i++)
         {
+
+            if (i == OrderList.Count - 1 && OrderList[i].GetComponent<CardDisplay>().card.isDead)
+            {
+                FinishTour(i);
+                break;
+            }
+
             for (int j = 0; j <= OrderList.Count - 1; j++)
             {
                 if (j > 0)
@@ -63,18 +70,27 @@ public class PlacedCards : MonoBehaviour
                         OrderList[j - 1].GetComponent<CardDisplay>().cadreP.SetActive(false);
                         OrderList[j - 1].GetComponent<CardDisplay>().cadreIA.SetActive(false);
                     }
-                    if (j == OrderList.Count && OrderList[j].GetComponent<CardDisplay>().card.isDead)
+                    if (j == OrderList.Count - 1 && OrderList[j].GetComponent<CardDisplay>().card.isDead)
                         break;
                 }
-
             }
-            if (OrderList[i].GetComponent<CardDisplay>().card.power <= 0)
+
+            if (OrderList[i].GetComponent<CardDisplay>().card.isEnnemy)
             {
-                print("carte morte");
-                i++;
+                if (OrderList[i].GetComponent<CardDisplay>().card.powerIA <= 0)
+                {
+                    print("carte morte");
+                    i++;
+                }
             }
-
-
+            else
+            {
+                if (OrderList[i].GetComponent<CardDisplay>().card.powerPlayer <= 0)
+                {
+                    print("carte morte");
+                    i++;
+                }
+            }
 
             CaseSlot slot = OrderList[i].GetComponent<CardDisplay>().card.cell;
             GameObject cadreP = OrderList[i].GetComponent<CardDisplay>().cadreP;
@@ -86,7 +102,10 @@ public class PlacedCards : MonoBehaviour
             InfosCard infosCard = infoClone.GetComponent<InfosDisplay>().infosCard;
             Card vars = OrderList[i].GetComponent<CardDisplay>().card;
             infosCard.cardName = vars.frenchName;
-            infosCard.power = vars.power;
+            if (!vars.isEnnemy)
+                infosCard.power = vars.powerPlayer;
+            if (vars.isEnnemy)
+                infosCard.power = vars.powerIA;
             infosCard.order = vars.gameOrder;
             infosCard.description = vars.description;
             infosCard.pattern = vars.pattern;
@@ -96,75 +115,83 @@ public class PlacedCards : MonoBehaviour
 
             PatternAttack pattern = GetPattern(OrderList[i].GetComponent<CardDisplay>().card.frenchName);
             Vector2 cardToAttack = new Vector2(slot.coordinates.x, slot.coordinates.y);
+
             foreach (var item in pattern.position)
             {
-                casesManager.DetectCard(pattern, slot, slot.card.power, cardToAttack, item.x, item.y);
-            }            
+                if (!slot.card.isEnnemy)
+                    casesManager.DetectCard(pattern, slot, slot.card.powerPlayer, cardToAttack, item.x, item.y);
+                else
+                    casesManager.DetectCard(pattern, slot, slot.card.powerIA, cardToAttack, item.x, item.y);
+            }
 
+            FinishTour(i);
             yield return new WaitForSeconds(2);
 
-            if (i >= 11)
-            {
-                for (int j = 0; j <= placedCardsList.Count - 1; j++)
+            #endregion
+        }
+    }
+
+    private void FinishTour(int i)
+    {
+        if (i >= 11)
+        {
+            for (int j = 0; j <= placedCardsList.Count - 1; j++)
+            { 
+                if (placedCardsList[j].GetComponent<CardDisplay>().card.isEnnemy == false)
                 {
-                    int power = placedCardsList[j].GetComponent<CardDisplay>().card.power;
-                    if (placedCardsList[j].GetComponent<CardDisplay>().card.isEnnemy == false)
-                    {
-                        numberCardsPlayer++;
-                        pdvPlayer += power;
-                    }
-                    else
-                    {
-                        numberCardsIA++;
-                        pdvIA += power;
-                    }
+                    numberCardsPlayer++;
+                    pdvPlayer += placedCardsList[j].GetComponent<CardDisplay>().card.powerPlayer;
                 }
-                if (numberCardsPlayer > numberCardsIA)
+                else
+                {
+                    numberCardsIA++;
+                    pdvIA += pdvPlayer += placedCardsList[j].GetComponent<CardDisplay>().card.powerIA; 
+                }
+            }
+            if (numberCardsPlayer > numberCardsIA)
+            {
+                whoWon = 0;
+                numberWinPlayer++;
+                print("Le joueur a gagné");
+
+            }
+            else if (numberCardsPlayer < numberCardsIA)
+            {
+                whoWon = 1;
+                numberWinIA++;
+                print("L'IA a gagné");
+
+            }
+            else if (numberCardsPlayer == numberCardsIA)
+            {
+                if (pdvPlayer > pdvIA)
                 {
                     whoWon = 0;
                     numberWinPlayer++;
                     print("Le joueur a gagné");
 
                 }
-                else if (numberCardsPlayer < numberCardsIA)
+                else if (pdvPlayer < pdvIA)
                 {
                     whoWon = 1;
                     numberWinIA++;
                     print("L'IA a gagné");
 
                 }
-                else if (numberCardsPlayer == numberCardsIA)
-                {
-                    if (pdvPlayer > pdvIA)
-                    {
-                        whoWon = 0;
-                        numberWinPlayer++;
-                        print("Le joueur a gagné");
-
-                    }
-                    else if (pdvPlayer < pdvIA)
-                    {
-                        whoWon = 1;
-                        numberWinIA++;
-                        print("L'IA a gagné");
-
-                    }
-                }
-
-                StartCoroutine(WaitToUpdateRound());
-
             }
-            #endregion
-        }
-    }
 
+            StartCoroutine(WaitToUpdateRound());
+
+        }
+
+    }
     private void Damage()
     {
         for (int c = 0; c <= OrderList.Count - 1; c++) //show damage
         {
             CardDisplay cardDisplay = OrderList[c].GetComponent<CardDisplay>();
-            cardDisplay.onCaseTextIAPower.text = cardDisplay.card.power.ToString();
-            cardDisplay.onCaseTextPower.text = cardDisplay.card.power.ToString();
+            cardDisplay.onCaseTextIAPower.text = cardDisplay.card.powerIA.ToString();
+            cardDisplay.onCaseTextPower.text = cardDisplay.card.powerPlayer.ToString();
 
             cardDisplay.damageGoPText.text = cardDisplay.card.damage.ToString();
             cardDisplay.damageGoIAText.text = cardDisplay.card.damage.ToString();
@@ -182,9 +209,10 @@ public class PlacedCards : MonoBehaviour
                 cardDisplay.damageGoP.SetActive(false);
                 cardDisplay.damageGoIA.SetActive(false);
             }
-            if (cardDisplay.card.power <= 0)
+            if (cardDisplay.card.powerPlayer <= 0 || cardDisplay.card.powerIA <= 0)
             {
-                cardDisplay.card.power = 0;
+                cardDisplay.card.powerPlayer = 0;
+                cardDisplay.card.powerIA = 0;
                 cardDisplay.card.isDead = true;
                 cardDisplay.onCaseIA.SetActive(false);
                 cardDisplay.onCase.SetActive(false);

@@ -96,7 +96,7 @@ public class CasesManager : MonoBehaviour
 
     void TakeCard(GameObject card, GameObject randomCell, int randomCellIndex)
     {
-        if(!playerCanPlay)
+        if (!playerCanPlay)
         {
             placedCards.placedCardsList.Add(card);
             Vector2 positionC = randomCell.transform.position;
@@ -150,10 +150,21 @@ public class CasesManager : MonoBehaviour
 
     private void AttackGlobal(CaseSlot cellToAttack, int damage, string signe)
     {
-        if(!healer)
-            cellToAttack.card.power -= damage;
+        AudioManager.instance.Play("CardAttack");
+        if (!healer)
+        {
+            if (!cellToAttack.card.isEnnemy)
+                cellToAttack.card.powerPlayer -= damage;
+            else
+                cellToAttack.card.powerIA -= damage;
+        }
         else
-            cellToAttack.card.power += damage;
+        {
+            if (!cellToAttack.card.isEnnemy)
+                cellToAttack.card.powerPlayer += damage;
+            else
+                cellToAttack.card.powerIA += damage;
+        }
         cellToAttack.card.damage = damage;
         cellToAttack.card.signeDamage = signe;
         cellToAttack.card.showDamage = true;
@@ -162,17 +173,17 @@ public class CasesManager : MonoBehaviour
     public void DetectCard(PatternAttack pattern, CaseSlot slot, int damage, Vector2 newVector, int x, int y)
     {
         CaseSlot cellToAttack = GetCellOnGrid((int)newVector.x + x, (int)newVector.y + y);
-        if(cellToAttack)
+        if (cellToAttack)
         {
-            if(cellToAttack.card && slot.card.isDead == false)
-            {                
+            if (cellToAttack.card && slot.card.isDead == false)
+            {
                 if (pattern.attackEnnemies && (slot.card.isEnnemy != cellToAttack.card.isEnnemy))
                 {
                     healer = false;
                     AttackGlobal(cellToAttack, damage, "-");
                 }
 
-                else if(pattern.attackAllies && (slot.card.isEnnemy == cellToAttack.card.isEnnemy))
+                else if (pattern.attackAllies && (slot.card.isEnnemy == cellToAttack.card.isEnnemy))
                 {
                     healer = false;
                     AttackGlobal(cellToAttack, damage, "-");
@@ -180,15 +191,30 @@ public class CasesManager : MonoBehaviour
 
                 else if (pattern.healAllies && (slot.card.isEnnemy == cellToAttack.card.isEnnemy))
                 {
-                    if(cellToAttack.card.power > 0)
+                    if(!cellToAttack.card.isEnnemy)
                     {
-                        healer = true;
-                        AttackGlobal(cellToAttack, damage, "+");
+                        if (cellToAttack.card.powerPlayer > 0 )
+                        {
+                            healer = true;
+                            AttackGlobal(cellToAttack, damage, "+");
+                        }
+                    }
+                    else
+                    {
+                        if (cellToAttack.card.powerIA > 0)
+                        {
+                            healer = true;
+                            AttackGlobal(cellToAttack, damage, "+");
+                        }
                     }
                 }
                 StartCoroutine(placedCards.Damage(cellToAttack.card));
             }
+            else if (!cellToAttack.card || cellToAttack.card.isDead == true || (pattern.attackEnnemies && (slot.card.isEnnemy == cellToAttack.card.isEnnemy)))
+                AudioManager.instance.Play("CardCantAttack");
         }
+        else
+            AudioManager.instance.Play("CardCantAttack");
     }
 
     IEnumerator WaitToPlay()
