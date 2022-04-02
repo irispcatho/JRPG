@@ -18,6 +18,7 @@ public class SafeManager : MonoBehaviour
     {
         if (isInRange && Input.GetKeyDown(KeyCode.E))
         {
+            AudioManager.instance.Play("SafeOpen");
             safeSprite[0].SetActive(false);
             safeSprite[1].SetActive(true);
             TriggerSafe();

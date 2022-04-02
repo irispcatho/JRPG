@@ -22,6 +22,7 @@ public class Menu : MonoBehaviour
     }
     public void OnClickPlay()
     {
+        AudioManager.instance.Play("ClickButtonMenu");
         Fade.DOFade(1, 1f).OnComplete(FadeCompletePlay);
     }
 
@@ -32,6 +33,7 @@ public class Menu : MonoBehaviour
     
     public void OnClickCredits()
     {
+        AudioManager.instance.Play("ClickButtonMenu");
         Fade.DOFade(1, 1f).OnComplete(FadeCompleteCredits);
     }
 
@@ -42,6 +44,7 @@ public class Menu : MonoBehaviour
 
     public void OnClickEscape()
     {
+        AudioManager.instance.Play("ClickButtonMenu");
         Fade.DOFade(1, 1f).OnComplete(FadeCompleteMenu);
     }
 

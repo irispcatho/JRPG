@@ -15,6 +15,7 @@ public class OnClickCard : MonoBehaviour
 
     private void OnMouseDown()
     {
+        AudioManager.instance.Play("MouseOverCard");
         infoClone.SetActive(true);
         InfosCard infosCard = infoClone.GetComponent<InfosDisplay>().infosCard;
         Card vars = gameObject.GetComponent<CardDisplay>().card;

@@ -88,6 +88,7 @@ public class DialogManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogText.text += letter;
+            AudioManager.instance.Play("DialogDefilement");
             yield return new WaitForSeconds(letterSpeed);
         }
     }
@@ -114,6 +115,7 @@ public class DialogManager : MonoBehaviour
             _simpleBlit.transitionIsActive = false;
             if(!combatAlreadyLauched)
             {
+                AudioManager.instance.Play("FightLaunch");
                 SceneManager.LoadScene("CardSystem", LoadSceneMode.Additive);
                 combatAlreadyLauched = true;
             }

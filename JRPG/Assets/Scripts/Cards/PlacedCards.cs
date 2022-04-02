@@ -34,9 +34,7 @@ public class PlacedCards : MonoBehaviour
             StartCoroutine(Attack());
             launchedattack = true;
         }
-
         Damage();
-
     }
 
     public PatternAttack GetPattern(string name)
@@ -46,7 +44,6 @@ public class PlacedCards : MonoBehaviour
             if (item.name == name)
                 return item;
         }
-
         return null;
     }
 

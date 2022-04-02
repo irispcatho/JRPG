@@ -62,6 +62,7 @@ public class CasesManager : MonoBehaviour
         Vector2 position = cell.transform.position;
         if (!placedCards.placedCardsList.Contains(placedCards.lastCardClicked) && playerCanPlay && !CasesListUsed.Contains(cell))
         {
+            AudioManager.instance.Play("CardPlacement");
             playerCanPlay = false;
             CasesListUsed.Add(cell);
             placedCards.placedCardsList.Add(placedCards.lastCardClicked);
@@ -98,6 +99,7 @@ public class CasesManager : MonoBehaviour
     {
         if (!playerCanPlay)
         {
+            AudioManager.instance.Play("CardPlacement");
             placedCards.placedCardsList.Add(card);
             Vector2 positionC = randomCell.transform.position;
             CasesListUsed.Add(CasesList[randomCellIndex]);

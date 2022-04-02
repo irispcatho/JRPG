@@ -20,7 +20,7 @@ MonoBehaviour:
   typeImage: {fileID: 0}
   pattern: {fileID: 21300000, guid: fbcba0d442ba4c34782a2fc0bf67f64d, type: 3}
   powerIA: 3
-  powerPlayer: 8
+  powerPlayer: 3
   gameOrder: 6
   animalTxt: RAT
   description: ??????????
