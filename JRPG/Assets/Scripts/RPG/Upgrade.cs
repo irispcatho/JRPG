@@ -11,5 +11,6 @@ public class Upgrade
     public string nameUpgrade;
     public int attackUpgrade;
     public Card cardAffected;
+    public bool asBeenDiscovered;
 }
 

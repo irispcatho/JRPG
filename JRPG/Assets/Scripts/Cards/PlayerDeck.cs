@@ -23,14 +23,25 @@ public class PlayerDeck : MonoBehaviour
         for (int i = 0; i < cardsPlayer.Count; i++)
         {
             GameObject go = Instantiate(cardPrefab);
-            go.GetComponent<CardDisplay>().card = GameObject.Instantiate(cardsPlayer[i]);
+            Card cardProperties = Instantiate(cardsPlayer[i]);
+            go.GetComponent<CardDisplay>().card = cardProperties;
+            Upgrade[] upgrade = SafeManager.instance.upgrade;
+            for (int j = 0; j < upgrade.Length; j++)
+            {
+                if(upgrade[j].asBeenDiscovered)
+                {
+                    if(upgrade[j].cardAffected.frenchName == cardsPlayer[i].frenchName)
+                        cardProperties.power += upgrade[j].attackUpgrade;
+                }
+            }
             go.name = "Carte joueur " + go.GetComponent<CardDisplay>().card.frenchName;
             go.transform.SetParent(parentPlayerDeck.transform, false);
             go.GetComponent<OnClickCard>().placedCards = placedCards;
             go.GetComponent<CardDisplay>().card.isEnnemy = false;
-
             go.GetComponent<OnClickCard>().infoClone = infoClone;
             infoClone.SetActive(false);
+
+
         }
 
         for (int i = 0; i < cardsIA.Count; i++)

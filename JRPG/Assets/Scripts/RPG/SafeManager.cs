@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class SafeManager : MonoBehaviour
 {
+    public static SafeManager instance;
     public Upgrade[] upgrade;
     public bool isInRange;
     public GameObject[] safeSprite;
 
+    private void Start()
+    {
+        instance = this;
+    }
     private void Update()
     {
         if (isInRange && Input.GetKeyDown(KeyCode.E))
@@ -39,7 +44,7 @@ public class SafeManager : MonoBehaviour
         print(rnd);
         for (int i = 0; i < rnd; i++)
         {
-            upgrade[i].cardAffected.power += upgrade[i].attackUpgrade;
+            upgrade[i].asBeenDiscovered = true;
         }
     }
 }
