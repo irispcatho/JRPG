@@ -74,7 +74,7 @@ public class DialogManager : MonoBehaviour
     {
         if (sentences.Count == 0)
         {
-            EndDialog();
+            EndDialogWithCombat();
             return;
         }
 
@@ -96,7 +96,14 @@ public class DialogManager : MonoBehaviour
         }
     }
 
-    void EndDialog()
+    public void EndDialog()
+    {
+        ZoomCamera.instance.zoomActive = false;
+        dialogUI.SetActive(false);
+        PlayerMovement.instance.moveSpeed = PlayerMovement.instance.initMoveSpeed;
+        PlayerMovement.instance.animator.enabled = true;
+    }
+    public void EndDialogWithCombat()
     {
         ZoomCamera.instance.zoomActive = false;
 

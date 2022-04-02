@@ -5,10 +5,9 @@ using UnityEngine;
 public class SafeManager : MonoBehaviour
 {
     public static SafeManager instance;
-    public Upgrade[] upgrade;
+    public Upgrade upgrade;
     public bool isInRange;
     public GameObject[] safeSprite;
-    public int index;
 
     private void Start()
     {
@@ -42,11 +41,7 @@ public class SafeManager : MonoBehaviour
 
     private void TriggerSafe()
     {
-        int rnd = Random.Range(3, 5);
-        for (int i = 0; i < rnd; i++)
-        {
-            upgrade[i].asBeenDiscovered = true;
-            upgrade[i].cardAffected.powerPlayer += upgrade[i].attackUpgrade;
-        }
+        upgrade.asBeenDiscovered = true;
+        upgrade.cardAffected.powerPlayer += upgrade.attackUpgrade;
     }
 }
