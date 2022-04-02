@@ -269,7 +269,9 @@ public class PlacedCards : MonoBehaviour
         round = 0;
         whoWon = -1;
         DialogManager.instance.combatAlreadyLauched = false;
-        SceneManager.UnloadSceneAsync("CardSystem");
+        SceneManager.UnloadSceneAsync("Fight1");
+        SceneManager.UnloadSceneAsync("Fight2");
+        SceneManager.UnloadSceneAsync("Fight3");
     }
     public IEnumerator Damage(Card card)
     {

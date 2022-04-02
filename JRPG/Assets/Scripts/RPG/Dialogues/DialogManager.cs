@@ -14,6 +14,8 @@ public class DialogManager : MonoBehaviour
     public float letterSpeed = 0.05f;
 
     public bool playCombat1 = false;
+    public bool playCombat2 = false;
+    public bool playCombat3 = false;
 
     public GameObject dialogUI;
 
@@ -43,9 +45,11 @@ public class DialogManager : MonoBehaviour
     {
         ZoomCamera.instance.zoomActive = true;
         if (pnj == pnjs[0])
-        {
             playCombat1 = true;
-        }
+        if (pnj == pnjs[1])
+            playCombat2 = true;
+        if (pnj == pnjs[2])
+            playCombat3 = true;
 
         PlayerMovement.instance.moveSpeed = 0;
         PlayerMovement.instance.animator.enabled = false;
@@ -88,25 +92,23 @@ public class DialogManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogText.text += letter;
-            AudioManager.instance.Play("DialogDefilement");
             yield return new WaitForSeconds(letterSpeed);
         }
     }
-
-
 
     void EndDialog()
     {
         ZoomCamera.instance.zoomActive = false;
 
         if (playCombat1)
-        {
-            StartCoroutine(WaitOneFrame(2));
-            
-        }
+            StartCoroutine(WaitOneFrame(2, "Fight1"));
+        if (playCombat2)
+            StartCoroutine(WaitOneFrame(2, "Fight2"));
+        if (playCombat3)
+            StartCoroutine(WaitOneFrame(2, "Fight3"));
 
 
-        IEnumerator WaitOneFrame(float timeToWait)
+        IEnumerator WaitOneFrame(float timeToWait, string scene)
         {
             _simpleBlit.transitionIsActive = true;
             yield return new WaitForSeconds(timeToWait);
@@ -116,7 +118,7 @@ public class DialogManager : MonoBehaviour
             if(!combatAlreadyLauched)
             {
                 AudioManager.instance.Play("FightLaunch");
-                SceneManager.LoadScene("CardSystem", LoadSceneMode.Additive);
+                SceneManager.LoadScene(scene, LoadSceneMode.Additive);
                 combatAlreadyLauched = true;
             }
         }

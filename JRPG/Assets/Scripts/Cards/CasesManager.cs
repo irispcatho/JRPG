@@ -152,7 +152,6 @@ public class CasesManager : MonoBehaviour
 
     private void AttackGlobal(CaseSlot cellToAttack, int damage, string signe)
     {
-        AudioManager.instance.Play("CardAttack");
         if (!healer)
         {
             if (!cellToAttack.card.isEnnemy)
@@ -182,12 +181,14 @@ public class CasesManager : MonoBehaviour
                 if (pattern.attackEnnemies && (slot.card.isEnnemy != cellToAttack.card.isEnnemy))
                 {
                     healer = false;
+                    AudioManager.instance.Play("CardAttack");
                     AttackGlobal(cellToAttack, damage, "-");
                 }
 
                 else if (pattern.attackAllies && (slot.card.isEnnemy == cellToAttack.card.isEnnemy))
                 {
                     healer = false;
+                    AudioManager.instance.Play("CardAttack");
                     AttackGlobal(cellToAttack, damage, "-");
                 }
 
@@ -198,6 +199,7 @@ public class CasesManager : MonoBehaviour
                         if (cellToAttack.card.powerPlayer > 0 )
                         {
                             healer = true;
+                            AudioManager.instance.Play("CardHeal");
                             AttackGlobal(cellToAttack, damage, "+");
                         }
                     }
@@ -206,13 +208,14 @@ public class CasesManager : MonoBehaviour
                         if (cellToAttack.card.powerIA > 0)
                         {
                             healer = true;
+                            AudioManager.instance.Play("CardHeal");
                             AttackGlobal(cellToAttack, damage, "+");
                         }
                     }
                 }
                 StartCoroutine(placedCards.Damage(cellToAttack.card));
             }
-            else if (!cellToAttack.card || cellToAttack.card.isDead == true || (pattern.attackEnnemies && (slot.card.isEnnemy == cellToAttack.card.isEnnemy)))
+            else if (!cellToAttack.card || cellToAttack.card.isDead == true || slot.card.isEnnemy == cellToAttack.card.isEnnemy)
                 AudioManager.instance.Play("CardCantAttack");
         }
         else

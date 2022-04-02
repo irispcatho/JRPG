@@ -31,8 +31,6 @@ public class PlayerDeck : MonoBehaviour
             go.GetComponent<CardDisplay>().card.isEnnemy = false;
             go.GetComponent<OnClickCard>().infoClone = infoClone;
             infoClone.SetActive(false);
-
-
         }
 
         for (int i = 0; i < cardsIA.Count; i++)
