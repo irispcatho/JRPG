@@ -246,7 +246,6 @@ public class PlacedCards : MonoBehaviour
         yield return new WaitForSeconds(2);
         ResetCards();
     }
-
     private IEnumerator WaitToUpdateRound()
     {
         yield return new WaitForSeconds(3);
@@ -269,9 +268,17 @@ public class PlacedCards : MonoBehaviour
         round = 0;
         whoWon = -1;
         DialogManager.instance.combatAlreadyLauched = false;
-        SceneManager.UnloadSceneAsync("Fight1");
-        SceneManager.UnloadSceneAsync("Fight2");
-        SceneManager.UnloadSceneAsync("Fight3");
+        Scene scene = SceneManager.GetActiveScene();
+        print(scene.buildIndex);
+        if (scene.buildIndex == 3)
+        {
+            SceneManager.UnloadSceneAsync("Fight1");
+            DialogManager.instance.DisplayNextSentence();
+        }
+        if (scene.buildIndex == 4)
+            SceneManager.UnloadSceneAsync("Fight2");
+        if (scene.buildIndex == 5)
+            SceneManager.UnloadSceneAsync("Fight3");
     }
     public IEnumerator Damage(Card card)
     {

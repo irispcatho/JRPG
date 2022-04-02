@@ -25,7 +25,6 @@ public class DialogManager : MonoBehaviour
     public GameObject[] wall;
 
     public Queue<string> sentences;
-    private Queue<string> names;
 
     public SimpleBlit _simpleBlit;
 
@@ -34,10 +33,7 @@ public class DialogManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-
         sentences = new Queue<string>();
-        names = new Queue<string>();
-
         dialogUI.SetActive(false);
     }
 
@@ -53,16 +49,10 @@ public class DialogManager : MonoBehaviour
 
         PlayerMovement.instance.moveSpeed = 0;
         PlayerMovement.instance.animator.enabled = false;
-
+        nameText.text = dialog.name;
         dialogUI.SetActive(true);
-
-        names.Clear();
         sentences.Clear();
 
-        foreach (string name in dialog.names)
-        {
-            names.Enqueue(name);
-        }
         foreach (string sentence in dialog.sentences)
         {
             sentences.Enqueue(sentence);
@@ -72,14 +62,17 @@ public class DialogManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if (sentences.Count == 0)
+        if(playCombat1)
         {
-            EndDialogWithCombat();
-            return;
-        }
+            if (sentences.Count == 3)
+            {
+                EndDialogWithCombat();
+                return;
+            }
 
-        string name = names.Dequeue();
-        nameText.text = name;
+            if (sentences.Count == 0)
+                return;
+        }
         
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
@@ -105,15 +98,21 @@ public class DialogManager : MonoBehaviour
     }
     public void EndDialogWithCombat()
     {
-        ZoomCamera.instance.zoomActive = false;
-
         if (playCombat1)
+        {
             StartCoroutine(WaitOneFrame(2, "Fight1"));
+            playCombat1 = false;
+        }
         if (playCombat2)
+        {
             StartCoroutine(WaitOneFrame(2, "Fight2"));
+            playCombat2 = false;
+        }
         if (playCombat3)
+        {
             StartCoroutine(WaitOneFrame(2, "Fight3"));
-
+            playCombat3 = false;
+        }
 
         IEnumerator WaitOneFrame(float timeToWait, string scene)
         {
@@ -129,11 +128,6 @@ public class DialogManager : MonoBehaviour
                 combatAlreadyLauched = true;
             }
         }
-        
-
-        dialogUI.SetActive(false);
-        PlayerMovement.instance.moveSpeed = PlayerMovement.instance.initMoveSpeed;
-        PlayerMovement.instance.animator.enabled = true;
     }
 
     private void Start()
