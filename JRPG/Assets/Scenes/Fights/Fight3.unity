@@ -2026,6 +2026,42 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 961375326}
     - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: upgrade.Array.data[0].nameUpgrade
+      value: Bonus de puissance !
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: upgrade.Array.data[1].nameUpgrade
+      value: Bonus de puissance !
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: upgrade.Array.data[2].nameUpgrade
+      value: Bonus de puissance !
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: upgrade.Array.data[0].cardAffected
+      value: 
+      objectReference: {fileID: 11400000, guid: 2d6ee4dde06942342bf949310d8c9cb9, type: 2}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: upgrade.Array.data[1].cardAffected
+      value: 
+      objectReference: {fileID: 11400000, guid: aa65f2dfe75050a458d496f2fb11aef3, type: 2}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: upgrade.Array.data[2].cardAffected
+      value: 
+      objectReference: {fileID: 11400000, guid: ab99aad8fbef3cb489d0a183a0cb861f, type: 2}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: upgrade.Array.data[0].attackUpgrade
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: upgrade.Array.data[1].attackUpgrade
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: upgrade.Array.data[2].attackUpgrade
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: patternAttacks.Array.data[0].position.Array.size
       value: 4
       objectReference: {fileID: 0}
