@@ -23,7 +23,7 @@ MonoBehaviour:
   powerPlayer: 3
   gameOrder: 6
   animalTxt: RAT
-  description: ??????????
+  description: Attaque les ennemis sur les cases adjacentes gauche et bas
   cell: {fileID: 0}
   isEnnemy: 0
   isDead: 0

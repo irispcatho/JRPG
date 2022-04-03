@@ -23,7 +23,7 @@ MonoBehaviour:
   powerPlayer: 3
   gameOrder: 6
   animalTxt: PANDA
-  description: ???????
+  description: "Attaque les ennemis situ\xE9s au dessus et \xE0 droite du Panda."
   cell: {fileID: 0}
   isEnnemy: 0
   isDead: 0

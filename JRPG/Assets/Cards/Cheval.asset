@@ -23,7 +23,7 @@ MonoBehaviour:
   powerPlayer: 2
   gameOrder: 3
   animalTxt: CHEVAL
-  description: HuHuHuHu
+  description: Attaque les ennemis en diagonale de sa position.
   cell: {fileID: 0}
   isEnnemy: 0
   isDead: 0

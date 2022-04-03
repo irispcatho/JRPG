@@ -23,7 +23,7 @@ MonoBehaviour:
   powerPlayer: 5
   gameOrder: 9
   animalTxt: RENARD
-  description: HiHiHiHiHi
+  description: Attaques les cases adjacentes horizontales.
   cell: {fileID: 0}
   isEnnemy: 0
   isDead: 0

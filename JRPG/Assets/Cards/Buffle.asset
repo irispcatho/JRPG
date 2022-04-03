@@ -23,7 +23,8 @@ MonoBehaviour:
   powerPlayer: 4
   gameOrder: 8
   animalTxt: BUFFLE
-  description: MeuhMeuhMeuh
+  description: "Augmente la puissance de 2 des alli\xE9s pr\xE9sents au dessus et
+    en dessous du Buffle."
   cell: {fileID: 0}
   isEnnemy: 0
   isDead: 0

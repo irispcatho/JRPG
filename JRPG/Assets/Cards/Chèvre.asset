@@ -23,7 +23,13 @@ MonoBehaviour:
   powerPlayer: 3
   gameOrder: 4
   animalTxt: CHEVRE
-  description: BehBehBeh
+  description: " Gestion_JRPG Gestion_JRPG 100% 10 G7  Attaque les ennemis sur 2
+    cases \xE0 gauche et \xE0 droite. Pour activer la compatibilit\xE9 avec le lecteur
+    d'\xE9cran, appuyez sur Ctrl+Alt+Z Pour conna\xEEtre les raccourcis clavier,
+    appuyez sur Ctrl+barre oblique      \t\t Attaque les ennemis sur 2 cases \xE0
+    gauche et \xE0 droite. Activer la compatibilit\xE9 du lecteur d'\xE9cran Keromas
+    a rejoint le document.<strong>Non valide : </strong><span>la valeur d&#39;entr\xE9e
+    doit \xEAtre comprise dans la plage sp\xE9cifi\xE9e</span>"
   cell: {fileID: 0}
   isEnnemy: 0
   isDead: 0

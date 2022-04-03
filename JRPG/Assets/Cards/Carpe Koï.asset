@@ -23,7 +23,7 @@ MonoBehaviour:
   powerPlayer: 4
   gameOrder: 7
   animalTxt: "CARPE KO\xCF"
-  description: GlouGlouGlou
+  description: Attaque les cases adjacentes verticales.
   cell: {fileID: 0}
   isEnnemy: 0
   isDead: 0

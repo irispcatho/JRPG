@@ -23,7 +23,7 @@ MonoBehaviour:
   powerPlayer: 2
   gameOrder: 8
   animalTxt: DRAGON
-  description: '*CracheDuFeu*'
+  description: "Attaque toutes les cartes, alli\xE9es ou ennemies, autour du Dragon."
   cell: {fileID: 0}
   isEnnemy: 0
   isDead: 0

@@ -23,7 +23,7 @@ MonoBehaviour:
   powerPlayer: 3
   gameOrder: 7
   animalTxt: CAMELEON
-  description: ???????
+  description: "Attaque les ennemis situ\xE9s au dessus et \xE0 gauche du Cam\xE9l\xE9on."
   cell: {fileID: 0}
   isEnnemy: 0
   isDead: 0

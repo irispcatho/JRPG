@@ -23,7 +23,8 @@ MonoBehaviour:
   powerPlayer: 2
   gameOrder: 1
   animalTxt: COQ
-  description: Cocorico
+  description: "Attaque les ennemis pr\xE9sents sur les cases adjacentes ou augmente
+    la puissance des alli\xE9s de 2."
   cell: {fileID: 0}
   isEnnemy: 0
   isDead: 0

@@ -23,7 +23,7 @@ MonoBehaviour:
   powerPlayer: 2
   gameOrder: 2
   animalTxt: ABEILLE
-  description: Bizbizbizbiz
+  description: "Attaque la case \xE0 gauche de l'Abeille."
   cell: {fileID: 0}
   isEnnemy: 0
   isDead: 0

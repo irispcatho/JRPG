@@ -23,7 +23,7 @@ MonoBehaviour:
   powerPlayer: 2
   gameOrder: 1
   animalTxt: SANGLIER
-  description: '*RespireFort*'
+  description: "Attaque les ennemis situ\xE9s en dessous du Sanglier."
   cell: {fileID: 0}
   isEnnemy: 0
   isDead: 0

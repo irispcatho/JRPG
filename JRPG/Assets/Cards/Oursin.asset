@@ -23,7 +23,7 @@ MonoBehaviour:
   powerPlayer: 2
   gameOrder: 5
   animalTxt: OURSIN
-  description: ???????
+  description: Attaque les ennemis adjacents.
   cell: {fileID: 0}
   isEnnemy: 0
   isDead: 0
