@@ -19,7 +19,6 @@ public class CasesManager : MonoBehaviour
     private GameObject visualCardOnCaseIA;
 
     private bool healer;
-
     public Vector2Int gridSize = new Vector2Int(4, 4);
     public CaseSlot[,] allCases;
 

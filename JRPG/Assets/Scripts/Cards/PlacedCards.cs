@@ -133,7 +133,7 @@ public class PlacedCards : MonoBehaviour
         if (i >= 11)
         {
             for (int j = 0; j <= placedCardsList.Count - 1; j++)
-            { 
+            {
                 if (placedCardsList[j].GetComponent<CardDisplay>().card.isEnnemy == false)
                 {
                     numberCardsPlayer++;
@@ -142,7 +142,7 @@ public class PlacedCards : MonoBehaviour
                 else
                 {
                     numberCardsIA++;
-                    pdvIA += pdvPlayer += placedCardsList[j].GetComponent<CardDisplay>().card.powerIA; 
+                    pdvIA += pdvPlayer += placedCardsList[j].GetComponent<CardDisplay>().card.powerIA;
                 }
             }
             if (numberCardsPlayer > numberCardsIA)
@@ -268,11 +268,17 @@ public class PlacedCards : MonoBehaviour
         round = 0;
         whoWon = -1;
         DialogManager.instance.combatAlreadyLauched = false;
-        if(DialogManager.instance.playCombat1)
+        if (numberWinPlayer == 2)
+            DialogManager.instance.DisplayNextSentence();
+        else
+            DialogManager.instance.EndDialog();
+        numberWinIA = 0;
+        numberWinPlayer = 0;
+        if(DialogManager.instance.currentCombat == 1)
             SceneManager.UnloadSceneAsync("Fight1");
-        if (DialogManager.instance.playCombat2)
+        if (DialogManager.instance.currentCombat == 2)
             SceneManager.UnloadSceneAsync("Fight2");
-        if (DialogManager.instance.playCombat3)
+        if (DialogManager.instance.currentCombat == 3)
             SceneManager.UnloadSceneAsync("Fight3");
     }
     public IEnumerator Damage(Card card)

@@ -17,6 +17,8 @@ public class DialogManager : MonoBehaviour
     public bool playCombat2 = false;
     public bool playCombat3 = false;
 
+    public int currentCombat = 0;
+
     public GameObject dialogUI;
 
     public GameObject[] maps;
@@ -67,12 +69,39 @@ public class DialogManager : MonoBehaviour
         {
             if (sentences.Count == 3)
             {
+                currentCombat = 1;
                 EndDialogWithCombat();
+                playCombat1 = false;
                 return;
             }
-
-            if (sentences.Count == 0)
+        }
+        if (playCombat2)
+        {
+            if (sentences.Count == 2)
+            {
+                currentCombat = 2;
+                EndDialogWithCombat();
+                playCombat2 = false;
                 return;
+            }
+        }
+
+        if (playCombat3)
+        {
+            if (sentences.Count == 3)
+            {
+                currentCombat = 3;
+                EndDialogWithCombat();
+                playCombat3 = false;
+                return;
+            }
+        }
+
+        if (sentences.Count == 0)
+        {
+            combatAlreadyLauched = false;
+            EndDialog();
+            return;
         }
         
         string sentence = sentences.Dequeue();
@@ -99,19 +128,12 @@ public class DialogManager : MonoBehaviour
     }
     public void EndDialogWithCombat()
     {
-        if (playCombat1 && !beenPlayed)
-        {
+        if (playCombat1)
             StartCoroutine(WaitOneFrame(2, "Fight1"));
-            beenPlayed = true;
-        }
         if (playCombat2)
-        {
             StartCoroutine(WaitOneFrame(2, "Fight2"));
-        }
         if (playCombat3)
-        {
             StartCoroutine(WaitOneFrame(2, "Fight3"));
-        }
 
         IEnumerator WaitOneFrame(float timeToWait, string scene)
         {
@@ -124,7 +146,6 @@ public class DialogManager : MonoBehaviour
             {
                 AudioManager.instance.Play("FightLaunch");
                 SceneManager.LoadScene(scene, LoadSceneMode.Additive);
-                SceneManager.GetSceneByName(scene);
                 combatAlreadyLauched = true;
             }
         }
