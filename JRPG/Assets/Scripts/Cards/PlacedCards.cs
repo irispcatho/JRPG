@@ -258,16 +258,19 @@ public class PlacedCards : MonoBehaviour
         whoWon = -1;
         round++;
 
+        if(numberWinPlayer == 2 || numberWinIA == 2)
+            StartCoroutine(WaitForClose());
 
         if (round < 3)
             StartCoroutine(WaitForRound());
-        else if(round >= 3 && SceneManager.GetActiveScene() != SceneManager.GetSceneByName("FightTuto"))
+        else if (round >= 3 && SceneManager.GetActiveScene() != SceneManager.GetSceneByName("FightTuto"))
             StartCoroutine(WaitForClose());
     }
 
     IEnumerator WaitForClose()
     {
         yield return new WaitForSeconds(1.95f);
+        AudioManager.instance.Play("Exploration");
         Scene scene = SceneManager.GetSceneByName("FightTuto");
         if (SceneManager.GetActiveScene() == scene)
         {
@@ -277,20 +280,24 @@ public class PlacedCards : MonoBehaviour
         ResetCards();
         round = 0;
         whoWon = -1;
-        if(SceneManager.GetActiveScene() != scene)
+        if (SceneManager.GetActiveScene() != scene)
         {
-            DialogManager.instance.combatAlreadyLauched = false;
             if (numberWinPlayer == 2)
-                DialogManager.instance.DisplayNextSentence();
+            {
+                //DialogManager.instance.DisplayNextSentence();
+                DialogManager.instance.combatAlreadyLauched = false;
+                CloseScene(1, "Fight1", 0);
+                CloseScene(2, "Fight2", 1);
+                CloseScene(3, "Fight3", 2);
+            }
             else
+            {
                 DialogManager.instance.EndDialog();
-
-            CloseScene(1, "Fight1", 0);
-            CloseScene(2, "Fight2", 1);
-            CloseScene(3, "Fight3", 2);
-
-            numberWinIA = 0;
-            numberWinPlayer = 0;
+                DialogManager.instance.combatAlreadyLauched = false;
+                CloseScene(1, "Fight1", 0);
+                CloseScene(2, "Fight2", 1);
+                CloseScene(3, "Fight3", 2);
+            }
         }
     }
 
@@ -298,7 +305,7 @@ public class PlacedCards : MonoBehaviour
     {
         if (DialogManager.instance.currentCombat == whichCombat)
         {
-            SceneManager.UnloadSceneAsync(whichScene);
+            //AudioManager.instance.Stop("Exploration");
             if (numberWinPlayer == 2)
             {
                 if (!upgrade[whichUpgrade].asBeenDiscovered)
@@ -307,6 +314,7 @@ public class PlacedCards : MonoBehaviour
                     upgrade[whichUpgrade].asBeenDiscovered = true;
                 }
             }
+            SceneManager.UnloadSceneAsync(whichScene);
         }
     }
     public IEnumerator Damage(Card card)

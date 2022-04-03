@@ -61,7 +61,7 @@ MonoBehaviour:
   parentPlayerDeck: {fileID: 0}
   parentIADeck: {fileID: 0}
   cardPrefab: {fileID: 4354206737431118379, guid: 29b79d9e3be3cff4c873ea6992f32a0a, type: 3}
-  infoClone: {fileID: 7845671428455921929, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
+  infoClone: {fileID: 0}
   placedCards: {fileID: 61903488}
 --- !u!114 &61903488
 MonoBehaviour:
@@ -79,9 +79,26 @@ MonoBehaviour:
   OrderList: []
   casesManager: {fileID: 0}
   playerDeck: {fileID: 6220157289882805940}
+  tuto: {fileID: 0}
   round: 0
   lastCardClicked: {fileID: 6220157289882805943}
-  infoClone: {fileID: 7845671428455921929, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
+  infoClone: {fileID: 0}
+  whoWon: -1
+  numberWinPlayer: 0
+  numberWinIA: 0
+  upgrade:
+  - nameUpgrade: A
+    attackUpgrade: 0
+    cardAffected: {fileID: 11400000, guid: 85c547224b82f46418e9b3baa2f9a587, type: 2}
+    asBeenDiscovered: 0
+  - nameUpgrade: B
+    attackUpgrade: 0
+    cardAffected: {fileID: 11400000, guid: 50211c8abab0abc4a84c3af694a00242, type: 2}
+    asBeenDiscovered: 0
+  - nameUpgrade: C
+    attackUpgrade: 0
+    cardAffected: {fileID: 11400000, guid: 4e30a8e0aa810b248bdae38c47205e03, type: 2}
+    asBeenDiscovered: 0
   patternAttacks:
   - name: Cheval
     position:
@@ -89,7 +106,6 @@ MonoBehaviour:
     - {x: 1, y: -1}
     - {x: -1, y: -1}
     - {x: -1, y: 1}
-    - {x: -2, y: -2}
     attackEnnemies: 1
     attackAllies: 0
     healAllies: 0
@@ -112,7 +128,6 @@ MonoBehaviour:
   - name: Buffle
     position:
     - {x: 0, y: -1}
-    - {x: 0, y: 1}
     - {x: 0, y: 1}
     attackEnnemies: 0
     attackAllies: 0
@@ -150,7 +165,6 @@ MonoBehaviour:
     - {x: 1, y: -1}
     - {x: -1, y: -1}
     - {x: -1, y: 1}
-    - {x: -2, y: -2}
     attackEnnemies: 0
     attackAllies: 0
     healAllies: 1

@@ -2038,22 +2038,6 @@ PrefabInstance:
       propertyPath: casesManager
       value: 
       objectReference: {fileID: 961375326}
-    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
-      propertyPath: upgrade.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
-      propertyPath: patternAttacks.Array.data[0].position.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
-      propertyPath: patternAttacks.Array.data[3].position.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
-      propertyPath: patternAttacks.Array.data[7].position.Array.size
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: infoClone
       value: 

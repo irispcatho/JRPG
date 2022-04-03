@@ -21,10 +21,7 @@ public class DialogManager : MonoBehaviour
 
     public GameObject dialogUI;
 
-    public GameObject[] maps;
     public GameObject[] pnjs;
-
-    public GameObject[] wall;
 
     public Queue<string> sentences;
 
@@ -145,6 +142,8 @@ public class DialogManager : MonoBehaviour
             {
                 AudioManager.instance.Play("FightLaunch");
                 SceneManager.LoadScene(scene, LoadSceneMode.Additive);
+                AudioManager.instance.Stop("Exploration");
+                //AudioManager.instance.Play("Exploration");
                 combatAlreadyLauched = true;
             }
         }
