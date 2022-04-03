@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     {
         instance = this;
         initMoveSpeed = moveSpeed;
+        AudioManager.instance.Play("Exploration");
     }
 
     void Update()

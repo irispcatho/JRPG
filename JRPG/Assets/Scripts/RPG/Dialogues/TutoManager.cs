@@ -24,7 +24,7 @@ public class TutoManager : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-            DisplayNextSentence();        
+            DisplayNextSentenceTuto();        
     }
     private void StartDialogTuto(Dialog dialog)
     {
@@ -34,14 +34,15 @@ public class TutoManager : MonoBehaviour
         {
             sentences.Enqueue(sentence);
         }
-        DisplayNextSentence();
+        DisplayNextSentenceTuto();
     }
 
-    public void DisplayNextSentence()
+    public void DisplayNextSentenceTuto()
     {
-        if(sentences.Count == 4)
+        if(sentences.Count == 6)
         {
             dialogUI.SetActive(false);
+            //return;
         }
         if (sentences.Count == 0)
         { 

@@ -1277,6 +1277,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 961375326}
     - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: walls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: upgrade.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: patternAttacks.Array.data[9].position.Array.data[1].y
       value: 1
       objectReference: {fileID: 0}
@@ -1492,6 +1500,8 @@ MonoBehaviour:
     - "Lorsque toutes les cartes sont plac\xE9es, on calcule les points et le joueur
       avec le plus de cartes en vie remporte la manche."
     - "\xC0 toi de commencer !"
+    - 
+    - 
     - Eh bien je pense que tu as compris le principe du jeu.
     - "Tu t'en ai bien sorti. mais tes adversaires en bas ne te montreront aucune
       piti\xE9."

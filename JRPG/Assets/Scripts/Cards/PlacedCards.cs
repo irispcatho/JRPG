@@ -270,7 +270,7 @@ public class PlacedCards : MonoBehaviour
 
         if (round < 3)
             StartCoroutine(WaitForRound());
-        else if (round >= 3 && SceneManager.GetActiveScene() != SceneManager.GetSceneByName("FightTuto"))
+        else if (round >= 3)
             StartCoroutine(WaitForClose());
     }
 
@@ -281,7 +281,7 @@ public class PlacedCards : MonoBehaviour
         if (SceneManager.GetActiveScene() == scene)
         {
             tuto.dialogUI.SetActive(true);
-            tuto.DisplayNextSentence();
+            tuto.DisplayNextSentenceTuto();
         }
         ResetCards();
         round = 0;
@@ -309,7 +309,7 @@ public class PlacedCards : MonoBehaviour
 
     private void CloseScene(int whichCombat, string whichScene, int whichUpgrade)
     {
-        AudioManager.instance.Play("Explo");
+        AudioManager.instance.Play("Exploration");
         AudioManager.instance.Stop("Combat");
         if (DialogManager.instance.currentCombat == whichCombat)
         {

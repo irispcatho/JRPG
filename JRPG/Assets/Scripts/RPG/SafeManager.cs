@@ -8,6 +8,7 @@ public class SafeManager : MonoBehaviour
     public Upgrade upgrade;
     public bool isInRange;
     public GameObject[] safeSprite;
+    public GameObject buttonE;
 
     private void Start()
     {
@@ -29,6 +30,7 @@ public class SafeManager : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isInRange = true;
+            buttonE.SetActive(true);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

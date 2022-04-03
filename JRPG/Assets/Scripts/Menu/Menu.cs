@@ -14,6 +14,7 @@ public class Menu : MonoBehaviour
     private void Start()
     {
         Fade.DOFade(0, 1f).OnComplete(SetActiveFade);
+        AudioManager.instance.Play("Exploration");
     }
 
     private void SetActiveFade()
@@ -28,6 +29,7 @@ public class Menu : MonoBehaviour
 
     private void FadeCompletePlay()
     {
+        AudioManager.instance.Stop("Exploration");
         SceneManager.LoadScene("FightTuto");
     }
     
