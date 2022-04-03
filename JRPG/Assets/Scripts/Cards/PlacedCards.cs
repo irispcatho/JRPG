@@ -277,7 +277,6 @@ public class PlacedCards : MonoBehaviour
     IEnumerator WaitForClose()
     {
         yield return new WaitForSeconds(1.95f);
-        AudioManager.instance.Play("Exploration");
         Scene scene = SceneManager.GetSceneByName("FightTuto");
         if (SceneManager.GetActiveScene() == scene)
         {
@@ -310,6 +309,7 @@ public class PlacedCards : MonoBehaviour
 
     private void CloseScene(int whichCombat, string whichScene, int whichUpgrade)
     {
+        AudioManager.instance.Play("Explo");
         AudioManager.instance.Stop("Combat");
         if (DialogManager.instance.currentCombat == whichCombat)
         {
