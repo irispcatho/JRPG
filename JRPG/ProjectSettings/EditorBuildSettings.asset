@@ -15,8 +15,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: fa182998f6d519a46aa7157f6d167a83
   - enabled: 1
-    path: Assets/Scenes/Fights/Fight1.unity
+    path: Assets/Scenes/Fights/FightTuto.unity
     guid: fe5d293040583d440a7b293be84660f9
+  - enabled: 1
+    path: Assets/Scenes/Fights/Fight1.unity
+    guid: cd5d65fc29ef488419d35f106b8a9b56
   - enabled: 1
     path: Assets/Scenes/Fights/Fight2.unity
     guid: c72afdbc9db695846b6827107deff9d4

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TutoManager : MonoBehaviour
 {
@@ -65,5 +66,6 @@ public class TutoManager : MonoBehaviour
     public void EndDialog()
     {
         dialogUI.SetActive(false);
+        SceneManager.LoadScene("TopDown");
     }
 }

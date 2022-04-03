@@ -28,7 +28,7 @@ public class Menu : MonoBehaviour
 
     private void FadeCompletePlay()
     {
-        SceneManager.LoadScene("TopDown");
+        SceneManager.LoadScene("FightTuto");
     }
     
     public void OnClickCredits()

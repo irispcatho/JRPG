@@ -11,6 +11,7 @@ public class PlacedCards : MonoBehaviour
     public List<GameObject> OrderList;
     public CasesManager casesManager;
     public PlayerDeck playerDeck;
+    public TutoManager tuto;
 
     private int pdvPlayer;
     private int pdvIA;
@@ -254,6 +255,13 @@ public class PlacedCards : MonoBehaviour
 
         whoWon = -1;
         round++;
+
+        Scene scene = SceneManager.GetSceneByName("FightTuto");
+        if (SceneManager.GetActiveScene() == scene)
+        {
+            tuto.dialogUI.SetActive(true);
+            tuto.DisplayNextSentence();
+        }
 
         if (round < 3)
             StartCoroutine(WaitForRound());
