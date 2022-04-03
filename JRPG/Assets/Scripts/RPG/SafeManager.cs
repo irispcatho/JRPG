@@ -39,9 +39,12 @@ public class SafeManager : MonoBehaviour
         }
     }
 
-    private void TriggerSafe()
+    public void TriggerSafe()
     {
-        upgrade.asBeenDiscovered = true;
-        upgrade.cardAffected.powerPlayer += upgrade.attackUpgrade;
+        if (!upgrade.asBeenDiscovered)
+        {
+            upgrade.cardAffected.powerPlayer += upgrade.attackUpgrade;
+            upgrade.asBeenDiscovered = true;
+        }
     }
 }

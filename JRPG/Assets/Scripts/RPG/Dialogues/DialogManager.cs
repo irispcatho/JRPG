@@ -29,7 +29,6 @@ public class DialogManager : MonoBehaviour
     public Queue<string> sentences;
 
     public SimpleBlit _simpleBlit;
-    private bool beenPlayed;
 
 
     public bool combatAlreadyLauched = false;

@@ -24,6 +24,8 @@ public class PlacedCards : MonoBehaviour
     public int numberWinPlayer = 0;
     public int numberWinIA = 0;
 
+    public Upgrade[] upgrade;
+
     public List<PatternAttack> patternAttacks;
 
     bool launchedattack = false;
@@ -282,14 +284,29 @@ public class PlacedCards : MonoBehaviour
                 DialogManager.instance.DisplayNextSentence();
             else
                 DialogManager.instance.EndDialog();
+
+            CloseScene(1, "Fight1", 0);
+            CloseScene(2, "Fight2", 1);
+            CloseScene(3, "Fight3", 2);
+
             numberWinIA = 0;
             numberWinPlayer = 0;
-            if(DialogManager.instance.currentCombat == 1)
-                SceneManager.UnloadSceneAsync("Fight1");
-            if (DialogManager.instance.currentCombat == 2)
-                SceneManager.UnloadSceneAsync("Fight2");
-            if (DialogManager.instance.currentCombat == 3)
-                SceneManager.UnloadSceneAsync("Fight3");
+        }
+    }
+
+    private void CloseScene(int whichCombat, string whichScene, int whichUpgrade)
+    {
+        if (DialogManager.instance.currentCombat == whichCombat)
+        {
+            SceneManager.UnloadSceneAsync(whichScene);
+            if (numberWinPlayer == 2)
+            {
+                if (!upgrade[whichUpgrade].asBeenDiscovered)
+                {
+                    upgrade[whichUpgrade].cardAffected.powerPlayer += upgrade[whichUpgrade].attackUpgrade;
+                    upgrade[whichUpgrade].asBeenDiscovered = true;
+                }
+            }
         }
     }
     public IEnumerator Damage(Card card)
