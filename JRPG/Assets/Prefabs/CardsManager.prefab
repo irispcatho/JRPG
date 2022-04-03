@@ -80,6 +80,9 @@ MonoBehaviour:
   casesManager: {fileID: 0}
   playerDeck: {fileID: 6220157289882805940}
   tuto: {fileID: 0}
+  walls:
+  - {fileID: 0}
+  - {fileID: 0}
   round: 0
   lastCardClicked: {fileID: 6220157289882805943}
   infoClone: {fileID: 0}

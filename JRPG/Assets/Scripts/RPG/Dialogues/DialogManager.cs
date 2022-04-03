@@ -11,6 +11,8 @@ public class DialogManager : MonoBehaviour
     public TMP_Text nameText;
     public TMP_Text dialogText;
 
+    public GameObject[] walls;
+
     public float letterSpeed = 0.05f;
 
     public bool playCombat1 = false;

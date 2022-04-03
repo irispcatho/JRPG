@@ -13,6 +13,7 @@ public class PlacedCards : MonoBehaviour
     public PlayerDeck playerDeck;
     public TutoManager tuto;
 
+    public GameObject[] walls;
     private int pdvPlayer;
     private int pdvIA;
     private int numberCardsPlayer;
@@ -30,6 +31,13 @@ public class PlacedCards : MonoBehaviour
 
     bool launchedattack = false;
 
+    private void Start()
+    {
+        for (int i = 0; i < DialogManager.instance.walls.Length; i++)
+        {
+            walls[i] = DialogManager.instance.walls[i];
+        }
+    }
     public void Update()
     {
         if (OrderList.Count >= 12 && launchedattack == false)
@@ -271,6 +279,7 @@ public class PlacedCards : MonoBehaviour
     {
         yield return new WaitForSeconds(1.95f);
         AudioManager.instance.Play("Exploration");
+
         Scene scene = SceneManager.GetSceneByName("FightTuto");
         if (SceneManager.GetActiveScene() == scene)
         {
@@ -310,6 +319,7 @@ public class PlacedCards : MonoBehaviour
             {
                 if (!upgrade[whichUpgrade].asBeenDiscovered)
                 {
+                    walls[whichCombat - 1].SetActive(false);
                     upgrade[whichUpgrade].cardAffected.powerPlayer += upgrade[whichUpgrade].attackUpgrade;
                     upgrade[whichUpgrade].asBeenDiscovered = true;
                 }
