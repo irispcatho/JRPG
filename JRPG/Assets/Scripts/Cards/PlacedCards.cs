@@ -290,7 +290,7 @@ public class PlacedCards : MonoBehaviour
         {
             if (numberWinPlayer == 2)
             {
-                //DialogManager.instance.DisplayNextSentence();
+                DialogManager.instance.DisplayNextSentence();
                 DialogManager.instance.combatAlreadyLauched = false;
                 CloseScene(1, "Fight1", 0);
                 CloseScene(2, "Fight2", 1);

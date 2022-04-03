@@ -38,6 +38,7 @@ public class SafeManager : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isInRange = false;
+            buttonE.SetActive(false);
         }
     }
 
