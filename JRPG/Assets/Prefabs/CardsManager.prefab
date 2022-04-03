@@ -90,17 +90,17 @@ MonoBehaviour:
   numberWinPlayer: 0
   numberWinIA: 0
   upgrade:
-  - nameUpgrade: A
-    attackUpgrade: 0
-    cardAffected: {fileID: 11400000, guid: 85c547224b82f46418e9b3baa2f9a587, type: 2}
+  - nameUpgrade: Bonus de puissance !
+    attackUpgrade: 1
+    cardAffected: {fileID: 11400000, guid: 2d6ee4dde06942342bf949310d8c9cb9, type: 2}
     asBeenDiscovered: 0
-  - nameUpgrade: B
-    attackUpgrade: 0
-    cardAffected: {fileID: 11400000, guid: 50211c8abab0abc4a84c3af694a00242, type: 2}
+  - nameUpgrade: Bonus de puissance !
+    attackUpgrade: 1
+    cardAffected: {fileID: 11400000, guid: aa65f2dfe75050a458d496f2fb11aef3, type: 2}
     asBeenDiscovered: 0
-  - nameUpgrade: C
-    attackUpgrade: 0
-    cardAffected: {fileID: 11400000, guid: 4e30a8e0aa810b248bdae38c47205e03, type: 2}
+  - nameUpgrade: Bonus de puissance !
+    attackUpgrade: 1
+    cardAffected: {fileID: 11400000, guid: ab99aad8fbef3cb489d0a183a0cb861f, type: 2}
     asBeenDiscovered: 0
   patternAttacks:
   - name: Cheval
