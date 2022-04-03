@@ -1276,6 +1276,10 @@ PrefabInstance:
       propertyPath: casesManager
       value: 
       objectReference: {fileID: 961375326}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[9].position.Array.data[1].y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: infoClone
       value: 
@@ -1471,14 +1475,14 @@ MonoBehaviour:
   dialog:
     name: Chang'e
     sentences:
-    - "Mon ami Lapin je dois t'apprendre une derni\xE8re chose avant de rejoindre
+    - "Mon ami Lapin je dois t'apprendre une derni\xE8re chose avant que tu ne rejoignes
       le monde des humains."
     - "Il existe un jeu l\xE0 bas, que tout le monde respecte et tu vas avoir besoin
       de quelques bases si tu veux atteindre ton but."
-    - Ce jeu c'est le xiangyo, un jeu de carte qui se joue contre un adversaire avec
-      des cartes.
-    - "Vous allez placer chacun votre tour une carte de votre main sur le plateau
-      jusqu'\xE0 ne plus en avoir en main."
+    - Ce jeu c'est le xiangyo, un jeu de carte qui se joue contre un adversaire.
+      Pour gagner il faut remporter 2 manches.
+    - "Vous allez placer chacun votre tour une carte  sur le plateau jusqu'\xE0 ne
+      plus en avoir en main."
     - "Une carte poss\xE8de syst\xE9matiquement deux statistiques, \xE0 gauche la
       puissance, qui repr\xE9sente \xE0 la fois les d\xE9g\xE2ts et les points de
       vie de la carte."
@@ -1492,7 +1496,7 @@ MonoBehaviour:
     - "Tu t'en ai bien sorti. mais tes adversaires en bas ne te montreront aucune
       piti\xE9."
     - "Voici les cartes qui composeront ton deck de d\xE9part."
-    - "Je te souhaite bon courage dans ta qu\xEAte, va et rejoint la terre de mes
+    - "Je te souhaite bon courage dans ta qu\xEAte, va et rejoins la terre de mes
       anc\xEAtres."
   nameText: {fileID: 1105222993}
   dialogText: {fileID: 85925884}

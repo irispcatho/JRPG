@@ -2050,6 +2050,10 @@ PrefabInstance:
       propertyPath: patternAttacks.Array.data[7].position.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: patternAttacks.Array.data[9].position.Array.data[1].y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: infoClone
       value: 
@@ -2062,6 +2066,26 @@ PrefabInstance:
       propertyPath: parentPlayerDeck
       value: 
       objectReference: {fileID: 1253713903}
+    - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: cardsIA.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 76cd8f5d5496b144b8310782c3dcb03a, type: 2}
+    - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: cardsIA.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4e30a8e0aa810b248bdae38c47205e03, type: 2}
+    - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: cardsIA.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2d6ee4dde06942342bf949310d8c9cb9, type: 2}
+    - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: cardsIA.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6b66d12eff988ae42a55d99250b67eaa, type: 2}
+    - target: {fileID: 6220157289882805940, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: cardsIA.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: aa65f2dfe75050a458d496f2fb11aef3, type: 2}
     - target: {fileID: 6220157289882805941, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: m_RootOrder
       value: 3
