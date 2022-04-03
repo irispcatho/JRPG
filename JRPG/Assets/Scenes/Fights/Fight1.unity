@@ -391,11 +391,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7845671428455921930, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
   m_PrefabInstance: {fileID: 1580435614}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &367785054 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 8478115039594839208, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
-  m_PrefabInstance: {fileID: 1580435614}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &373574009
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,7 +508,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -60.68799, y: 557.96}
+  m_AnchoredPosition: {x: -60.687958, y: 557.96}
   m_SizeDelta: {x: 121.37, y: -493.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &420019031
@@ -1072,7 +1067,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -60.67993, y: -395.3}
+  m_AnchoredPosition: {x: -60.6799, y: -395.3}
   m_SizeDelta: {x: 121.39, y: -790.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1253713905
@@ -1146,13 +1141,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 39886133}
     m_Modifications:
+    - target: {fileID: 1848080663542700738, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5452094388881928312, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7845671428455921929, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
       propertyPath: m_Name
       value: InfoCard
-      objectReference: {fileID: 0}
-    - target: {fileID: 7845671428455921929, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7845671428455921930, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
       propertyPath: m_Pivot.x
@@ -1238,13 +1237,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7845671428455921933, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
-      propertyPath: pattern
-      value: 
-      objectReference: {fileID: 367785054}
-    - target: {fileID: 8478115039594839208, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
+    - target: {fileID: 7845671428516038090, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7845671428997830683, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7845671429302256091, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7845671429650121688, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66add08596ff61948ab60166b728c6d2, type: 3}

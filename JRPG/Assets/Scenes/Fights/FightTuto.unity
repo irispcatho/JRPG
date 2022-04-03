@@ -583,7 +583,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -60.68799, y: 557.96}
+  m_AnchoredPosition: {x: -60.687958, y: 557.96}
   m_SizeDelta: {x: 121.37, y: -493.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &420019031
@@ -1396,7 +1396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -60.67993, y: -395.3}
+  m_AnchoredPosition: {x: -60.6799, y: -395.3}
   m_SizeDelta: {x: 121.39, y: -790.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1253713905
@@ -1503,7 +1503,7 @@ MonoBehaviour:
     - 
     - 
     - Eh bien je pense que tu as compris le principe du jeu.
-    - "Tu t'en ai bien sorti. mais tes adversaires en bas ne te montreront aucune
+    - "Tu t'en es bien sorti. Mais tes adversaires en bas ne feront preuve d'aucune
       piti\xE9."
     - "Voici les cartes qui composeront ton deck de d\xE9part."
     - "Je te souhaite bon courage dans ta qu\xEAte, va et rejoins la terre de mes
@@ -1606,6 +1606,14 @@ PrefabInstance:
     - target: {fileID: 7845671428455921930, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7845671429302256091, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 03bd85a45c753ec43873855bd54b96f3, type: 2}
+    - target: {fileID: 7845671429302256091, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
