@@ -1,0 +1,1848 @@
+fileFormatVersion: 2
+guid: 0a06b2c6c91a5ff478439c35ceb45058
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7147369558010237954
+    second: atlas JRPG_0
+  - first:
+      213: 661628422765735713
+    second: atlas JRPG_1
+  - first:
+      213: -6214984722971017737
+    second: atlas JRPG_2
+  - first:
+      213: 4348002190964183928
+    second: atlas JRPG_3
+  - first:
+      213: -1657357905330083947
+    second: atlas JRPG_4
+  - first:
+      213: -4447404093528861053
+    second: atlas JRPG_5
+  - first:
+      213: 2699890580967615664
+    second: atlas JRPG_6
+  - first:
+      213: 3766050618438549911
+    second: atlas JRPG_7
+  - first:
+      213: -5519815753363432044
+    second: atlas JRPG_8
+  - first:
+      213: -5953672169750139498
+    second: atlas JRPG_9
+  - first:
+      213: -5737348174312015790
+    second: atlas JRPG_10
+  - first:
+      213: -8408058231214141905
+    second: atlas JRPG_11
+  - first:
+      213: 8873871986947945258
+    second: atlas JRPG_12
+  - first:
+      213: -3613288281702048585
+    second: atlas JRPG_13
+  - first:
+      213: -2355798019794841270
+    second: atlas JRPG_14
+  - first:
+      213: -1773331362160118560
+    second: atlas JRPG_15
+  - first:
+      213: 5108177263447222722
+    second: atlas JRPG_16
+  - first:
+      213: -3477536320886499063
+    second: atlas JRPG_17
+  - first:
+      213: 26843360865777824
+    second: atlas JRPG_18
+  - first:
+      213: 2639003252144354336
+    second: atlas JRPG_19
+  - first:
+      213: 3974598331915202237
+    second: atlas JRPG_20
+  - first:
+      213: -1513813284987185852
+    second: atlas JRPG_21
+  - first:
+      213: -5992128784708916350
+    second: atlas JRPG_22
+  - first:
+      213: -181778796707648795
+    second: atlas JRPG_23
+  - first:
+      213: 6191874907799870173
+    second: atlas JRPG_24
+  - first:
+      213: 8340740312825947361
+    second: atlas JRPG_25
+  - first:
+      213: 2706300443065173466
+    second: atlas JRPG_26
+  - first:
+      213: 1850214583978706076
+    second: atlas JRPG_27
+  - first:
+      213: 3775170379202990182
+    second: atlas JRPG_28
+  - first:
+      213: 2893138685718187767
+    second: atlas JRPG_29
+  - first:
+      213: 3960498227284157398
+    second: atlas JRPG_30
+  - first:
+      213: 5641300669331129168
+    second: atlas JRPG_31
+  - first:
+      213: -807787387986092784
+    second: atlas JRPG_32
+  - first:
+      213: -3269064227538322408
+    second: atlas JRPG_33
+  - first:
+      213: 6985384671812178056
+    second: atlas JRPG_34
+  - first:
+      213: 4537748160364266378
+    second: atlas JRPG_35
+  - first:
+      213: 2472901990327671873
+    second: atlas JRPG_36
+  - first:
+      213: 1838759074643410861
+    second: atlas JRPG_37
+  - first:
+      213: 6288503150831347861
+    second: atlas JRPG_38
+  - first:
+      213: 2053175546461634671
+    second: atlas JRPG_39
+  - first:
+      213: -356402657835014852
+    second: atlas JRPG_40
+  - first:
+      213: 5436584150516303441
+    second: atlas JRPG_41
+  - first:
+      213: 5267662227552706474
+    second: atlas JRPG_42
+  - first:
+      213: 503434142090926780
+    second: atlas JRPG_43
+  - first:
+      213: 3153344068981887275
+    second: atlas JRPG_44
+  - first:
+      213: 6767767883202101034
+    second: atlas JRPG_45
+  - first:
+      213: -1899356325984104760
+    second: atlas JRPG_46
+  - first:
+      213: -5356784929372699725
+    second: atlas JRPG_47
+  - first:
+      213: -874445318160200081
+    second: atlas JRPG_48
+  - first:
+      213: -7196085821268059563
+    second: atlas JRPG_49
+  - first:
+      213: 930243975839511392
+    second: atlas JRPG_50
+  - first:
+      213: 3026403155226019338
+    second: atlas JRPG_51
+  - first:
+      213: 2319212123759550461
+    second: atlas JRPG_52
+  - first:
+      213: 8526095610398619016
+    second: atlas JRPG_53
+  - first:
+      213: 4575078245086361689
+    second: atlas JRPG_54
+  - first:
+      213: -8264524857818059598
+    second: atlas JRPG_55
+  - first:
+      213: 1317377222061912714
+    second: atlas JRPG_56
+  - first:
+      213: 6926060796414208852
+    second: atlas JRPG_57
+  - first:
+      213: 7818358829565946208
+    second: atlas JRPG_58
+  - first:
+      213: 2625824926341297822
+    second: atlas JRPG_59
+  - first:
+      213: 3628542042752706406
+    second: atlas JRPG_60
+  - first:
+      213: -818314072555403774
+    second: atlas JRPG_61
+  - first:
+      213: 5449632150350122190
+    second: atlas JRPG_62
+  - first:
+      213: -4132971224887881146
+    second: atlas JRPG_63
+  - first:
+      213: -6426303534507798273
+    second: atlas JRPG_64
+  - first:
+      213: 1345675659832056986
+    second: atlas JRPG_65
+  - first:
+      213: -4495242507466385820
+    second: atlas JRPG_66
+  - first:
+      213: -8341699581337899348
+    second: atlas JRPG_67
+  - first:
+      213: -7301246638489836861
+    second: atlas JRPG_68
+  - first:
+      213: 4994350828625097806
+    second: atlas JRPG_69
+  - first:
+      213: -6840693657614010531
+    second: atlas JRPG_70
+  - first:
+      213: 836707900037592349
+    second: atlas JRPG_71
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: atlas JRPG_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 980
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20414af9ebe803360800000000000000
+      internalID: 7147369558010237954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_1
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 980
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12fe0488b839e2900800000000000000
+      internalID: 661628422765735713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_2
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 980
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd35d6a250ffb9a0800000000000000
+      internalID: -6214984722971017737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_3
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 980
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8735a0bb4f4375c30800000000000000
+      internalID: 4348002190964183928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_4
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 980
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5976d1324c1eff8e0800000000000000
+      internalID: -1657357905330083947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_5
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 980
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38618905a85a742c0800000000000000
+      internalID: -4447404093528861053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_6
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 980
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bc6ff2cd20f77520800000000000000
+      internalID: 2699890580967615664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_7
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 980
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7918b268513b34430800000000000000
+      internalID: 3766050618438549911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_8
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 980
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49dda2b41dca563b0800000000000000
+      internalID: -5519815753363432044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 840
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69de9ec94be406da0800000000000000
+      internalID: -5953672169750139498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_10
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 840
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2587565bb38d060b0800000000000000
+      internalID: -5737348174312015790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_11
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 840
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e8ea52693905b80800000000000000
+      internalID: -8408058231214141905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_12
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 840
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23725c6e83562b70800000000000000
+      internalID: 8873871986947945258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_13
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 840
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bc511aa3750bddc0800000000000000
+      internalID: -3613288281702048585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_14
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 840
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a415f8bbe268e4fd0800000000000000
+      internalID: -2355798019794841270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_15
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 840
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e4f269858cd367e0800000000000000
+      internalID: -1773331362160118560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_16
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 840
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c9af752824e3e640800000000000000
+      internalID: 5108177263447222722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_17
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 840
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9099a04142f4dbfc0800000000000000
+      internalID: -3477536320886499063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a87bfcf4ed5f5000800000000000000
+      internalID: 26843360865777824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_19
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 700
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0243a2dc97f9f9420800000000000000
+      internalID: 2639003252144354336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_20
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 700
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe6aa2ef1c982730800000000000000
+      internalID: 3974598331915202237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_21
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 700
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 445521c76daddfae0800000000000000
+      internalID: -1513813284987185852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_22
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 700
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b28033e9ea7dca0800000000000000
+      internalID: -5992128784708916350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_23
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 700
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eaea82c5213a7df0800000000000000
+      internalID: -181778796707648795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_24
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 700
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddad0153c65fde550800000000000000
+      internalID: 6191874907799870173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_25
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 700
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e465c59f1340c370800000000000000
+      internalID: 8340740312825947361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_26
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 700
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5c1641ae5be8520800000000000000
+      internalID: 2706300443065173466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 560
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c944c4c7c584da910800000000000000
+      internalID: 1850214583978706076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_28
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 560
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66098fa4579146430800000000000000
+      internalID: 3775170379202990182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_29
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 560
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe4c206e4e762820800000000000000
+      internalID: 2893138685718187767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_30
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 560
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d326d2772486f630800000000000000
+      internalID: 3960498227284157398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_31
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 560
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 053c7a2e11de94e40800000000000000
+      internalID: 5641300669331129168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_32
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 560
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01d5c0586a92ac4f0800000000000000
+      internalID: -807787387986092784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_33
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 560
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c34a1c763f1a2d0800000000000000
+      internalID: -3269064227538322408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_34
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 560
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 880d2de495211f060800000000000000
+      internalID: 6985384671812178056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_35
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 560
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a83c1bae8e159fe30800000000000000
+      internalID: 4537748160364266378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 420
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c56d91243815220800000000000000
+      internalID: 2472901990327671873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_37
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 420
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daf75afd2a5948910800000000000000
+      internalID: 1838759074643410861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_38
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 420
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5982a3a3c40454750800000000000000
+      internalID: 6288503150831347861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_39
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 420
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f604d5408485e7c10800000000000000
+      internalID: 2053175546461634671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_40
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 420
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c352db6cbadcd0bf0800000000000000
+      internalID: -356402657835014852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_41
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 420
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1560b0b0b70a27b40800000000000000
+      internalID: 5436584150516303441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_42
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 420
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaf950ef2ee7a1940800000000000000
+      internalID: 5267662227552706474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_43
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 420
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba12275fae8cf600800000000000000
+      internalID: 503434142090926780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_44
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 420
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b21104e39bde2cb20800000000000000
+      internalID: 3153344068981887275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 280
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2ffe885801fbed50800000000000000
+      internalID: 6767767883202101034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_46
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 280
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce83d71c7124a5e0800000000000000
+      internalID: -1899356325984104760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_47
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 280
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b3039afc70e8a5b0800000000000000
+      internalID: -5356784929372699725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_48
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 280
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ece8bbd985dd3f0800000000000000
+      internalID: -874445318160200081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_49
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 280
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a9712721e522c90800000000000000
+      internalID: -7196085821268059563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_50
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 280
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0637c56a7f3e8ec00800000000000000
+      internalID: 930243975839511392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_51
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 280
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a064e5692a1fff920800000000000000
+      internalID: 3026403155226019338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_52
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 280
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff977b832f7f2020800000000000000
+      internalID: 2319212123759550461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_53
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 280
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885b3d2d8c6c25670800000000000000
+      internalID: 8526095610398619016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 140
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9587df19c61fd7f30800000000000000
+      internalID: 4575078245086361689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_55
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 140
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bc6e5cdd628e4d80800000000000000
+      internalID: -8264524857818059598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_56
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 140
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a82f03c8a93484210800000000000000
+      internalID: 1317377222061912714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_57
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 140
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b2707399f4e1060800000000000000
+      internalID: 6926060796414208852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_58
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 140
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06921da9ee3608c60800000000000000
+      internalID: 7818358829565946208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_59
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 140
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9670f8bbddc07420800000000000000
+      internalID: 2625824926341297822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_60
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 140
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66768d653cb2b5230800000000000000
+      internalID: 3628542042752706406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_61
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 140
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 206c1a6cfa3c4a4f0800000000000000
+      internalID: -818314072555403774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_62
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 140
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eccca2e319bf0ab40800000000000000
+      internalID: 5449632150350122190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64295a1819cb4a6c0800000000000000
+      internalID: -4132971224887881146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_64
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 0
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff053debbfe21d6a0800000000000000
+      internalID: -6426303534507798273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_65
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 0
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9cdd2702eccca210800000000000000
+      internalID: 1345675659832056986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_66
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 0
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 466da3b91c0bd91c0800000000000000
+      internalID: -4495242507466385820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_67
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 0
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cae645f4d645c3c80800000000000000
+      internalID: -8341699581337899348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_68
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 0
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c26c4fadd2ccaa90800000000000000
+      internalID: -7301246638489836861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_69
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 0
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4470ef0e9f7f4540800000000000000
+      internalID: 4994350828625097806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_70
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 0
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5736a8ac59f011a0800000000000000
+      internalID: -6840693657614010531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas JRPG_71
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 0
+        width: 197
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d15f08ae6659c9b00800000000000000
+      internalID: 836707900037592349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
