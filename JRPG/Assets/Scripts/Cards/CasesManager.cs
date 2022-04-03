@@ -59,7 +59,7 @@ public class CasesManager : MonoBehaviour
     {
         GameObject cell = CasesList[casenumber];
         Vector2 position = cell.transform.position;
-        if (!placedCards.placedCardsList.Contains(placedCards.lastCardClicked) && playerCanPlay && !CasesListUsed.Contains(cell))
+        if (!placedCards.placedCardsList.Contains(placedCards.lastCardClicked) && playerCanPlay && !CasesListUsed.Contains(cell) && placedCards.lastCardClicked.GetComponent<CardDisplay>() != null)
         {
             AudioManager.instance.Play("CardPlacement");
             playerCanPlay = false;

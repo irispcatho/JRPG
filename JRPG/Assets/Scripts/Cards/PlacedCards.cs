@@ -256,38 +256,41 @@ public class PlacedCards : MonoBehaviour
         whoWon = -1;
         round++;
 
-        Scene scene = SceneManager.GetSceneByName("FightTuto");
-        if (SceneManager.GetActiveScene() == scene)
-        {
-            tuto.dialogUI.SetActive(true);
-            tuto.DisplayNextSentence();
-        }
 
         if (round < 3)
             StartCoroutine(WaitForRound());
-        else
+        else if(round >= 3 && SceneManager.GetActiveScene() != SceneManager.GetSceneByName("FightTuto"))
             StartCoroutine(WaitForClose());
     }
 
     IEnumerator WaitForClose()
     {
         yield return new WaitForSeconds(1.95f);
+        Scene scene = SceneManager.GetSceneByName("FightTuto");
+        if (SceneManager.GetActiveScene() == scene)
+        {
+            tuto.dialogUI.SetActive(true);
+            tuto.DisplayNextSentence();
+        }
         ResetCards();
         round = 0;
         whoWon = -1;
-        DialogManager.instance.combatAlreadyLauched = false;
-        if (numberWinPlayer == 2)
-            DialogManager.instance.DisplayNextSentence();
-        else
-            DialogManager.instance.EndDialog();
-        numberWinIA = 0;
-        numberWinPlayer = 0;
-        if(DialogManager.instance.currentCombat == 1)
-            SceneManager.UnloadSceneAsync("Fight1");
-        if (DialogManager.instance.currentCombat == 2)
-            SceneManager.UnloadSceneAsync("Fight2");
-        if (DialogManager.instance.currentCombat == 3)
-            SceneManager.UnloadSceneAsync("Fight3");
+        if(SceneManager.GetActiveScene() != scene)
+        {
+            DialogManager.instance.combatAlreadyLauched = false;
+            if (numberWinPlayer == 2)
+                DialogManager.instance.DisplayNextSentence();
+            else
+                DialogManager.instance.EndDialog();
+            numberWinIA = 0;
+            numberWinPlayer = 0;
+            if(DialogManager.instance.currentCombat == 1)
+                SceneManager.UnloadSceneAsync("Fight1");
+            if (DialogManager.instance.currentCombat == 2)
+                SceneManager.UnloadSceneAsync("Fight2");
+            if (DialogManager.instance.currentCombat == 3)
+                SceneManager.UnloadSceneAsync("Fight3");
+        }
     }
     public IEnumerator Damage(Card card)
     {

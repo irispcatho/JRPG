@@ -466,11 +466,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1500149676049557196, guid: 4a91db4e2b50a5a42b53e264d09fb7eb, type: 3}
   m_PrefabInstance: {fileID: 771917875}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &367785054 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 8478115039594839208, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
-  m_PrefabInstance: {fileID: 1580435614}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &373574009
 GameObject:
   m_ObjectHideFlags: 0
@@ -1270,6 +1265,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: tuto
+      value: 
+      objectReference: {fileID: 1556822984}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
+      propertyPath: infoClone
+      value: 
+      objectReference: {fileID: 904493455}
+    - target: {fileID: 61903488, guid: cbacdf2ce3071c64eb6de73ad30733e8, type: 3}
       propertyPath: casesManager
       value: 
       objectReference: {fileID: 961375326}
@@ -1506,10 +1509,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: InfoCard
       objectReference: {fileID: 0}
-    - target: {fileID: 7845671428455921929, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7845671428455921930, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1593,14 +1592,6 @@ PrefabInstance:
     - target: {fileID: 7845671428455921930, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7845671428455921933, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
-      propertyPath: pattern
-      value: 
-      objectReference: {fileID: 367785054}
-    - target: {fileID: 8478115039594839208, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66add08596ff61948ab60166b728c6d2, type: 3}
