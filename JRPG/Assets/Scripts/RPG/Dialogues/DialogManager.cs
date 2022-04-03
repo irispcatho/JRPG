@@ -63,7 +63,7 @@ public class DialogManager : MonoBehaviour
     {
         if(playCombat1)
         {
-            if (sentences.Count == 5)
+            if (sentences.Count == 4)
             {
                 currentCombat = 1;
                 EndDialogWithCombat();
@@ -98,8 +98,10 @@ public class DialogManager : MonoBehaviour
             combatAlreadyLauched = false;
             EndDialog();
             if (currentCombat == 3)
+            {
                 finaleIllustation.SetActive(true);
-            GoToCredits();
+                StartCoroutine(GoToCredits());
+            }
             return;
         }
         
