@@ -7,14 +7,14 @@ using TMPro;
 public class DialogManager : MonoBehaviour
 {
     public static DialogManager instance;
-
+   
     public TMP_Text nameText;
     public TMP_Text dialogText;
 
     public GameObject[] walls;
 
     public float letterSpeed = 0.05f;
-
+    public GameObject finaleIllustation;
     public bool playCombat1 = false;
     public bool playCombat2 = false;
     public bool playCombat3 = false;
@@ -28,16 +28,14 @@ public class DialogManager : MonoBehaviour
     public Queue<string> sentences;
 
     public SimpleBlit _simpleBlit;
-
-
     public bool combatAlreadyLauched = false;
+
     private void Awake()
     {
         instance = this;
         sentences = new Queue<string>();
         dialogUI.SetActive(false);
     }
-
     public void StartDialog(Dialog dialog, GameObject pnj)
     {
         ZoomCamera.instance.zoomActive = true;
@@ -99,6 +97,9 @@ public class DialogManager : MonoBehaviour
         {
             combatAlreadyLauched = false;
             EndDialog();
+            if (currentCombat == 3)
+                finaleIllustation.SetActive(true);
+            GoToCredits();
             return;
         }
         
@@ -115,6 +116,11 @@ public class DialogManager : MonoBehaviour
             dialogText.text += letter;
             yield return new WaitForSeconds(letterSpeed);
         }
+    }
+    IEnumerator GoToCredits()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("Credits");
     }
 
     public void EndDialog()
@@ -145,7 +151,7 @@ public class DialogManager : MonoBehaviour
                 AudioManager.instance.Play("FightLaunch");
                 SceneManager.LoadScene(scene, LoadSceneMode.Additive);
                 AudioManager.instance.Stop("Exploration");
-                //AudioManager.instance.Play("Exploration");
+                //AudioManager.instance.Play("Combat");
                 combatAlreadyLauched = true;
             }
         }

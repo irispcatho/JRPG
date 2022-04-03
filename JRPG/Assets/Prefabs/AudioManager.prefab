@@ -82,13 +82,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: DialogDefilement
     clip: {fileID: 8300000, guid: 60682c868b796cb43a27acb4500d0575, type: 3}
-    volume: 0.5
+    volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: FightLauch
+  - name: FightLaunch
     clip: {fileID: 8300000, guid: 787d935be29933847a7779d973c2a3b9, type: 3}
-    volume: 0.5
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -112,7 +112,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Exploration
     clip: {fileID: 8300000, guid: 4b0188b0916e5f646b511410f7e5f762, type: 3}
-    volume: 0.5
+    volume: 0.2
     pitch: 1
-    loop: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: Combat
+    clip: {fileID: 8300000, guid: 0561035924276334799de0ba45abe747, type: 3}
+    volume: 0.05
+    pitch: 1
+    loop: 1
     source: {fileID: 0}

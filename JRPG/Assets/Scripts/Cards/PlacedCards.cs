@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PlacedCards : MonoBehaviour
 {
+    public static PlacedCards instance;
     public List<GameObject> placedCardsList;
     public List<GameObject> OrderList;
     public CasesManager casesManager;
@@ -33,6 +34,8 @@ public class PlacedCards : MonoBehaviour
 
     private void Start()
     {
+        instance = this;
+        AudioManager.instance.Play("Combat");
         for (int i = 0; i < DialogManager.instance.walls.Length; i++)
         {
             walls[i] = DialogManager.instance.walls[i];
@@ -161,14 +164,12 @@ public class PlacedCards : MonoBehaviour
                 whoWon = 0;
                 numberWinPlayer++;
                 print("Le joueur a gagné");
-
             }
             else if (numberCardsPlayer < numberCardsIA)
             {
                 whoWon = 1;
                 numberWinIA++;
                 print("L'IA a gagné");
-
             }
             else if (numberCardsPlayer == numberCardsIA)
             {
@@ -177,14 +178,12 @@ public class PlacedCards : MonoBehaviour
                     whoWon = 0;
                     numberWinPlayer++;
                     print("Le joueur a gagné");
-
                 }
                 else if (pdvPlayer < pdvIA)
                 {
                     whoWon = 1;
                     numberWinIA++;
                     print("L'IA a gagné");
-
                 }
             }
 
@@ -279,7 +278,6 @@ public class PlacedCards : MonoBehaviour
     {
         yield return new WaitForSeconds(1.95f);
         AudioManager.instance.Play("Exploration");
-
         Scene scene = SceneManager.GetSceneByName("FightTuto");
         if (SceneManager.GetActiveScene() == scene)
         {
@@ -312,14 +310,16 @@ public class PlacedCards : MonoBehaviour
 
     private void CloseScene(int whichCombat, string whichScene, int whichUpgrade)
     {
+        AudioManager.instance.Stop("Combat");
         if (DialogManager.instance.currentCombat == whichCombat)
         {
             //AudioManager.instance.Stop("Exploration");
             if (numberWinPlayer == 2)
             {
+                if(DialogManager.instance.currentCombat < 3)
+                    walls[whichCombat - 1].SetActive(false);
                 if (!upgrade[whichUpgrade].asBeenDiscovered)
                 {
-                    walls[whichCombat - 1].SetActive(false);
                     upgrade[whichUpgrade].cardAffected.powerPlayer += upgrade[whichUpgrade].attackUpgrade;
                     upgrade[whichUpgrade].asBeenDiscovered = true;
                 }

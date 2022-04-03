@@ -37,6 +37,5 @@ public class AudioManager : MonoBehaviour
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         s.source.DOFade(s.volume * 0, 2f);
-        //Debug.Log("musique stoppée");
     }
 }
