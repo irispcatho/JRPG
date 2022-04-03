@@ -382,7 +382,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7845671428455921930
 RectTransform:
   m_ObjectHideFlags: 0
@@ -458,11 +458,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infosCard:
-    cardName: Panda
+    cardName: "Ch\xE8vre"
     power: 3
-    order: 6
-    description: ???????
-    pattern: {fileID: 21300000, guid: ce55064d530004843a96e13bd3722fd6, type: 3}
+    order: 4
+    description: BehBehBeh
+    pattern: {fileID: 21300000, guid: 44f1a0935e81ce647b67f644b64d0672, type: 3}
   cardName: {fileID: 7845671429302256091}
   power: {fileID: 7845671428997830683}
   order: {fileID: 7845671428516038090}
