@@ -248,6 +248,8 @@ public class PlacedCards : MonoBehaviour
             GameObject.Destroy(playerDeck.parentIADeck.transform.GetChild(i).gameObject);
         }
         playerDeck.CardsCreation();
+        numberCardsPlayer = 0;
+        numberCardsIA = 0;
         launchedattack = false;
     }
 
@@ -283,7 +285,6 @@ public class PlacedCards : MonoBehaviour
             tuto.dialogUI.SetActive(true);
             tuto.DisplayNextSentenceTuto();
         }
-        ResetCards();
         round = 0;
         whoWon = -1;
         if (SceneManager.GetActiveScene() != scene)
