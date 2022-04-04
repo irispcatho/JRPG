@@ -17,7 +17,7 @@ MonoBehaviour:
   animalG: {fileID: 21300000, guid: 9650baa8fb543ab46a3071212e46dc9c, type: 3}
   animalR: {fileID: 21300000, guid: 9a742d63d00a1ae46988bc5009daf263, type: 3}
   biome: {fileID: 21300000, guid: ad7208320d4d2f74cb133b18bca8d1b8, type: 3}
-  typeImage: {fileID: 0}
+  typeImage: {fileID: 21300000, guid: 9f07995e308b70d498af163d8773fbe1, type: 3}
   pattern: {fileID: 21300000, guid: 6d28419bc58e1614c98bfc76d5d00a78, type: 3}
   powerIA: 3
   powerPlayer: 3

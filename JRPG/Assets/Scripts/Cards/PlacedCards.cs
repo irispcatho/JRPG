@@ -36,9 +36,13 @@ public class PlacedCards : MonoBehaviour
     {
         instance = this;
         AudioManager.instance.Play("Combat");
-        for (int i = 0; i < DialogManager.instance.walls.Length; i++)
+        Scene scene = SceneManager.GetSceneByName("FightTuto");
+        if (SceneManager.GetActiveScene() != scene)
         {
-            walls[i] = DialogManager.instance.walls[i];
+            for (int i = 0; i < DialogManager.instance.walls.Length; i++)
+            {
+                walls[i] = DialogManager.instance.walls[i];
+            }
         }
     }
     public void Update()
@@ -308,7 +312,7 @@ public class PlacedCards : MonoBehaviour
             //AudioManager.instance.Stop("Exploration");
             if (numberWinPlayer == 2)
             {
-                if(DialogManager.instance.currentCombat < 3)
+                if (DialogManager.instance.currentCombat < 3)
                     walls[whichCombat - 1].SetActive(false);
                 if (!upgrade[whichUpgrade].asBeenDiscovered)
                 {
