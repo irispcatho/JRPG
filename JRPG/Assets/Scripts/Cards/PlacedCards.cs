@@ -287,18 +287,18 @@ public class PlacedCards : MonoBehaviour
             if (numberWinPlayer == 2)
             {
                 DialogManager.instance.DisplayNextSentence();
-                DialogManager.instance.combatAlreadyLauched = false;
                 CloseScene(1, "Fight1", 0);
                 CloseScene(2, "Fight2", 1);
                 CloseScene(3, "Fight3", 2);
+                DialogManager.instance.combatAlreadyLauched = false;
             }
-            else
+            else if(numberWinIA == 2)
             {
                 DialogManager.instance.EndDialog();
-                DialogManager.instance.combatAlreadyLauched = false;
                 CloseScene(1, "Fight1", 0);
                 CloseScene(2, "Fight2", 1);
                 CloseScene(3, "Fight3", 2);
+                DialogManager.instance.combatAlreadyLauched = false;
             }
         }
     }

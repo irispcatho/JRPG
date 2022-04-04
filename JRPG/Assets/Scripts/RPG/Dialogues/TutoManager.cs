@@ -20,6 +20,7 @@ public class TutoManager : MonoBehaviour
     private void Start()
     {
         StartDialogTuto(dialog);
+        AudioManager.instance.Stop("Exploration");
     }
     private void Update()
     {

@@ -1,7 +1,7 @@
 using UnityEngine.Audio;
 using UnityEngine;
 using System;
-using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -20,6 +20,11 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
+    }
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Menu") || SceneManager.GetActiveScene() == SceneManager.GetSceneByName("TopDown"))
+            Play("Exploration");
     }
 
     public void Play(string name)
