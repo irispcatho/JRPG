@@ -63,7 +63,7 @@ public class DialogManager : MonoBehaviour
     {
         if(playCombat1)
         {
-            if (sentences.Count == 4)
+            if (sentences.Count == 3)
             {
                 currentCombat = 1;
                 EndDialogWithCombat();
@@ -73,7 +73,7 @@ public class DialogManager : MonoBehaviour
         }
         if (playCombat2)
         {
-            if (sentences.Count == 4)
+            if (sentences.Count == 2)
             {
                 currentCombat = 2;
                 EndDialogWithCombat();
@@ -84,7 +84,7 @@ public class DialogManager : MonoBehaviour
 
         if (playCombat3)
         {
-            if (sentences.Count == 5)
+            if (sentences.Count == 3)
             {
                 currentCombat = 3;
                 EndDialogWithCombat();

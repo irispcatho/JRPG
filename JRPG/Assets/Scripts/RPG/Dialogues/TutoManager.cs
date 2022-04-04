@@ -39,7 +39,7 @@ public class TutoManager : MonoBehaviour
 
     public void DisplayNextSentenceTuto()
     {
-        if(sentences.Count == 6)
+        if(sentences.Count == 5)
         {
             dialogUI.SetActive(false);
             //return;

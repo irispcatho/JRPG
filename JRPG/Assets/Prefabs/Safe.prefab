@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8126072557114784186
 Transform:
   m_ObjectHideFlags: 0
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880049867975570845}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -44.9, y: -37.8, z: 0}
+  m_LocalPosition: {x: -0.24, y: 1.82, z: 0}
   m_LocalScale: {x: 2.2336388, y: 2.2336388, z: 2.2336388}
   m_Children: []
   m_Father: {fileID: 3244307269582408349}
@@ -189,7 +189,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3244307269582408348}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 54.1457, y: 1.9491, z: 0}
   m_LocalScale: {x: 0.4477, y: 0.4477, z: 0.4477}
   m_Children:
@@ -212,15 +212,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrade:
-    nameUpgrade: 
-    attackUpgrade: 0
-    cardAffected: {fileID: 0}
+    nameUpgrade: Bonus
+    attackUpgrade: 1
+    cardAffected: {fileID: 11400000, guid: ab99aad8fbef3cb489d0a183a0cb861f, type: 2}
     asBeenDiscovered: 0
   isInRange: 0
   safeSprite:
   - {fileID: 3244307269645840182}
   - {fileID: 3244307269510886686}
-  buttonE: {fileID: 0}
+  buttonE: {fileID: 1880049867975570845}
+  upgradeGo: {fileID: 0}
+  upgradeTxt: {fileID: 0}
 --- !u!61 &3244307269582408350
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -234,7 +236,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.05960965, y: -0.0397408}
+  m_Offset: {x: 0.28102183, y: 0.17702675}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -245,7 +247,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.3779635, y: 3.5036826}
+  m_Size: {x: 8.403641, y: 6.6622934}
   m_EdgeRadius: 0
 --- !u!1 &3244307269645840182
 GameObject:

@@ -253,25 +253,16 @@ public class PlacedCards : MonoBehaviour
         launchedattack = false;
     }
 
-    private IEnumerator WaitForRound()
-    {
-        yield return new WaitForSeconds(2);
-        ResetCards();
-    }
     private IEnumerator WaitToUpdateRound()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1.5f);
         if (numberWinPlayer == 2 || numberWinIA == 2)
             StartCoroutine(WaitForClose());
-
         whoWon = -1;
         round++;
 
-        if(numberWinPlayer == 2 || numberWinIA == 2)
-            StartCoroutine(WaitForClose());
-
         if (round < 3)
-            StartCoroutine(WaitForRound());
+            ResetCards();
         else if (round >= 3)
             StartCoroutine(WaitForClose());
     }

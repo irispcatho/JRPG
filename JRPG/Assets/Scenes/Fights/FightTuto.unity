@@ -583,7 +583,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -60.687958, y: 557.96}
+  m_AnchoredPosition: {x: -60.687927, y: 557.96}
   m_SizeDelta: {x: 121.37, y: -493.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &420019031
@@ -1396,7 +1396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -60.6799, y: -395.3}
+  m_AnchoredPosition: {x: -60.67987, y: -395.3}
   m_SizeDelta: {x: 121.39, y: -790.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1253713905
@@ -1501,7 +1501,6 @@ MonoBehaviour:
       avec le plus de cartes en vie remporte la manche."
     - "\xC0 toi de commencer !"
     - 
-    - 
     - Eh bien je pense que tu as compris le principe du jeu.
     - "Tu t'en es bien sorti. Mais tes adversaires en bas ne feront preuve d'aucune
       piti\xE9."
@@ -1512,6 +1511,33 @@ MonoBehaviour:
   dialogText: {fileID: 85925884}
   dialogUI: {fileID: 362460267}
   letterSpeed: 0.05
+--- !u!114 &1556822985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556822983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d40853185cdfb4fba651bc7f117053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cards:
+  - {fileID: 11400000, guid: 85c547224b82f46418e9b3baa2f9a587, type: 2}
+  - {fileID: 11400000, guid: 50211c8abab0abc4a84c3af694a00242, type: 2}
+  - {fileID: 11400000, guid: 4e30a8e0aa810b248bdae38c47205e03, type: 2}
+  - {fileID: 11400000, guid: 060304a213acd8c4884bb99fe8f94461, type: 2}
+  - {fileID: 11400000, guid: a5b00aca7a2b1694f99ca28fd7533509, type: 2}
+  - {fileID: 11400000, guid: 6b66d12eff988ae42a55d99250b67eaa, type: 2}
+  - {fileID: 11400000, guid: 1936fe9968878374ca517bd56ec504dd, type: 2}
+  - {fileID: 11400000, guid: aa65f2dfe75050a458d496f2fb11aef3, type: 2}
+  - {fileID: 11400000, guid: dc6ca7e346f4a6644aeaf8f0d790c35d, type: 2}
+  - {fileID: 11400000, guid: a13918d5f7c57cf4bb2eb483b5e5b74b, type: 2}
+  - {fileID: 11400000, guid: 2d6ee4dde06942342bf949310d8c9cb9, type: 2}
+  - {fileID: 11400000, guid: 76cd8f5d5496b144b8310782c3dcb03a, type: 2}
+  - {fileID: 11400000, guid: ab99aad8fbef3cb489d0a183a0cb861f, type: 2}
+  - {fileID: 11400000, guid: b76f9a888c547e3499fa0e278254525c, type: 2}
 --- !u!1001 &1580435614
 PrefabInstance:
   m_ObjectHideFlags: 0

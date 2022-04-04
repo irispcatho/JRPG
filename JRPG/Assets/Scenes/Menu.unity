@@ -263,7 +263,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit
+  m_text: Quitter
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 03bd85a45c753ec43873855bd54b96f3, type: 2}
   m_sharedMaterial: {fileID: -6174997875193428187, guid: 03bd85a45c753ec43873855bd54b96f3, type: 2}
@@ -1218,7 +1218,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Credits
+  m_text: "Cr\xE9dits"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 03bd85a45c753ec43873855bd54b96f3, type: 2}
   m_sharedMaterial: {fileID: -6174997875193428187, guid: 03bd85a45c753ec43873855bd54b96f3, type: 2}
@@ -1352,7 +1352,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play
+  m_text: Jouer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 03bd85a45c753ec43873855bd54b96f3, type: 2}
   m_sharedMaterial: {fileID: -6174997875193428187, guid: 03bd85a45c753ec43873855bd54b96f3, type: 2}
@@ -1502,7 +1502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1785799608836815308, guid: 6491251fe5a85074d8a2ab5688870263, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1785799608836815308, guid: 6491251fe5a85074d8a2ab5688870263, type: 3}
       propertyPath: m_AnchoredPosition.y
